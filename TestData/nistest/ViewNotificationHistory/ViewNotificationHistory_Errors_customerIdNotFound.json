@@ -1,0 +1,19 @@
+{
+  "customerIdNotFound": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST002:customerIdNotFound",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "999999999999999",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification/",
+      "CONTACT_ID": "",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.record.not.found",
+      "HTTP_CODE":"404",
+      "FIELD_NAME":"customer-id",
+      "COMMENT": "View Notification History - Customer Id Not Found"
+    }
+  ]
+}

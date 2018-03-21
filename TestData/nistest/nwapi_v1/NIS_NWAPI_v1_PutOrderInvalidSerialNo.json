@@ -1,0 +1,22 @@
+{ "putOrder": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "NIS_NWAPI_v1_PutOrder:putOrder",
+      "USERNAME": "ABC",
+      "NIS_HOST":"localhost",
+      "NIS_PORT":"8201",
+
+      "NIS_URL_FMT": "http://%s:%s/nis/nwapi/v1.1/patron/163/order"
+,
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.record.not.found",
+      "HTTP_CODE":"404",
+      "PAN":"4556964261117326",
+      "EXP":"0120",
+      "NAME":"Adam",
+      "COUNTRY":"US",
+      "POSTAL":"92124",
+      "PRIMARY":"true",
+      "BILLING_ID":"1000061" 
+    }
+]}

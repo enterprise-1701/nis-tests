@@ -1,0 +1,10 @@
+{
+	"InvalidNegativeCustomerIdTest": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "83723:InvalidNegativeCustomerIdTest",
+			"CUSTOMER_ID_NEGATIVE": "-1"
+		}
+	]
+}

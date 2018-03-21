@@ -1,0 +1,10 @@
+{
+	"ViewActivityHistory_CustomerIdNotFoundTEST": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "83723:ViewActivityHistory_CustomerIdNotFoundTEST",
+			"CUSTOMER_ID": "999999999999999"
+		}
+	]
+}

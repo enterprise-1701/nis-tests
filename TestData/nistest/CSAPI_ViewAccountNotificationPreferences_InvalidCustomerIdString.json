@@ -1,0 +1,16 @@
+{
+	"InvalidCustomerIdStringTest": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "83723:InvalidCustomerIdStringTest",
+			"NIS_CUSTOMER_ID_TEST": "test"
+		},
+
+		{
+			"RunMode": "N",
+			"TestCase_Description": "83723:InvalidCustomerIdStringTest",
+			"NIS_CUSTOMER_ID_TEST": "test1"
+		}
+	]
+}

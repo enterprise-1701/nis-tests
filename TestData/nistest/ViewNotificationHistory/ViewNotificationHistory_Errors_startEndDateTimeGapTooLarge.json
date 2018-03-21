@@ -1,0 +1,19 @@
+{
+  "startEndDateTimeGapTooLarge": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST010:startEndDateTimeGapTooLarge",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502460",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification?startDateTime=2016-09-08T21:00:08Z&endDateTime=2017-09-08T20:37:28.315Z",
+      "CONTACT_ID": "",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.date.range.too.large",
+      "HTTP_CODE":"400",
+      "FIELD_NAME":"end-date-time",
+      "COMMENT": "View Notification History - Start End Date Time Gap Too Large"
+    }
+  ]
+}

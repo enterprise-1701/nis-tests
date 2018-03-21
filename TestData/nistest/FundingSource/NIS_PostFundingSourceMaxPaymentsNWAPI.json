@@ -1,0 +1,22 @@
+{ "postFundingSource": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "NIS_PostFundingSourceMaxPaymentsNWAPI:postFundingSource",
+      "USERNAME": "ABC",
+      "NIS_HOST":"localhost",
+      "NIS_PORT":"8201",
+
+      "NIS_NW_URL_FMT": "http://%s:%s/nis/nwapi/v2/customer/102/fundingsource/"
+,
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.exceeds.max.payment.cards.allowed",
+      "HTTP_CODE":"400",
+      "CARD_ID":"8051",
+      "MASKED_PAN":"3553",
+      "EXP_DATE":"0121",
+      "NAME":"Jonny",
+      "CARD_TYPE":"Visa",
+      "PRIMARY":"true",
+      "BILLING_ADDRESS_ID":"1"
+    }
+]}

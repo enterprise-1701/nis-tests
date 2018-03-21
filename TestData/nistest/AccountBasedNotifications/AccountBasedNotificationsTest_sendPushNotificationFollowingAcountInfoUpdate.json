@@ -1,0 +1,19 @@
+{
+  "sendPushNotificationFollowingAcountInfoUpdate": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST001:sendPushNotificationFollowingAcountInfoUpdate",
+      "USERNAME": "ABC",
+      "CONTACT_ID": "0",
+      "CUSTOMER_ID": "0",
+      "CNG_HOST":"10.252.1.51",
+      "CNG_PORT":"8901",
+      "CNG_URL_FMT":"http://%s:%s/cng/notification/v1/customer/%s/notification",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "FUNDING_SOURCE_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/fundingsource",
+      "PNTOKEN_URL_FMT":"http://%s:%s/nis/nwapi/v2/customer/%s/contact/%s/pntoken",
+      "NOTIFICATIONS_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/notification"
+    }
+  ]
+}

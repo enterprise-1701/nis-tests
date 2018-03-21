@@ -1,0 +1,19 @@
+{
+  "invalidStatus": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST005:invalidStatus",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502460",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification?status=NO_SUCH_STATUS",
+      "CONTACT_ID": "",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.value.unexpected",
+      "HTTP_CODE":"400",
+      "FIELD_NAME":"status",
+      "COMMENT": "View Notification History - Invalid Status"
+    }
+  ]
+}

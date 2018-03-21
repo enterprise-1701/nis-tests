@@ -1,0 +1,12 @@
+{
+	"getNewProductCatalog": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "428539:getNewProductCatalog",
+			"HOST":"localhost",
+			"PORT": "8201",
+			"PRODUCT_CATALOG_URL":"http://%s:%s/nis/nextlink/v1/productcatalog?riderClassId=1&nfMediaTypeId=5"
+		}
+	]
+}

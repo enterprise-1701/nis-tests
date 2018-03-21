@@ -1,0 +1,14 @@
+{
+  "resendNotification": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST001:resendNotification",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502465",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/notification",
+      "NIS_URL_FMT2":"http://%s:%s/nis/csapi/v1/customer/%s/contact/%s/resend"
+    }
+  ]
+}

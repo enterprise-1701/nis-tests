@@ -1,0 +1,14 @@
+{
+  "sendEmailNotificationFollowingAcountInfoUpdate": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST001:sendEmailNotificationFollowingAcountInfoUpdate",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5503325",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "FUNDING_SOURCE_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/fundingsource",
+      "NOTIFICATIONS_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/notification"
+    }
+  ]
+}

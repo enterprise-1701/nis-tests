@@ -1,0 +1,14 @@
+{
+  "sendEmailNotificationFollowingAcountLockout": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST001:sendEmailNotificationFollowingAcountLockout",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502480",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT": "http://%s:%s/nis/nwapi/v2/customer/credentials/authenticate",
+	  "NOTIFICATIONS_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/notification"	  
+    }
+  ]
+}

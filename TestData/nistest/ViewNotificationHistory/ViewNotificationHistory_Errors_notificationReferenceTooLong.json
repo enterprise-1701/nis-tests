@@ -1,0 +1,19 @@
+{
+  "notificationReferenceTooLong": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST007:notificationReferenceTooLong",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502460",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification?notificationReference=123456789012345678901",
+      "CONTACT_ID": "",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.value.toolong",
+      "HTTP_CODE":"400",
+      "FIELD_NAME":"notification-reference",
+      "COMMENT": "View Notification History - Notification Reference Too Long"
+    }
+  ]
+}

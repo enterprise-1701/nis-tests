@@ -1,0 +1,19 @@
+{
+  "contactNotFound": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST001:getNotificationDetail",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502460",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification?contactId=%s",
+      "CONTACT_ID": "999999999999999",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.record.not.found",
+      "HTTP_CODE":"404",
+      "FIELD_NAME":"contact-id",
+      "COMMENT":"View Notification History - Contact Not Found"
+    }
+  ]
+}

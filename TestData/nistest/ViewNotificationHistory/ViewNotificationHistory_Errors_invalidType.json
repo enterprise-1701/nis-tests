@@ -1,0 +1,19 @@
+{
+  "invalidType": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "REST006:invalidType",
+      "USERNAME": "ABC",
+      "CUSTOMER_ID": "5502460",
+      "NIS_HOST":"10.252.1.21",
+      "NIS_PORT":"8201",
+      "NIS_URL_FMT":"http://%s:%s/nis/csapi/v1/customer/%s/notification?type=NO_SUCH_TYPE",
+      "CONTACT_ID": "",
+      "RESULT":"DataValidationError",
+      "ERROR_KEY":"errors.general.value.unexpected",
+      "HTTP_CODE":"400",
+      "FIELD_NAME":"type",
+      "COMMENT": "View Notification History - Invalid Type"
+    }
+  ]
+}
