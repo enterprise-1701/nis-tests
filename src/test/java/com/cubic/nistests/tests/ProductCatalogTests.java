@@ -193,6 +193,9 @@ public class ProductCatalogTests extends NextLinkBase {
 							"STORED VALUE AMOUNT IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
 
 					restActions.assertTrue(stored.getPageNumber() > 0,
+							"STORED VALUE PAGE NUMBER IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+
+					restActions.assertTrue(stored.getButtonNumber() > 0,
 							"STORED VALUE BUTTON NUMBER IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
 					
 					restActions.assertTrue(null != stored.getLoadType(),
