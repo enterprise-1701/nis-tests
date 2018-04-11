@@ -179,6 +179,50 @@ public class ProductCatalogTests extends NextLinkBase {
 
 				restActions.assertTrue("".equals(catResponse.getResult().getTerminalCommands()),
 						"RESULT TERMINAL COMMANDS IS NOT EMPTY STRING, BUT IT SHOULD BE");
+				
+				restActions.assertTrue(null != catResponse.getCatalog().getMaxAddValue(),
+						"CATALOG MAX ADD VALUE IS NULL BUT IT SHOULD NOT BE");
+				
+				restActions.assertTrue(null != catResponse.getCatalog().getStoredValue(),
+						"CATALOG STORED VALUE IS NULL BUT IT SHOULD NOT BE");
+				
+				for (WSStoredValue stored : catResponse.getCatalog().getStoredValue()) {
+					restActions.assertTrue(null != stored.getName(), "STORED VALUE NAME IS NULL BUT IT SHOULD NOT BE");
+					
+					restActions.assertTrue(stored.getAmount() > 0,
+							"STORED VALUE AMOUNT IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+
+					restActions.assertTrue(stored.getPageNumber() > 0,
+							"STORED VALUE BUTTON NUMBER IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+					
+					restActions.assertTrue(null != stored.getLoadType(),
+							"STORED VALUE LOAD TYPE IS NULL BUT IT SHOULD NOT BE");
+				}
+				
+				restActions.assertTrue(null != catResponse.getCatalog().getProduct(),
+						"CATALOG PRODUCT VALUE IS NULL BUT IT SHOULD NOT BE");
+				
+				for (WSProduct product : catResponse.getCatalog().getProduct()) {
+					restActions.assertTrue(product.getFareInstrumentId() > 0,
+							"PRODUCT FARE INSTRUMENT ID IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+
+					restActions.assertTrue(null != product.getName(), "PRODUCT NAME IS NULL BUT IT SHOULD NOT BE");
+
+					restActions.assertTrue(null != product.getNameShort(),
+							"PRODUCT NAME SHORT IS NULL BUT IT SHOULD NOT BE");
+
+					restActions.assertTrue(null != product.getSupportsAutoload(),
+							"PRODUCT SUPPORTS AUTOLOAD IS NULL BUT IT SHOULD NOT BE");
+
+					restActions.assertTrue(product.getPrice() > 0,
+							"PRODUCT PRICE IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+					
+					restActions.assertTrue(product.getPageNumber() > 0,
+							"PRODUCT PAGE NUMBER IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+
+					restActions.assertTrue(product.getButtonNumber() > 0,
+							"PRODUCT BUTTON NUMBER IS NOT GREATER THAN ZERO BUT IT SHOULD BE");
+				}
 			}
 
 			// close session with vpos/NL
