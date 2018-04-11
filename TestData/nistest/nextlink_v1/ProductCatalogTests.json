@@ -7,8 +7,8 @@
 			"APP_ID":"abc",
 			"CSC_UID":"0468742a2d4480",
 			"DEVICE_ID":"POI65001",
-			"HOST":"lab7319.ctsservice.com",
-			"CARD_SUMMARY_URL":"https://%s/nis/nextlink/v1/card/summary",
+			"HOST":"13.92.130.133",
+			"PRODUCT_CATALOG_URL":"https://%s/nis/nextlink/v1/card/productcatalog",
 			"CREATE_SESSION_URL":"https://%s/nis/nextlink/v1/session?region=2&deviceId=%s&cscUID=%s",
 			"DELETE_SESSION_URL":"https://%s/nis/nextlink/v1/session"
 		}
