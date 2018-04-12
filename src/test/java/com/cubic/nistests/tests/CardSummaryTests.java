@@ -47,6 +47,15 @@ public class CardSummaryTests extends NextLinkBase {
 		LOG.info("TestCase_Description=" + testCaseName);
 
 		try {
+			javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
+					new javax.net.ssl.HostnameVerifier(){
+
+					    public boolean verify(String hostname,
+					            javax.net.ssl.SSLSession sslSession) {
+					        return true;
+					    }
+					});
+			
 			RESTActions restActions = setupAutomationTest(context, testCaseName);
 
 			// get headers
