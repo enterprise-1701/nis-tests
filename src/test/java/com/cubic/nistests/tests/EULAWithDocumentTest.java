@@ -59,11 +59,13 @@ public class EULAWithDocumentTest extends RESTEngine {
 	private static final String INFO_EULA_TYPE_DESC = "INFO_EULA_TYPE_DESC";
 	private static final String INFO_CREATE_DTM = "INFO_CREATE_DTM";
 	private static final String INFO_PUBLISHER_ID = "INFO_PUBLISHER_ID";
+	private static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
+	private static final String BAD_RESPONSE_CODE = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND ";
 	
 	/**
 	 * GET the EULA from NIS by eula-id and locale.
 	 * 
-	 * testRailId: 
+	 * testRailId: 621694
 	 * 
 	 * @param context 	The TestNG context reference.
 	 * @param data		The test data.
@@ -94,19 +96,18 @@ public class EULAWithDocumentTest extends RESTEngine {
 
 			LOG.info("##### Verifying HTTP response code...");
 			int status = clientResponse.getStatus();
-			String msg = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND " + status;
+			String msg = BAD_RESPONSE_CODE + status;
 			restActions.assertTrue(status == HttpURLConnection.HTTP_OK, msg);
 			
 			String response = clientResponse.getEntity(String.class);
 			LOG.info("##### Got the response body");
-			msg = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
-			restActions.assertTrue(response != null, msg);
+			restActions.assertTrue(response != null, RESPONSE_IS_NULL);
 			
 			Gson gson = new Gson();
 			LOG.info("##### Building the Expected WSInfoDocument test data...");
 			WSInfoDocument expectInfoDoc = buildExpectedInfoDoc( data );
 			
-			LOG.info("##### Parsing the Actual WSInfoDocument test data...");
+			LOG.info("##### Parsing the Actual WSInfoDocument test data from the API response...");
 			WSInfoDocument actualInfoDoc = gson.fromJson(response, WSInfoDocument.class);
 			
 			LOG.info("##### Comparing the Expected test data with the Actual test data...");
