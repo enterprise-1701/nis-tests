@@ -16,7 +16,7 @@
 			]
 		},
 		{
-			"RunMode": "N",
+			"RunMode": "Y",
 			"TestCase_Description": "575645:Self-Service CRM - Customer Prevalidate - Success",
 			"username" : "myname2",
 			"password" : "mypassword2",
