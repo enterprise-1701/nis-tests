@@ -1,9 +1,9 @@
 package com.cubic.nistests.tests;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedHashMap;
-import java.util.List;
+//import java.util.List;
 
 import org.apache.log4j.Logger;
 //import org.json.simple.JSONArray;
@@ -11,29 +11,29 @@ import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
-import com.cubic.backoffice.apiobjects.WSCustomerContact;
-import com.cubic.backoffice.apiobjects.WSErrors;
+//import com.cubic.backoffice.apiobjects.WSCustomerContact;
+//import com.cubic.backoffice.apiobjects.WSErrors;
 import com.cubic.backoffice.BaseTest.BaseTest;
-import com.cubic.backoffice.utils.BackOfficeUtils;
+//import com.cubic.backoffice.utils.BackOfficeUtils;
 //import com.cubic.backoffice.utils.GenericConstantsUtils;
 
-import com.cubic.nisjava.api.CRMCustomerCredentialPrevalidatePOST;
-import com.cubic.nisjava.apiobjects.CRMCustomerCredentialPrevalidatePostObj;
-import com.cubic.nisjava.apiobjects.CRMCustomerCredentialPrevalidateRespObj;
-import com.cubic.nisjava.apiutils.CRMCustomerCredentialPrevalidateUtils;
+//import com.cubic.nisjava.api.CRMCustomerCredentialPrevalidatePOST;
+//import com.cubic.nisjava.apiobjects.CRMCustomerCredentialPrevalidatePostObj;
+//import com.cubic.nisjava.apiobjects.CRMCustomerCredentialPrevalidateRespObj;
+//import com.cubic.nisjava.apiutils.CRMCustomerCredentialPrevalidateUtils;
 import com.cubic.nisjava.constants.AppConstants;
 //import com.cubic.nisjava.constants.NISObj;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
-import com.cubic.nisjava.testcaseobjects.SelfServiceCRM_CustomerPrevalidate_Object;
-import com.cubic.nisjava.testcaseutils.SelfServiceCRM_CustomerLogin_Utils;
-import com.cubic.nisjava.utils.APICommonUtils;
-import com.jayway.jsonpath.Configuration;
+//import com.cubic.nisjava.testcaseobjects.SelfServiceCRM_CustomerPrevalidate_Object;
+//import com.cubic.nisjava.testcaseutils.SelfServiceCRM_CustomerLogin_Utils;
+//import com.cubic.nisjava.utils.APICommonUtils;
+//import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 
 import net.minidev.json.JSONArray;
-import net.minidev.json.JSONObject;
+//import net.minidev.json.JSONObject;
 
-import android.util.Log;
+//import android.util.Log;
 
 public class SelfServiceCRM_CustomerPrevalidate_Success extends BaseTest {
 
