@@ -1,0 +1,12 @@
+{
+	"getEULA": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "633247:EULAWithBadEulaIdTest",
+			"testRailId":"633247",
+			"LOC_LOCALE_TAG":"en",	
+			"INFO_EULA_ID":"1"
+		}
+	]
+}
