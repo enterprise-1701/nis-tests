@@ -19,12 +19,10 @@
 			<class name="com.cubic.nistests.tests.EULAWithDocumentTest"/>
 			<class name="com.cubic.nistests.tests.EULAWithBadLocaleTest"/> 
 		    <class name="com.cubic.nistests.tests.EULAWithBadEulaIdTest"/>
-		    <class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-
-		    <!-- 
 		    <class name="com.cubic.nistests.tests.CardSummaryTests"/>
-		    <class name="com.cubic.nistests.tests.ProductCatalogTests"/>     
-		     -->
+		    <class name="com.cubic.nistests.tests.ProductCatalogTests"/> 
+		    <class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+<!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
