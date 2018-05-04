@@ -1,0 +1,20 @@
+{
+	"getNameTitles": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "685849:NameTitlesTest",
+			"testRailId":"685849",
+			"NAMETITLE_KEY_MR":"Mr",
+			"NAMETITLE_VAL_MR":"Mr",
+			"NAMETITLE_KEY_MRS":"Mrs",
+			"NAMETITLE_VAL_MRS":"Mrs",
+			"NAMETITLE_KEY_MISS":"Miss",
+			"NAMETITLE_VAL_MISS":"Miss",
+			"NAMETITLE_KEY_MS":"Ms",
+			"NAMETITLE_VAL_MS":"Ms",
+			"NAMETITLE_KEY_DR":"Doctor",
+			"NAMETITLE_VAL_DR":"Dr"			
+		}
+	]
+}
