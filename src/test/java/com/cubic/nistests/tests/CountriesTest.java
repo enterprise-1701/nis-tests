@@ -87,56 +87,72 @@ public class CountriesTest extends RESTEngine {
 	 * @param response  The API response in String form.
 	 */
 	private void verifyResponse(RESTActions restActions, Hashtable<String, String> data, String response) {
-		String msg = "";
-		LOG.info("##### Parse the actual response...");
-		Gson gson = new Gson();
-		WSCountryList countryListActual = gson.fromJson(response, WSCountryList.class);
+		LOG.info("##### Test the actual response...");
+		
 		boolean bFoundCountry = false;
-		LOG.info("##### Test the list of countries...");
-
+		boolean bNumStates = false;
+		boolean bState = false;
+		boolean bDesc = false;
+		
+		String msg = "";
+		String actualState = "";
+		String expectedDescription = "";
+		String actualDescription = "";
 		String expectedStateKey = data.get("EXPECTED_STATE_KEY");
 		String expectedStateVal = data.get("EXPECTED_STATE_VALUE");
 		String sExpectedNumStates = data.get("EXPECTED_NUM_US_STATES");
 		String sExpectedCountryName = data.get("EXPECTED_COUNTRY_NAME");
 		String sExpectedCountryDesc = data.get("EXPECTED_COUNTRY_DESC");
+		
+		int exectedNumStates = Integer.valueOf(sExpectedNumStates);
+		int actualNumStates = 0;
+		
+		Gson gson = new Gson();
+		WSCountryList countryListActual = gson.fromJson(response, WSCountryList.class);
+		
 		for (WSCountry country : countryListActual.getCountries()) {
 
 			if (sExpectedCountryName.equals(country.getCountry())) {
 				bFoundCountry = true;
 
-				String expectedDescription = sExpectedCountryDesc;
-				String actualDescription = country.getDescription();
-				boolean bDesc = expectedDescription.equals(actualDescription);
-				if (!bDesc) {
-					msg = String.format("BAD DESCRIPTION: EXPECTED %s FOUND %s", expectedDescription,
-							actualDescription);
-				}
-				restActions.assertTrue(bDesc, msg);
-
-				int exectedNumStates = Integer.valueOf(sExpectedNumStates);
-				int actualNumStates = country.getStates().size();
-				boolean bNumStates = exectedNumStates == actualNumStates;
-				if (!bNumStates) {
-					msg = String.format("BAD STATELIST SIZE: EXPECTED %s FOUND %s", exectedNumStates, actualNumStates);
-				}
-				restActions.assertTrue(bNumStates, msg);
+				expectedDescription = sExpectedCountryDesc;
+				actualDescription = country.getDescription();
+				bDesc = expectedDescription.equals(actualDescription);
+	
+				actualNumStates = country.getStates().size();
+				bNumStates = exectedNumStates == actualNumStates;
 
 				for (WSState state : country.getStates()) {
 					if (expectedStateKey.equals(state.getKey())) {
-
-						String actualState = state.getValue();
-						boolean bState = expectedStateVal.equals(actualState);
-						if (!bState) {
-							msg = String.format("BAD STATE NAME: EXPECTED %s FOUND %s", expectedStateVal, actualState);
-						}
-						restActions.assertTrue(bState, msg);
+						actualState = state.getValue();
+						bState = expectedStateVal.equals(actualState);
 						break;
 					}
 				}
 				break;
 			}
 		}
+		LOG.info("##### test that the country was found...");
 		restActions.assertTrue(bFoundCountry, "COUNTRY WAS NOT FOUND");
+		
+		LOG.info("##### verify the country description...");
+		if (!bDesc) {
+			msg = String.format("BAD DESCRIPTION: EXPECTED %s FOUND %s", expectedDescription,
+					actualDescription);
+		}
+		restActions.assertTrue(bDesc, msg);
+		
+		LOG.info("##### verify the correct number of states was found...");
+		if (!bNumStates) {
+			msg = String.format("BAD STATELIST SIZE: EXPECTED %s FOUND %s", exectedNumStates, actualNumStates);
+		}
+		restActions.assertTrue(bNumStates, msg);
+		
+		LOG.info("##### verify the state name was found...");
+		if (!bState) {
+			msg = String.format("BAD STATE NAME: EXPECTED %s FOUND %s", expectedStateVal, actualState);
+		}
+		restActions.assertTrue(bState, msg);
 	}
 
 	/**
