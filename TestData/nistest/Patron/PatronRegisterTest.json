@@ -1,0 +1,654 @@
+{
+	"patronRegister": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_ValidData_C339774": "339774:verifyPatronRegister",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithinvalidUsername": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_InvalidUsername_C339775":"339775:verifyPatronRegisterWithInvalidUsername",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+			"Invalid_Username":"",
+			"InvalidUsername_errorMessage":"errors.general.value.required"
+			}
+	],
+	"patronRegisterWithPasswordMaxlength": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_PasswordMaxlength_C360689":"360689:verifyPatronRegisterWithPasswordMaxlength",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+			"Password_Max_length_errorMessage":"errors.general.value.toolong",
+			"Password_Max_length":"K!akz58j!test test test test test test test test test test test test test test test test test test"
+			}
+	],
+	"patronRegisterWithNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_NameBlank_C360697":"360697:verifyPatronAccountWithNameBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithFirstNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_FirstNameBlank_C360698":"360698:verifyPatronAccountWithFirstNameBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Firstname_blank":""
+		}
+	],
+	"patronRegisterWithFirstNametoolang": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_FirstNametoolang_C360700":"360700:verifyPatronAccountWithFirstNametoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Firstname_toolong":"JohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJoh"
+			
+		}
+	],
+	"patronRegisterWithLastNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_LastNameBlank_C360705":"360705:verifyPatronAccountWithLastNameBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+		    }
+	],
+	"patronRegisterWithLastNametoolang": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_LastNametoolang_C360706":"360706:verifyPatronAccountWithLastNametoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Lastname_toolong":"JohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJohnJoh"
+			}
+	],
+	"patronRegisterWithAddressBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_AddressBlank_C360709":"360709:verifyPatronAccountWithAddressBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+		}
+	],
+	"patronRegisterWithAddress1FieldBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_Address1Blank_C360711":"360711:verifyPatronAccountWithAddress1Blank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Address1_Field_Blank": ""
+			}
+	],
+	"patronRegisterWithAddress1toolong": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_Address1toolong_C360712":"360712:verifyPatronAccountWithAddress1toolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Address1_Field_toolong": "test test test test test test test test test test test"
+			}
+	],
+	"patronRegisterWithAddress2toolong": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_Address2toolong_C360713":"360713:verifyPatronAccountWithAddress2toolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Address2_Field_toolong": "test test test test test test test test test test test"
+			}
+	],
+	"patronRegisterWithCityBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_CityBlank_C360715":"360715:verifyPatronAccountWithCityBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+		}
+	],
+	"patronRegisterWithCitytoolong": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_Citytoolong_C360716":"360716:verifyPatronAccountWithCitytoolong",
+			 "FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "City_toolong":"test test test test  test test test test test test test test test test test test test test test"
+			
+		}
+	],
+	"patronRegisterWithSateIdBlank": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_StateIDBlank_C360719":"360719:verifyPatronAccountWithStateBlank",
+			 "FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			
+		}
+	],
+	"patronRegisterWithInvalidSate": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_InvalidState_C360720":"360720:verifyPatronAccountWithInvalidState",
+			 "FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		     "Invalid_State":"XX"
+		     
+		     }
+	],
+	"patronRegisterWithCountryBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_CountryBlank_C360722":"360722:verifyPatronAccountWithCountryBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],"patronRegisterWithInvalidCountry": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_InvalidCountry_C360723":"360723:verifyPatronAccountWithInvalidCountryId",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Invalid_Country":"XX"
+			}
+	],
+	"patronRegisterWithPostalCodeBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_PostalCodeBlank_C360724":"360724:verifyPatronAccountWithPostalCodeBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithInvalidPostalCode": [
+		{
+			"RunMode": "Y",
+	        "TestCase_Description_InvalidPostalCode_C360725":"360725:verifyPatronAccountWithInvalidPostalCode",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		      "Invalid_PostalCode":"999999999999999999999999"
+			}
+	],
+	"patronRegisterWithPhoneBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_PhoneBlank_C360728":"360728:verifyPatronAccountWithPhoneBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithPhonetoolong": [
+		{
+			"RunMode": "Y",
+		"TestCase_Description_Phonetoolong_C360729":"360729:verifyPatronAccountWithPhonetoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithPhoneNumberBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description_PhoneNumberBlank_C360730":"360730:verifyPatronAccountWithPhoneNumberBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithInvalidPhoneNumber": [
+		{
+			"RunMode": "Y",
+		 "TestCase_Description_InvalidPhoneNumber_C360732":"360732:verifyPatronAccountWithInvalidPhoneNumber",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Invalid_PhoneNumber":"1234567890"
+			}
+	],
+	"patronRegisterWithPhoneTypeBlank": [
+		{
+			"RunMode": "Y",
+		  "TestCase_Description_PhoneTypeBlank_C360734":"360734:verifyPatronAccountWithPhoneTypeBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithInvalidPhoneType": [
+		{
+			"RunMode": "Y",
+	        "TestCase_Description_InvalidPhoneType_C360733":"360733:verifyPatronAccountWithInvalidPhoneType",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	],
+	"patronRegisterWithEmailtoolong": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_Emailtoolong_C360739":"360739:verifyPatronAccountWithEmailtoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		     "Email_toolong":"ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911@mobile.com"
+			}
+	],
+	"patronRegisterWithEmailWithSpecialChars": [
+		{
+			"RunMode": "Y",
+	"TestCase_Description_EmailSpecialChars_C360741":"360741:verifyPatronAccountWithEmailSpecialChars",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Email_SpecialChars":"@.!!!ventrapp91111mobile.com"
+			}
+	],
+	"patronRegisterWithEmailWithInvalidFormat": [
+		{
+			"RunMode": "Y",
+		 "TestCase_Description_EmailInvalidFormat_C360742":"360742:verifyPatronAccountWithEmailInvalidFormat",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "Email_InvalidFormat":"ventra.comcmt068@mailiantorcom"
+			}
+	],
+	"patronRegisterWithEmailWithSecurityAnswertoolong": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_SecurityAnswertoolong_C360744":"360744:verifyPatronAccountWithSecurityAnswertoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "securityAnswer_toolong": "wyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemotherwyanemoth"
+			}
+	],
+	"patronRegisterWithEmailWithIVRPintoolong": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_IVRPintoolong_C360746":"360746:verifyPatronAccountWithIVRPINtoolong",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "IVRPin_toolong":"1234123456"
+			}
+	],
+	"patronRegisterWithEmailWithIVRPintoosmall": [
+		{
+			"RunMode": "Y",
+		"TestCase_Description_IVRPintoosmall_C360747":"360747:verifyPatronAccountWithIVRPINtoosmall",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "IVRPin_toosmall":"11"
+			}
+	],
+	"patronRegisterWithEmailWithIVRPinInvalid": [
+		{
+			"RunMode": "Y",
+			 "TestCase_Description_IVRPinInvalid_C360748":"360748:verifyPatronAccountWithIVRPINInvalid",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother",
+		    "IVRPin_Invalid":"12te"
+			}
+	]
+}
