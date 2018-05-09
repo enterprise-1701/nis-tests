@@ -108,26 +108,6 @@ public class PhoneTypesTest extends RESTEngine {
 		WSPhoneTypeList result = new WSPhoneTypeList();
 		List<WSPhoneType> phoneTypeList = new ArrayList<WSPhoneType>();
 		
-		WSPhoneType home = new WSPhoneType();
-		home.setKey( data.get("PHONETYPE_KEY_H") );
-		home.setValue(data.get("PHONETYPE_VAL_H"));
-		phoneTypeList.add( home );
-		
-		WSPhoneType fax = new WSPhoneType();
-		fax.setKey(data.get("PHONETYPE_KEY_F"));
-		fax.setValue(data.get("PHONETYPE_VAL_F"));
-		phoneTypeList.add( fax );
-		
-		WSPhoneType mobile = new WSPhoneType();
-		mobile.setKey(data.get("PHONETYPE_KEY_M"));
-		mobile.setValue(data.get("PHONETYPE_VAL_M"));
-		phoneTypeList.add( mobile );
-		
-		WSPhoneType work = new WSPhoneType();
-		work.setKey(data.get("PHONETYPE_KEY_W"));
-		work.setValue(data.get("PHONETYPE_VAL_W"));
-		phoneTypeList.add( work );
-		
 		WSPhoneType daytime = new WSPhoneType();
 		daytime.setKey(data.get("PHONETYPE_KEY_D"));
 		daytime.setValue(data.get("PHONETYPE_VAL_D"));
@@ -136,17 +116,37 @@ public class PhoneTypesTest extends RESTEngine {
 		WSPhoneType evening = new WSPhoneType();
 		evening.setKey(data.get("PHONETYPE_KEY_E"));
 		evening.setValue(data.get("PHONETYPE_VAL_E"));
-		phoneTypeList.add( evening );		
+		phoneTypeList.add( evening );
+		
+		WSPhoneType fax = new WSPhoneType();
+		fax.setKey(data.get("PHONETYPE_KEY_F"));
+		fax.setValue(data.get("PHONETYPE_VAL_F"));
+		phoneTypeList.add( fax );
+		
+		WSPhoneType home = new WSPhoneType();
+		home.setKey( data.get("PHONETYPE_KEY_H") );
+		home.setValue(data.get("PHONETYPE_VAL_H"));
+		phoneTypeList.add( home );
+		
+		WSPhoneType mobile = new WSPhoneType();
+		mobile.setKey(data.get("PHONETYPE_KEY_M"));
+		mobile.setValue(data.get("PHONETYPE_VAL_M"));
+		phoneTypeList.add( mobile );
+		
+		WSPhoneType other = new WSPhoneType();
+		other.setKey(data.get("PHONETYPE_KEY_O"));
+		other.setValue(data.get("PHONETYPE_VAL_O"));
+		phoneTypeList.add( other );
 		
 		WSPhoneType pager = new WSPhoneType();
 		pager.setKey(data.get("PHONETYPE_KEY_P"));
 		pager.setValue(data.get("PHONETYPE_VAL_P"));
-		phoneTypeList.add( pager );		
-	
-		WSPhoneType other = new WSPhoneType();
-		other.setKey(data.get("PHONETYPE_KEY_O"));
-		other.setValue(data.get("PHONETYPE_VAL_O"));
-		phoneTypeList.add( other );		
+		phoneTypeList.add( pager );
+		
+		WSPhoneType work = new WSPhoneType();
+		work.setKey(data.get("PHONETYPE_KEY_W"));
+		work.setValue(data.get("PHONETYPE_VAL_W"));
+		phoneTypeList.add( work );
 		
 		result.setPhoneTypes(phoneTypeList);
 		return result;

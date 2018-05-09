@@ -1,0 +1,16 @@
+{
+	"tryToGetEULAWithBadIdAndLocaleCombination": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "698268:EULA_API_BAD_ID_LOCALE_COMBO",
+			"testRailId":"698268",
+			"LOC_LOCALE_TAG":"es",	
+			"INFO_EULA_ID":"100",
+			"RETURN_DOCUMENT":"false",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"locale",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"
+		}
+	]
+}

@@ -98,6 +98,31 @@ public class NameTitlesTest extends RESTEngine {
 		WSNameTitleList result = new WSNameTitleList();
 		List<WSNameTitle> nameTitleList = new ArrayList<WSNameTitle>();
 		
+		WSNameTitle dame = new WSNameTitle();
+		dame.setKey(data.get("NAMETITLE_KEY_DAME"));
+		dame.setValue(data.get("NAMETITLE_VAL_DAME"));
+		nameTitleList.add( dame );
+		
+		WSNameTitle dr = new WSNameTitle();
+		dr.setKey(data.get("NAMETITLE_KEY_DR"));
+		dr.setValue(data.get("NAMETITLE_VAL_DR"));
+		nameTitleList.add( dr );		
+		
+		WSNameTitle lady = new WSNameTitle();
+		lady.setKey(data.get("NAMETITLE_KEY_LADY"));
+		lady.setValue(data.get("NAMETITLE_VAL_LADY"));
+		nameTitleList.add( lady );
+		
+		WSNameTitle lord = new WSNameTitle();
+		lord.setKey(data.get("NAMETITLE_KEY_LORD"));
+		lord.setValue(data.get("NAMETITLE_VAL_LORD"));
+		nameTitleList.add( lord );
+		
+		WSNameTitle miss = new WSNameTitle();
+		miss.setKey(data.get("NAMETITLE_KEY_MISS"));
+		miss.setValue(data.get("NAMETITLE_VAL_MISS"));
+		nameTitleList.add( miss );
+		
 		WSNameTitle mr = new WSNameTitle();
 		mr.setKey(data.get("NAMETITLE_KEY_MR"));
 		mr.setValue(data.get("NAMETITLE_VAL_MR"));
@@ -108,20 +133,30 @@ public class NameTitlesTest extends RESTEngine {
 		mrs.setValue(data.get("NAMETITLE_VAL_MRS"));
 		nameTitleList.add( mrs );
 		
-		WSNameTitle miss = new WSNameTitle();
-		miss.setKey(data.get("NAMETITLE_KEY_MISS"));
-		miss.setValue(data.get("NAMETITLE_VAL_MISS"));
-		nameTitleList.add( miss );
-		
 		WSNameTitle ms = new WSNameTitle();
 		ms.setKey(data.get("NAMETITLE_KEY_MS"));
 		ms.setValue(data.get("NAMETITLE_VAL_MS"));
 		nameTitleList.add( ms );
 		
-		WSNameTitle dr = new WSNameTitle();
-		dr.setKey(data.get("NAMETITLE_KEY_DR"));
-		dr.setValue(data.get("NAMETITLE_VAL_DR"));
-		nameTitleList.add( dr );
+		WSNameTitle prof = new WSNameTitle();
+		prof.setKey(data.get("NAMETITLE_KEY_PROF"));
+		prof.setValue(data.get("NAMETITLE_VAL_PROF"));
+		nameTitleList.add( prof );
+		
+		WSNameTitle rev = new WSNameTitle();
+		rev.setKey(data.get("NAMETITLE_KEY_REV"));
+		rev.setValue(data.get("NAMETITLE_VAL_REV"));
+		nameTitleList.add( rev );
+		
+		WSNameTitle sir = new WSNameTitle();
+		sir.setKey(data.get("NAMETITLE_KEY_SIR"));
+		sir.setValue(data.get("NAMETITLE_VAL_SIR"));
+		nameTitleList.add( sir );		
+		
+		WSNameTitle sr = new WSNameTitle();
+		sr.setKey(data.get("NAMETITLE_KEY_SR"));
+		sr.setValue(data.get("NAMETITLE_VAL_SR"));
+		nameTitleList.add( sr );		
 		
 		result.setNameTitles(nameTitleList);
 		return result;

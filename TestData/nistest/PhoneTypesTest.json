@@ -5,22 +5,30 @@
 			"RunMode": "Y",
 			"TestCase_Description": "685823:PhoneTypesTest",
 			"testRailId":"685823",
-			"PHONETYPE_KEY_H":"H",
-			"PHONETYPE_VAL_H":"Home",
-			"PHONETYPE_KEY_F":"F",
-			"PHONETYPE_VAL_F":"Fax",
-			"PHONETYPE_KEY_M":"M",
-			"PHONETYPE_VAL_M":"Mobile",
-			"PHONETYPE_KEY_W":"W",
-			"PHONETYPE_VAL_W":"Work",
+			
 			"PHONETYPE_KEY_D":"D",
-			"PHONETYPE_VAL_D":"DayTime",
+			"PHONETYPE_VAL_D":"Day Time",
+			
 			"PHONETYPE_KEY_E":"E",
 			"PHONETYPE_VAL_E":"Evening",
+			
+			"PHONETYPE_KEY_F":"F",
+			"PHONETYPE_VAL_F":"Fax",			
+			
+			"PHONETYPE_KEY_H":"H",
+			"PHONETYPE_VAL_H":"Home",
+
+			"PHONETYPE_KEY_M":"M",
+			"PHONETYPE_VAL_M":"Mobile",
+			
+			"PHONETYPE_KEY_O":"O",
+			"PHONETYPE_VAL_O":"Other",
+			
 			"PHONETYPE_KEY_P":"P",
 			"PHONETYPE_VAL_P":"Pager",
-			"PHONETYPE_KEY_O":"O",
-			"PHONETYPE_VAL_O":"Other"
+			
+			"PHONETYPE_KEY_W":"W",
+			"PHONETYPE_VAL_W":"Work"
 		}
 	]
 }
