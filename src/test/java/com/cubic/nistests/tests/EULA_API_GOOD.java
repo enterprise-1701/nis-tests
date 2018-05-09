@@ -20,7 +20,13 @@ import com.cubic.nisjava.apiobjects.WSInfoDocument;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 
-public class EULA_API_GOOD extends RESTEngine {
+/**
+ * This is the base class for the set of Positive EULA test cases.
+ *  
+ * @author 203402
+ *
+ */
+public abstract class EULA_API_GOOD extends RESTEngine {
 
 	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
 	protected static final String LOC_LANGUAGE = "LOC_LANGUAGE";
@@ -54,6 +60,13 @@ public class EULA_API_GOOD extends RESTEngine {
 	protected static final String BAD_RESPONSE_CODE = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND ";
 	protected static final String RETURN_DOCUMENT = "RETURN_DOCUMENT";
 	
+	/**
+	 * Test method to return a EULA document.
+	 * 
+	 * @param context  The testNG context object.
+	 * @param data  Test Data from the JSON input file.
+	 * @throws Throwable  Thrown if something goes wrong.
+	 */
 	public void mainTest(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		String testCaseName = data.get("TestCase_Description");
 		LOG.info("##### Starting Test Case " + testCaseName);
