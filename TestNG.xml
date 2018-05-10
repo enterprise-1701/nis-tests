@@ -31,7 +31,7 @@
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-
+<!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

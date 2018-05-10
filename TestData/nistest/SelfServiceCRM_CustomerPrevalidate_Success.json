@@ -1,0 +1,33 @@
+{
+	"SelfServiceCRM_CustomerPrevalidate_Success_Test": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "575645:Self-Service CRM - Customer Prevalidate - Success",
+			"username" : "myname",
+			"password" : "mypassword",
+			"isUsernameValid_Expected" : "true",
+			"usernameErrors" : [
+				{"key" : "errors.general.value.toolong", "message" : "Too long"}
+			],
+			"isPasswordValid_Expected" : "true",
+			"passwordErrors" : [
+				{"key" : "", "message" : ""}
+			]
+		},
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "575645:Self-Service CRM - Customer Prevalidate - Success",
+			"username" : "myname2",
+			"password" : "mypassword2",
+			"isUsernameValid_Expected" : "true",
+			"usernameErrors" : [
+				{"key" : "errors.general.value.duplicate", "message" : "Duplicate"}
+			],
+			"isPasswordValid_Expected" : "true",
+			"passwordErrors" : [
+				{"key" : "", "message" : ""}
+			]			
+		}
+	]
+}
