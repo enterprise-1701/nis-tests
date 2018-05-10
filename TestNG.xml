@@ -20,10 +20,10 @@
 			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
-			<class name="com.cubic.nistests.tests.SecurityQuestionsTest"/>
-			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
-			
+			<class name="com.cubic.nistests.tests.SecurityQuestionsTest"/>	
+			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>
+						 
 			<class name="com.cubic.nistests.tests.EULA_API_GOOD_WITHOUT_DOC"/>
 			<class name="com.cubic.nistests.tests.EULA_API_GOOD_WITH_DOC"/>
 			<class name="com.cubic.nistests.tests.EULA_API_BAD_LOCALE"/>
@@ -31,7 +31,7 @@
 			<class name="com.cubic.nistests.tests.EULA_API_BAD_ID_LOCALE_COMBO"/>			  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-			 		
+		
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

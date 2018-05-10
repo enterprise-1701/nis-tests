@@ -6,41 +6,20 @@
 			"TestCase_Description": "685849:NameTitlesTest",
 			"testRailId":"685849",
 			
-			"NAMETITLE_KEY_DAME":"Dame",
-			"NAMETITLE_VAL_DAME":"Dame",
-			
-			"NAMETITLE_KEY_DR":"Dr",
-			"NAMETITLE_VAL_DR":"Doctor",
-			
-			"NAMETITLE_KEY_LADY":"Lady",
-			"NAMETITLE_VAL_LADY":"Lady",
-			
-			"NAMETITLE_KEY_LORD":"Lord",
-			"NAMETITLE_VAL_LORD":"Lord",
-			
-			"NAMETITLE_KEY_MISS":"Miss",
-			"NAMETITLE_VAL_MISS":"Miss",			
-			
 			"NAMETITLE_KEY_MR":"Mr",
 			"NAMETITLE_VAL_MR":"Mr",
 			
 			"NAMETITLE_KEY_MRS":"Mrs",
 			"NAMETITLE_VAL_MRS":"Mrs",
-
+			
+			"NAMETITLE_KEY_MISS":"Miss",
+			"NAMETITLE_VAL_MISS":"Miss",
+			
 			"NAMETITLE_KEY_MS":"Ms",
 			"NAMETITLE_VAL_MS":"Ms",
 			
-			"NAMETITLE_KEY_PROF":"Prof",
-			"NAMETITLE_VAL_PROF":"Professor",
-			
-			"NAMETITLE_KEY_REV":"Rev",
-			"NAMETITLE_VAL_REV":"Reverend",
-			
-			"NAMETITLE_KEY_SIR":"Sir",
-			"NAMETITLE_VAL_SIR":"Sir",
-			
-			"NAMETITLE_KEY_SR":"Sr",
-			"NAMETITLE_VAL_SR":"Sister"			
+			"NAMETITLE_KEY_DR":"Doctor",
+			"NAMETITLE_VAL_DR":"Dr"			
 		}
 	]
 }

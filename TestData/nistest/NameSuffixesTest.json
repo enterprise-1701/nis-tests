@@ -5,12 +5,12 @@
 			"RunMode": "Y",
 			"TestCase_Description": "685746:NameSuffixesTest",
 			"testRailId":"685746",
-			"NAMESUFFIXES_KEY_1":"Esq.",
-			"NAMESUFFIXES_VALUE_1":"Esq.",
-			"NAMESUFFIXES_KEY_2":"Jr.",
-			"NAMESUFFIXES_VALUE_2":"Jr.",
-			"NAMESUFFIXES_KEY_3":"Sr.",
-			"NAMESUFFIXES_VALUE_3":"Sr."
+			"NAMESUFFIXES_KEY_1":"1",
+			"NAMESUFFIXES_VALUE_1":"Junior",
+			"NAMESUFFIXES_KEY_2":"2",
+			"NAMESUFFIXES_VALUE_2":"Senior",
+			"NAMESUFFIXES_KEY_3":"3",
+			"NAMESUFFIXES_VALUE_3":"Esquire"
 		}
 	]
 }
