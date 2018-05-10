@@ -3,7 +3,7 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "633247:EULA_API_BAD_ID",
+			"TestCase_Description": "633247:EULAAPIBadId",
 			"testRailId":"633247",
 			"LOC_LOCALE_TAG":"en",	
 			"INFO_EULA_ID":"1",

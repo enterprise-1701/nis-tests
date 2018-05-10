@@ -1,11 +1,11 @@
 {
-	"tryToGetEULAWithBadLocale": 
+	"tryToGetEULAWithBadIdAndLocaleCombination": 
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "633286:EULA_API_BAD_LOCALE",
-			"testRailId":"633286",
-			"LOC_LOCALE_TAG":"is",	
+			"TestCase_Description": "698268:EULAAPIBadIdLocaleCombo",
+			"testRailId":"698268",
+			"LOC_LOCALE_TAG":"es",	
 			"INFO_EULA_ID":"100",
 			"RETURN_DOCUMENT":"false",
 			"EXPECTED_RESULT":"DataValidationError",

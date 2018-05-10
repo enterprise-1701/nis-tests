@@ -21,7 +21,7 @@ import com.sun.jersey.api.client.ClientResponse;
  * @author 203402
  *
  */
-public abstract class EULA_API_BAD extends RESTEngine {
+public abstract class EULAAPIBad extends RESTEngine {
 
 	private final Logger LOG = Logger.getLogger(this.getClass().getName());	
 	private static final String INFO_EULA_ID = "INFO_EULA_ID";
@@ -112,3 +112,4 @@ public abstract class EULA_API_BAD extends RESTEngine {
 		}    
 	}	
 }
+

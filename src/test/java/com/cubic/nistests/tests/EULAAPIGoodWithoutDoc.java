@@ -13,7 +13,7 @@ import com.cubic.nisjava.apiobjects.WSInfoDocument;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 
-public class EULA_API_GOOD_WITHOUT_DOC extends EULA_API_GOOD {
+public class EULAAPIGoodWithoutDoc extends EULAAPIGood {
 
 	/**
 	 * Lookup the EULA Info from NIS by eula-id and locale.
@@ -85,3 +85,4 @@ public class EULA_API_GOOD_WITHOUT_DOC extends EULA_API_GOOD {
 		return infoDoc;
 	}
 }
+

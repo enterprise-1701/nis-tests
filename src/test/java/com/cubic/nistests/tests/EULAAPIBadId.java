@@ -8,25 +8,22 @@ import org.testng.annotations.Test;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 
-public class EULA_API_BAD_ID_LOCALE_COMBO extends EULA_API_BAD {
+public class EULAAPIBadId extends EULAAPIBad {
 
 	/**
-	 * Try to Get a EULA using a non-existent combination of eulaId and locale,
-	 * i.e., the eualId refers to a real document which doesn't have the given
-	 * locale.
+	 * Try to get a EULA giving a non-existent EulaId
+	 * in order to elicit a errors.general.record.not.found
+	 * error.
 	 * 
-	 * testRailId: 698268
-	 * 
-	 * There's a defect assoc'd with this Test Case
-	 * 
-	 *  @see https://jira.cts.cubic.cub/browse/CCBO-13057
+	 * testRailId: 633247
 	 * 
 	 * @param context 	The TestNG context reference.
 	 * @param data		The test data.
 	 * @throws Throwable Thrown if something goes wrong.
 	 */
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderSource.class)
-	public void tryToGetEULAWithBadIdAndLocaleCombination(ITestContext context, Hashtable<String, String> data) throws Throwable {
+	public void tryToGetEULAWithBadId(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		mainTest( context, data );
 	}
 }
+

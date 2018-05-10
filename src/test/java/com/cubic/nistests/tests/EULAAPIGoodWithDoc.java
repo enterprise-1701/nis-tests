@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 
-public class EULA_API_GOOD_WITH_DOC extends EULA_API_GOOD {
+public class EULAAPIGoodWithDoc extends EULAAPIGood {
 	
 	/**
 	 * GET the EULA from NIS by eula-id and locale.
@@ -24,3 +24,4 @@ public class EULA_API_GOOD_WITH_DOC extends EULA_API_GOOD {
 		mainTest( context, data );
 	}
 }
+

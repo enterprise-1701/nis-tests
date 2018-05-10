@@ -26,7 +26,7 @@ import com.sun.jersey.api.client.ClientResponse;
  * @author 203402
  *
  */
-public abstract class EULA_API_GOOD extends RESTEngine {
+public abstract class EULAAPIGood extends RESTEngine {
 
 	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
 	protected static final String LOC_LANGUAGE = "LOC_LANGUAGE";

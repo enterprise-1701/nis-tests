@@ -3,7 +3,7 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "621694:EULA_API_GOOD_WITH_DOC",
+			"TestCase_Description": "621694:EULAAPIGoodWithDoc",
 			"testRailId":"621694",
 			
 			"LOC_LANGUAGE":"English",
@@ -39,7 +39,7 @@
 		},
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "621694:EULA_API_GOOD_WITH_DOC",
+			"TestCase_Description": "621694:EULAAPIGoodWithDoc",
 			"testRailId":"621694",
 			
 			"LOC_LANGUAGE":"Spanish",
