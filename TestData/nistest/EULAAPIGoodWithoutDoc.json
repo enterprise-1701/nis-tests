@@ -1,0 +1,65 @@
+{
+	"getEULA": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "698330:EULAAPIGoodWithoutDoc",
+			"testRailId":"698330",
+			
+			"LOC_LANGUAGE":"English",
+			"LOC_LOCALE_ID":"103",
+			"LOC_LOCALE_TAG":"en",
+			"RETURN_DOCUMENT":"false",
+			
+			"INFO_EULA_ID":"100",
+			"INFO_EULA_TYPE":"REGISTERED_TRAVELER_NEW_USER",
+			"INFO_NAME":"Test EULA",
+			"INFO_NOTICE_DATE":"2018-04-06T00:01:00.000Z",
+			"INFO_EFFECTIVE_DATE":"2018-04-06T00:01:00.000Z",
+			"INFO_PUBLISH_DATE":"2018-04-06T00:07:01.698Z",
+			"INFO_EXPLICIT":"true",
+			"INFO_FEATURE":"General",
+			"INFO_CHANNEL":"Any",
+			"INFO_USER_TYPE":"Traveler_Primary",
+			"INFO_STATUS":"Inactive",
+			"INFO_ARCHIVE":"false",
+			"INFO_AUTHOR_ID":"ankit",
+			"INFO_FEATURE_DESC":"A non-specific feature",
+			"INFO_CHANNEL_DESC":"A non-specific channel",
+			"INFO_USER_TYPE_DESC":"Traveler primary contact or account owner",
+			"INFO_EULA_TYPE_DESC":"Registered Traveler",
+			"INFO_CREATE_DTM":"2018-04-06T00:03:32.486Z",
+			"INFO_PUBLISHER_ID":"ankit"
+		},
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "698330:EULAAPIGoodWithoutDoc",
+			"testRailId":"698330",
+			
+			"LOC_LANGUAGE":"Spanish",
+			"LOC_LOCALE_ID":"621",
+			"LOC_LOCALE_TAG":"es",
+			"RETURN_DOCUMENT":"false",
+			
+			"INFO_EULA_ID":"101",
+			"INFO_EULA_TYPE":"REGISTERED_TRAVELER_NEW_USER",
+			"INFO_NAME":"Test EULA_Clone",
+			"INFO_NOTICE_DATE":"2018-04-06T00:01:00.000Z",
+			"INFO_EFFECTIVE_DATE":"2018-04-06T00:01:00.000Z",
+			"INFO_PUBLISH_DATE":"2018-04-06T00:07:01.698Z",
+			"INFO_EXPLICIT":"true",
+			"INFO_FEATURE":"General",
+			"INFO_CHANNEL":"Any",
+			"INFO_USER_TYPE":"Traveler_Primary",
+			"INFO_STATUS":"Inactive",
+			"INFO_ARCHIVE":"false",
+			"INFO_AUTHOR_ID":"ankit",
+			"INFO_FEATURE_DESC":"A non-specific feature",
+			"INFO_CHANNEL_DESC":"A non-specific channel",
+			"INFO_USER_TYPE_DESC":"Traveler primary contact or account owner",
+			"INFO_EULA_TYPE_DESC":"Registered Traveler",
+			"INFO_CREATE_DTM":"2018-04-06T00:06:40.812Z",
+			"INFO_PUBLISHER_ID":"ankit"
+		}
+	]
+}

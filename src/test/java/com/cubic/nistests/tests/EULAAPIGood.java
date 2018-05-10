@@ -5,74 +5,69 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
-import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 import org.testng.ITestContext;
-import org.testng.annotations.Test;
 
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
 import com.cubic.accelerators.RESTEngine;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.backoffice.utils.BackOfficeUtils;
-import com.cubic.nisjava.constants.AppConstants;
-import com.cubic.nisjava.dataproviders.NISDataProviderSource;
-import com.sun.jersey.api.client.ClientResponse;
 import com.cubic.nisjava.apiobjects.WSCXSDocument;
 import com.cubic.nisjava.apiobjects.WSCXSInfo;
 import com.cubic.nisjava.apiobjects.WSCXSLocale;
 import com.cubic.nisjava.apiobjects.WSInfoDocument;
+import com.google.gson.Gson;
+import com.sun.jersey.api.client.ClientResponse;
 
 /**
- * Test class to GET a EULA from NIS.
- * 
+ * This is the base class for the set of Positive EULA test cases.
+ *  
  * @author 203402
  *
  */
-public class EULAWithDocumentTest extends RESTEngine {
-	
-	private final Logger LOG = Logger.getLogger(this.getClass().getName());
-	private static final String LOC_LANGUAGE = "LOC_LANGUAGE";
-	private static final String LOC_LOCALE_ID = "LOC_LOCALE_ID";
-	private static final String LOC_LOCALE_TAG = "LOC_LOCALE_TAG";
-	private static final String DOC_EULA_ID = "DOC_EULA_ID";
-	private static final String DOC_EULA_DOCUMENT_ID = "DOC_EULA_DOCUMENT_ID";
-	private static final String DOC_FORMAT = "DOC_FORMAT";
-	private static final String DOC_FILENAME = "DOC_FILENAME";
-	private static final String DOC_DOCUMENT = "DOC_DOCUMENT";
-	private static final String INFO_EULA_ID = "INFO_EULA_ID";
-	private static final String INFO_EULA_TYPE = "INFO_EULA_TYPE";
-	private static final String INFO_NAME = "INFO_NAME";
-	private static final String INFO_NOTICE_DATE = "INFO_NOTICE_DATE";
-	private static final String INFO_EFFECTIVE_DATE = "INFO_EFFECTIVE_DATE";
-	private static final String INFO_PUBLISH_DATE = "INFO_PUBLISH_DATE";
-	private static final String INFO_EXPLICIT = "INFO_EXPLICIT";
-	private static final String INFO_FEATURE = "INFO_FEATURE";
-	private static final String INFO_CHANNEL = "INFO_CHANNEL";
-	private static final String INFO_USER_TYPE = "INFO_USER_TYPE";
-	private static final String INFO_STATUS = "INFO_STATUS";
-	private static final String INFO_ARCHIVE = "INFO_ARCHIVE";
-	private static final String INFO_AUTHOR_ID = "INFO_AUTHOR_ID";
-	private static final String INFO_FEATURE_DESC = "INFO_FEATURE_DESC";
-	private static final String INFO_CHANNEL_DESC = "INFO_CHANNEL_DESC";
-	private static final String INFO_USER_TYPE_DESC = "INFO_USER_TYPE_DESC";
-	private static final String INFO_EULA_TYPE_DESC = "INFO_EULA_TYPE_DESC";
-	private static final String INFO_CREATE_DTM = "INFO_CREATE_DTM";
-	private static final String INFO_PUBLISHER_ID = "INFO_PUBLISHER_ID";
-	private static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
-	private static final String BAD_RESPONSE_CODE = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND ";
+public abstract class EULAAPIGood extends RESTEngine {
+
+	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
+	protected static final String LOC_LANGUAGE = "LOC_LANGUAGE";
+	protected static final String LOC_LOCALE_ID = "LOC_LOCALE_ID";
+	protected static final String LOC_LOCALE_TAG = "LOC_LOCALE_TAG";
+	protected static final String DOC_EULA_ID = "DOC_EULA_ID";
+	protected static final String DOC_EULA_DOCUMENT_ID = "DOC_EULA_DOCUMENT_ID";
+	protected static final String DOC_FORMAT = "DOC_FORMAT";
+	protected static final String DOC_FILENAME = "DOC_FILENAME";
+	protected static final String DOC_DOCUMENT = "DOC_DOCUMENT";
+	protected static final String INFO_EULA_ID = "INFO_EULA_ID";
+	protected static final String INFO_EULA_TYPE = "INFO_EULA_TYPE";
+	protected static final String INFO_NAME = "INFO_NAME";
+	protected static final String INFO_NOTICE_DATE = "INFO_NOTICE_DATE";
+	protected static final String INFO_EFFECTIVE_DATE = "INFO_EFFECTIVE_DATE";
+	protected static final String INFO_PUBLISH_DATE = "INFO_PUBLISH_DATE";
+	protected static final String INFO_EXPLICIT = "INFO_EXPLICIT";
+	protected static final String INFO_FEATURE = "INFO_FEATURE";
+	protected static final String INFO_CHANNEL = "INFO_CHANNEL";
+	protected static final String INFO_USER_TYPE = "INFO_USER_TYPE";
+	protected static final String INFO_STATUS = "INFO_STATUS";
+	protected static final String INFO_ARCHIVE = "INFO_ARCHIVE";
+	protected static final String INFO_AUTHOR_ID = "INFO_AUTHOR_ID";
+	protected static final String INFO_FEATURE_DESC = "INFO_FEATURE_DESC";
+	protected static final String INFO_CHANNEL_DESC = "INFO_CHANNEL_DESC";
+	protected static final String INFO_USER_TYPE_DESC = "INFO_USER_TYPE_DESC";
+	protected static final String INFO_EULA_TYPE_DESC = "INFO_EULA_TYPE_DESC";
+	protected static final String INFO_CREATE_DTM = "INFO_CREATE_DTM";
+	protected static final String INFO_PUBLISHER_ID = "INFO_PUBLISHER_ID";
+	protected static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
+	protected static final String BAD_RESPONSE_CODE = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND ";
+	protected static final String RETURN_DOCUMENT = "RETURN_DOCUMENT";
 	
 	/**
-	 * GET the EULA from NIS by eula-id and locale.
+	 * Test method to return a EULA document.
 	 * 
-	 * testRailId: 621694
-	 * 
-	 * @param context 	The TestNG context reference.
-	 * @param data		The test data.
-	 * @throws Throwable Thrown if something goes wrong.
+	 * @param context  The testNG context object.
+	 * @param data  Test Data from the JSON input file.
+	 * @throws Throwable  Thrown if something goes wrong.
 	 */
-	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderSource.class)
-	public void getEULA(ITestContext context, Hashtable<String, String> data) throws Throwable {
+	public void mainTest(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		String testCaseName = data.get("TestCase_Description");
 		LOG.info("##### Starting Test Case " + testCaseName);
 		
@@ -83,7 +78,8 @@ public class EULAWithDocumentTest extends RESTEngine {
 			
             String sURL = "http://" + BackOfficeGlobals.ENV.NIS_HOST + ":" + BackOfficeGlobals.ENV.NIS_PORT
                     + "/nis/csapi/v1/eula/" + data.get(INFO_EULA_ID)
-                    + "/" + data.get(LOC_LOCALE_TAG) + "?returnDocument=true";
+                    + "/" + data.get(LOC_LOCALE_TAG)
+                    + "?returnDocument=" + data.get(RETURN_DOCUMENT);
             LOG.info("##### Built URL: " + sURL);
             
             LOG.info("Creating GET request headers");

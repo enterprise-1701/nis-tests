@@ -1,0 +1,16 @@
+{
+	"tryToGetEULAWithBadId": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "633247:EULAAPIBadId",
+			"testRailId":"633247",
+			"LOC_LOCALE_TAG":"en",	
+			"INFO_EULA_ID":"1",
+			"RETURN_DOCUMENT":"false",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"eulaId",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"
+		}
+	]
+}
