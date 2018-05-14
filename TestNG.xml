@@ -16,12 +16,21 @@
 
 	<test name="NISTests">
 		<classes>
-			<class name="com.cubic.nistests.tests.EULAWithDocumentTest"/>
-			<class name="com.cubic.nistests.tests.EULAWithBadLocaleTest"/> 
-		    <class name="com.cubic.nistests.tests.EULAWithBadEulaIdTest"/>
-		    <class name="com.cubic.nistests.tests.CardSummaryTests"/>
-		    <class name="com.cubic.nistests.tests.ProductCatalogTests"/> 
-		    <class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
+	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
+		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
+		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>
+
+			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
+			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
+			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
+			<class name="com.cubic.nistests.tests.CountriesTest"/>
+			<class name="com.cubic.nistests.tests.SecurityQuestionsTest"/>	
+			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
+			 
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
 <!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
 		</classes>
 	</test> <!-- Test -->
