@@ -27,7 +27,6 @@
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
-			<class name="com.cubic.nistests.tests.SecurityQuestionsTest"/>	
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>

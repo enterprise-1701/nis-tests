@@ -3,7 +3,7 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "697931:SecurityQuestionsTest",
+			"TestCase_Description": "697931:SecurityQuestionsTestCMS",
 			"testRailId":"697931",
 			"EXPECTED_QUESTION_1":"What is your first pet's name?",
 			"EXPECTED_VALUE_1":"1",

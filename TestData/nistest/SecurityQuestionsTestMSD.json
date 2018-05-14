@@ -1,0 +1,22 @@
+{
+	"getSecurityQuestions": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "697931:SecurityQuestionsTestMSD",
+			"testRailId":"697931",
+			"EXPECTED_QUESTION_1":"Where is my car?",
+			"EXPECTED_VALUE_1":"1",
+			"EXPECTED_QUESTION_2":"When is it?",
+			"EXPECTED_VALUE_2":"2",
+			"EXPECTED_QUESTION_3":"How are you?",
+			"EXPECTED_VALUE_3":"3",
+			"EXPECTED_QUESTION_4":"What is your favorite color",
+			"EXPECTED_VALUE_4":"4",
+			"EXPECTED_QUESTION_5":"Have you ever seen the rain?",
+			"EXPECTED_VALUE_5":"5",
+			"EXPECTED_QUESTION_6":"What is your favorite pizza place?",
+			"EXPECTED_VALUE_6":"6"							
+		}
+	]
+}

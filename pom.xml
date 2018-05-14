@@ -16,7 +16,7 @@
     <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
-    <testset>TestNG.xml</testset>
+    <testset>TestNG${CRMConfigName}.xml</testset>
   </properties>
 
   <dependencies>
