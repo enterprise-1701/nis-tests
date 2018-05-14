@@ -1,25 +1,19 @@
 package com.cubic.nistests.tests;
 
 import java.net.HttpURLConnection;
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.ITestContext;
-import org.testng.annotations.Test;
 
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
 import com.cubic.accelerators.RESTEngine;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.backoffice.utils.BackOfficeUtils;
-import com.cubic.nisjava.constants.AppConstants;
-import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 import com.cubic.nisjava.apiobjects.WSSecurityQuestionList;
-import com.cubic.nisjava.apiobjects.WSSecurityQuestion;
 
 /**
  * This test class will call the customerservice/securityquestions API 
@@ -28,29 +22,27 @@ import com.cubic.nisjava.apiobjects.WSSecurityQuestion;
  * @author 203402
  *
  */
-public class SecurityQuestionsTest extends RESTEngine {
+public abstract class SecurityQuestionsTest extends RESTEngine {
 
-	private static final String EXPECTED_QUESTION_1 = "EXPECTED_QUESTION_1";
-	private static final String EXPECTED_QUESTION_2 = "EXPECTED_QUESTION_2";
-	private static final String EXPECTED_VALUE_1 = "EXPECTED_VALUE_1";
-	private static final String EXPECTED_VALUE_2 = "EXPECTED_VALUE_2";
+	protected static final String EXPECTED_QUESTION_1 = "EXPECTED_QUESTION_1";
+	protected static final String EXPECTED_QUESTION_2 = "EXPECTED_QUESTION_2";
+	protected static final String EXPECTED_QUESTION_3 = "EXPECTED_QUESTION_3";
+	protected static final String EXPECTED_QUESTION_4 = "EXPECTED_QUESTION_4";
+	protected static final String EXPECTED_QUESTION_5 = "EXPECTED_QUESTION_5";
+	protected static final String EXPECTED_QUESTION_6 = "EXPECTED_QUESTION_6";
+	protected static final String EXPECTED_VALUE_1 = "EXPECTED_VALUE_1";
+	protected static final String EXPECTED_VALUE_2 = "EXPECTED_VALUE_2";
+	protected static final String EXPECTED_VALUE_3 = "EXPECTED_VALUE_3";
+	protected static final String EXPECTED_VALUE_4 = "EXPECTED_VALUE_4";
+	protected static final String EXPECTED_VALUE_5 = "EXPECTED_VALUE_5";
+	protected static final String EXPECTED_VALUE_6 = "EXPECTED_VALUE_6";
+
 	private static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
 	private static final String WRONG_HTTP_CODE = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND ";
 	
 	private final Logger LOG = Logger.getLogger(this.getClass().getName());
 
-	/**
-	 * This test method will call the customerservice/securityquestions API
-	 * in NIS and show the response, which is a list of security questions.
-	 * 
-	 * testRailId = 697931
-	 * 
-	 * @param context  The TestNG context object.
-	 * @param data  The test data.
-	 * @throws Throwable  Thrown if something goes wrong.
-	 */
-	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderSource.class)
-	public void getSecurityQuestions(ITestContext context, Hashtable<String, String> data) throws Throwable {
+	public void mainTest(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		String testCaseName = data.get("TestCase_Description");
 		LOG.info("##### Starting Test Case " + testCaseName);
 		
@@ -102,27 +94,7 @@ public class SecurityQuestionsTest extends RESTEngine {
 	 * @param data  The Test Data from the JSON input file.
 	 * @return  An initialized WSSecurityQuestionList object.
 	 */
-	private WSSecurityQuestionList buildExpectedTestData( Hashtable<String,String> data) {
-		WSSecurityQuestionList result = new WSSecurityQuestionList();
-		List<WSSecurityQuestion> questionList = new ArrayList<WSSecurityQuestion>();
-		
-		WSSecurityQuestion q1 = new WSSecurityQuestion();
-		q1.setName(data.get(EXPECTED_QUESTION_1));
-		String sAnswer1 = data.get(EXPECTED_VALUE_1);
-		Integer answer1 = Integer.valueOf(sAnswer1);
-		q1.setValue(answer1);
-		questionList.add(q1);
-
-		WSSecurityQuestion q2 = new WSSecurityQuestion();
-		q2.setName(data.get(EXPECTED_QUESTION_2));
-		String sAnswer2 = data.get(EXPECTED_VALUE_2);
-		Integer answer2 = Integer.valueOf(sAnswer2);
-		q2.setValue(answer2);
-		questionList.add(q2);
-		
-		result.setSecurityQuestions(questionList);
-		return result;
-	}
+	protected abstract WSSecurityQuestionList buildExpectedTestData( Hashtable<String,String> data);
 	
 	/**
 	 * Build the URL used to get the security questions list.
