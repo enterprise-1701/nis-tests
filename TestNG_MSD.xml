@@ -16,7 +16,7 @@
 
 	<test name="NISTests">
 		<classes>
-
+ 
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
@@ -27,10 +27,11 @@
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
+			<class name="com.cubic.nistests.tests.SecurityQuestionsTestMSD"/>	
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-<!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
