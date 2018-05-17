@@ -1,8 +1,8 @@
 {
-	"patronRegister": [
+"patronRegisterWithLastNameBlank": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "339774:verifyPatronRegister",
+			"TestCase_Description":"360705:verifyPatronAccountWithLastNameBlank",
 			"FirstName":"Test",
 			"LastName":"Test",
 			"DateOfBirth" : "1990-02-16",
@@ -16,6 +16,7 @@
 		    "Phone":"123-456-7890",
 		    "SecurityQuestion" : "What is your mother's maiden ?",
 		    "SecurityAnswer" : "wyanemother"
-			}
+		    }
 	]
+
 }

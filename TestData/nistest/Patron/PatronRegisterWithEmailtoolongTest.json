@@ -1,8 +1,8 @@
 {
-	"patronRegister": [
+"patronRegisterWithEmailtoolong": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "339774:verifyPatronRegister",
+			 "TestCase_Description":"360739:verifyPatronAccountWithEmailtoolong",
 			"FirstName":"Test",
 			"LastName":"Test",
 			"DateOfBirth" : "1990-02-16",
@@ -15,7 +15,9 @@
 		    "State":"CA",
 		    "Phone":"123-456-7890",
 		    "SecurityQuestion" : "What is your mother's maiden ?",
-		    "SecurityAnswer" : "wyanemother"
+		    "SecurityAnswer" : "wyanemother",
+		     "Email_toolong":"ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911ventrapp911@mobile.com"
 			}
 	]
+
 }

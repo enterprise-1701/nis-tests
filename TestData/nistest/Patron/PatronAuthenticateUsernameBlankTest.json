@@ -1,0 +1,10 @@
+{
+"patronAuthenticateWithUsernameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "470991:Verify patron/Authenticate with username blank",
+			"password_valid":"K!akz58j!",
+			"Username_blank":""
+		}
+	]
+}

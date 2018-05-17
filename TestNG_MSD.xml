@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="nistests - Test Suite">
+
+	<parameter name="browser" value="saucelabs"></parameter>
+	<parameter name="seleniumgridurl" value="local"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="executionenv" value="local"></parameter>
+	<parameter name="version" value=""></parameter>
+	<parameter name="platform" value=""></parameter>
+	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
+
+	<parameter name="projectID" value="35"></parameter>
+	<parameter name="suiteID" value="548"></parameter>
+
+	<test name="NISTests">
+		<classes>
+ 
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
+	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
+		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
+		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>
+
+			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
+			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
+			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
+			<class name="com.cubic.nistests.tests.CountriesTest"/>
+			<class name="com.cubic.nistests.tests.SecurityQuestionsTestMSD"/>	
+			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
+			 
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

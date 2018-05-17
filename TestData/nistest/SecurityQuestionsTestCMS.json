@@ -1,0 +1,14 @@
+{
+	"getSecurityQuestions": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "697931:SecurityQuestionsTestCMS",
+			"testRailId":"697931",
+			"EXPECTED_QUESTION_1":"What is your first pet's name?",
+			"EXPECTED_VALUE_1":"1",
+			"EXPECTED_QUESTION_2":"What is your mother's maiden name?",
+			"EXPECTED_VALUE_2":"2"
+		}
+	]
+}
