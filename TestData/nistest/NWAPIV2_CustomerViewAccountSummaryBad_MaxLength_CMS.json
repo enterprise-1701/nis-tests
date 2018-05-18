@@ -1,0 +1,16 @@
+{
+	"tryToGetAccountSummaryWithCustomerIdThatIsMaxLength": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "687521:NWAPIV2_CustomerViewAccountSummaryBad_MaxLength_CMS",
+			"testRailId":"687521",
+			"CUSTOMER_ID":"1111111111111111111111111111111111111111",
+			"RETURN_CUSTOMER_INFO":"true",
+			"EXPECTED_HTTP_RESPONSE_CODE":"400",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"customer-id",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"
+		}
+	]
+}
