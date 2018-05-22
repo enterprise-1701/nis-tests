@@ -1,0 +1,16 @@
+{
+	"getAccountSummaryWithCustomerId": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "687525:NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset_CMS",
+			"testRailId":"687525",
+			"RETURN_CUSTOMER_INFO":"true",
+			"RETURN_FUNDING_SOURCES":"true",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"CUSTOMER_ID":"CMS055074038",
+			"CUSTOMER_TYPE":"Traveler",
+			"CUSTOMER_STATUS":"Active"
+		}
+	]
+}
