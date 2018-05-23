@@ -13,24 +13,28 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSCustomerInfo;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
 import com.cubic.nisjava.apiobjects.WSCustomerStatus;
+import com.cubic.nisjava.apiobjects.WSFundingSourceList;
+import com.cubic.nisjava.apiobjects.WSOneAccountInfo;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 
 public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends RESTEngine {
 	
-	private static final String CUSTOMER_ID = "CUSTOMER_ID";
-	private static final String CUSTOMER_TYPE = "CUSTOMER_TYPE";
-	private static final String CUSTOMER_STATUS = "CUSTOMER_STATUS";
-	private static final String CUSTOMER_INFO_REF_IS_NULL = "CUSTOMER INFO REFERENCE IS NULL BUT SHOULD NOT BE";
-	private static final String BAD_CUSTOMER_ID_FMT = "BAD CUSTOMER ID - EXPECTED %s FOUND %s";
-	private static final String BAD_CUSTOMER_TYPE_FMT = "BAD CUSTOMER TYPE - EXPECTED %s FOUND %s";
-	private static final String BAD_CUSTOMER_STATUS_FMT = "BAD CUSTOMER STATUS - EXPECTED %s FOUND %s";
-	private static final String EXPECTED_HTTP_RESPONSE_CODE = "EXPECTED_HTTP_RESPONSE_CODE";
-	private static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
-	private static final String BAD_RESPONSE_CODE_FMT = "WRONG HTTP RESPONSE CODE - EXPECTED %s, FOUND %s";	
-	private static final String RETURN_CUSTOMER_INFO = "RETURN_CUSTOMER_INFO";
-	private static final String RETURN_FUNDING_SOURCES = "RETURN_FUNDING_SOURCES";
-	private static final String RETURN_ONEACCOUNT_INFO = "RETURN_ONEACCOUNT_INFO";
+	protected static final String CUSTOMER_ID = "CUSTOMER_ID";
+	protected static final String CUSTOMER_TYPE = "CUSTOMER_TYPE";
+	protected static final String CUSTOMER_STATUS = "CUSTOMER_STATUS";
+	protected static final String CUSTOMER_INFO_REF_IS_NULL = "CUSTOMER INFO REFERENCE IS NULL BUT SHOULD NOT BE";
+	protected static final String FUNDING_SOURCE_REF_IS_NULL = "FUNDING SOURCE REFERENCE IS NULL BUT SHOULD NOT BE";
+	protected static final String ONE_ACCOUNT_REF_IS_NULL = "ONE ACCOUNT REFERENCE IS NULL BUT SHOULD NOT BE";
+	protected static final String BAD_CUSTOMER_ID_FMT = "BAD CUSTOMER ID - EXPECTED %s FOUND %s";
+	protected static final String BAD_CUSTOMER_TYPE_FMT = "BAD CUSTOMER TYPE - EXPECTED %s FOUND %s";
+	protected static final String BAD_CUSTOMER_STATUS_FMT = "BAD CUSTOMER STATUS - EXPECTED %s FOUND %s";
+	protected static final String EXPECTED_HTTP_RESPONSE_CODE = "EXPECTED_HTTP_RESPONSE_CODE";
+	protected static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";
+	protected static final String BAD_RESPONSE_CODE_FMT = "WRONG HTTP RESPONSE CODE - EXPECTED %s, FOUND %s";	
+	protected static final String RETURN_CUSTOMER_INFO = "RETURN_CUSTOMER_INFO";
+	protected static final String RETURN_FUNDING_SOURCES = "RETURN_FUNDING_SOURCES";
+	protected static final String RETURN_ONEACCOUNT_INFO = "RETURN_ONEACCOUNT_INFO";
 	
 	private final Logger LOG = Logger.getLogger(this.getClass().getName());		
 
@@ -88,7 +92,7 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 	 * @param data  The Test Data from the JSON input file.
 	 * @return The URL in string form.
 	 */
-	private String buildURL( Hashtable<String,String> data ) {
+	protected String buildURL( Hashtable<String,String> data ) {
         String sURL = "http://" + BackOfficeGlobals.ENV.NIS_HOST + ":" + BackOfficeGlobals.ENV.NIS_PORT
                 + "/nis/nwapi/v2/customer/" + data.get(CUSTOMER_ID)
                 + "?returnCustomerInfo=" + data.get(RETURN_CUSTOMER_INFO)
@@ -112,6 +116,7 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
         
 		LOG.info("##### Testing the response content...");
 		
+		// test that the Customer Info block is present
 		WSCustomerInfo customerInfo = customerInfoContainer.getCustomerInfo();
 		restActions.assertTrue( customerInfo != null, CUSTOMER_INFO_REF_IS_NULL );
 		
@@ -139,6 +144,14 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 		restActions.assertTrue(expectedCustomerStatus.equals(actualCustomerStatus), 
 				String.format(BAD_CUSTOMER_STATUS_FMT, 
 						expectedCustomerStatus, actualCustomerStatus));
+		
+		// test that the Funding Source block is present
+		WSFundingSourceList fundingSourceList = customerInfoContainer.getFundingSources();
+		restActions.assertTrue( fundingSourceList != null, FUNDING_SOURCE_REF_IS_NULL );
+		
+		// test that the One Account block is present
+		WSOneAccountInfo oneAccountInfo = customerInfoContainer.getOneAccountInfo();
+		restActions.assertTrue( oneAccountInfo != null, ONE_ACCOUNT_REF_IS_NULL );
 	}
 
 }

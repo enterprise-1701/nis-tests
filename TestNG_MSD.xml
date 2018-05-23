@@ -16,10 +16,8 @@
 
 	<test name="NISTests">
 		<classes>
- 			<class name="com.cubic.nistests.tests.TestScript_Driver"/>
  			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset_MSD"/>
  			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll_MSD"/>
- 			
  			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryBad_MaxLength_MSD"/>
  			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCredentialsAuthenticate_InvalidPassword_MSD"/>
  			<class name="com.cubic.nistests.tests.CSAPIV1_OneAccountBalanceHistory"/>
