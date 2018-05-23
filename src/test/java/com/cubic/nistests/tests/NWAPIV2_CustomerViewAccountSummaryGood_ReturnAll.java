@@ -88,10 +88,10 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 			
 			verifyResponse( data, restActions, response );
 		
-		} catch( Throwable t ) {	
-			t.printStackTrace();
-			restActions.failureReport("Exception", "Exception is " + t);
-			throw new RuntimeException(t);
+		} catch( Exception e ) {	
+			e.printStackTrace();
+			restActions.failureReport("Exception", "Exception is " + e);
+			throw new RuntimeException(e);
 		} finally {
 			teardownAutomationTest(context, testCaseName);
 			LOG.info("##### Done!");
@@ -120,7 +120,7 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 	 * @param restActions  The RESTActions object used by the testMain method.
 	 * @param response  The Response in String form obtained by the GET method.
 	 */
-	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) throws Throwable {
+	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) throws Exception {
 		Gson gson = new Gson();
 		
 		LOG.info("##### Parsing the response content...");

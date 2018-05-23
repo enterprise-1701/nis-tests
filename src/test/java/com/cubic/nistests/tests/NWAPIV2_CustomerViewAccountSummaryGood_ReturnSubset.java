@@ -45,7 +45,7 @@ public class NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset
 	 * @param response  The Response in String form obtained by the GET method.
 	 */
 	@Override
-	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) {
+	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) throws Exception {
 		Gson gson = new Gson();
 		
 		LOG.info("##### Parsing the response content...");
