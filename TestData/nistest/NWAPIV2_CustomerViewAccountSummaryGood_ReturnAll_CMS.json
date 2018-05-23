@@ -1,0 +1,19 @@
+{
+	"getAccountSummaryWithCustomerId": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "687523:NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll_CMS",
+			"testRailId":"687523",
+			"RETURN_CUSTOMER_INFO":"true",
+			"RETURN_FUNDING_SOURCES":"true",
+			"RETURN_ONEACCOUNT_INFO":"true",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"CUSTOMER_ID":"CMS055074038",
+			"CUSTOMER_TYPE":"Traveler",
+			"CUSTOMER_STATUS":"Active",
+			"EXPECTED_ONE_ACCOUNT_ID":"7443",
+			"EXPECTED_FUNDING_SOURCE_ID_LIST":"1032"
+		}
+	]
+}
