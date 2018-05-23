@@ -58,12 +58,12 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 	public void testMain(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		String testCaseName = data.get("TestCase_Description");
 		LOG.info("##### Starting Test Case " + testCaseName);
+
+		LOG.info("##### Setting up automation test...");
+		BackOfficeGlobals.ENV.setEnvironmentVariables();
+		RESTActions restActions = setupAutomationTest(context, testCaseName);		
 		
 		try {
-			LOG.info("##### Setting up automation test...");
-			BackOfficeGlobals.ENV.setEnvironmentVariables();
-			RESTActions restActions = setupAutomationTest(context, testCaseName);
-			
 			String sURL = buildURL( data );
             LOG.info("##### Built URL: " + sURL);
             
@@ -87,7 +87,11 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 			restActions.assertTrue(response != null, RESPONSE_IS_NULL);
 			
 			verifyResponse( data, restActions, response );
-			
+		
+		} catch( Throwable t ) {	
+			t.printStackTrace();
+			restActions.failureReport("Exception", "Exception is " + t);
+			throw new RuntimeException(t);
 		} finally {
 			teardownAutomationTest(context, testCaseName);
 			LOG.info("##### Done!");
@@ -116,7 +120,7 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 	 * @param restActions  The RESTActions object used by the testMain method.
 	 * @param response  The Response in String form obtained by the GET method.
 	 */
-	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) {
+	protected void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response ) throws Throwable {
 		Gson gson = new Gson();
 		
 		LOG.info("##### Parsing the response content...");
