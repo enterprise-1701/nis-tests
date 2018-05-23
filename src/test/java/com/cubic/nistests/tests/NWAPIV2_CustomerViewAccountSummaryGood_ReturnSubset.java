@@ -1,6 +1,7 @@
 package com.cubic.nistests.tests;
 
 import java.util.Hashtable;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -9,6 +10,7 @@ import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.nisjava.apiobjects.WSCustomerInfo;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
 import com.cubic.nisjava.apiobjects.WSCustomerStatus;
+import com.cubic.nisjava.apiobjects.WSFundingSource;
 import com.cubic.nisjava.apiobjects.WSFundingSourceList;
 import com.cubic.nisjava.apiobjects.WSOneAccountInfo;
 import com.google.gson.Gson;
@@ -83,6 +85,41 @@ public class NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset
 		// test that the Funding Source block is present
 		WSFundingSourceList fundingSourceList = customerInfoContainer.getFundingSources();
 		restActions.assertTrue( fundingSourceList != null, FUNDING_SOURCE_REF_IS_NULL );
+		if ( fundingSourceList != null ) {
+			
+			String sExpectedFundingSourceIdList = data.get(EXPECTED_FUNDING_SOURCE_ID_LIST);
+			String[] aExpectedFundingSourceIdList = sExpectedFundingSourceIdList.split(" ");
+			
+			List<WSFundingSource> fundingSources = fundingSourceList.getFundingSources();
+			restActions.assertTrue( fundingSources != null, FUNDING_SOURCE_LIST_IS_NULL);
+			
+			if ( fundingSources != null ) {
+				int expectedFundingSourcesLength = 0;
+				// count the number of fundingSourceIds with non-zero length
+				for ( int i = 0; i < aExpectedFundingSourceIdList.length; i++ ) {
+					if ( aExpectedFundingSourceIdList[i].length() > 0 ) {
+						expectedFundingSourcesLength++;
+					}
+				}
+				int actualFoundingSourcesLength = fundingSources.size();
+				
+				restActions.assertTrue( expectedFundingSourcesLength == actualFoundingSourcesLength,
+						String.format(BAD_FUNDING_SOURCES_LIST_SIZE_FMT, 
+								expectedFundingSourcesLength, actualFoundingSourcesLength));
+				
+				if (expectedFundingSourcesLength == actualFoundingSourcesLength) {
+					for (int i = 0; i < expectedFundingSourcesLength; i++) {
+						Integer expectedFundingSourceId = Integer.valueOf(aExpectedFundingSourceIdList[i]);
+						WSFundingSource actualFoundingSource = fundingSources.get(i);
+						Integer actualFundingSourceId = actualFoundingSource.getFundingSourceId();
+
+						restActions.assertTrue(expectedFundingSourceId.equals(actualFundingSourceId),
+								String.format(BAD_FUNDING_SOURCE_ID_FMT,
+										expectedFundingSourceId,actualFundingSourceId));
+					}
+				}
+			}
+		}
 		
 		// test that the One Account block is absent
 		WSOneAccountInfo oneAccountInfo = customerInfoContainer.getOneAccountInfo();

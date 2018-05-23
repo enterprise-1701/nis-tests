@@ -1,6 +1,7 @@
 package com.cubic.nistests.tests;
 
 import java.util.Hashtable;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.ITestContext;
@@ -13,6 +14,7 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSCustomerInfo;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
 import com.cubic.nisjava.apiobjects.WSCustomerStatus;
+import com.cubic.nisjava.apiobjects.WSFundingSource;
 import com.cubic.nisjava.apiobjects.WSFundingSourceList;
 import com.cubic.nisjava.apiobjects.WSOneAccountInfo;
 import com.google.gson.Gson;
@@ -35,6 +37,12 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 	protected static final String RETURN_CUSTOMER_INFO = "RETURN_CUSTOMER_INFO";
 	protected static final String RETURN_FUNDING_SOURCES = "RETURN_FUNDING_SOURCES";
 	protected static final String RETURN_ONEACCOUNT_INFO = "RETURN_ONEACCOUNT_INFO";
+	protected static final String EXPECTED_ONE_ACCOUNT_ID = "EXPECTED_ONE_ACCOUNT_ID";
+	protected static final String BAD_ONE_ACCOUNT_ID_FMT = "BAD ONE ACCOUNT ID - EXPECTED %s FOUND %s";
+	protected static final String EXPECTED_FUNDING_SOURCE_ID_LIST = "EXPECTED_FUNDING_SOURCE_ID_LIST";
+	protected static final String FUNDING_SOURCE_LIST_IS_NULL = "FUNDING SOURCE LIST IS NULL BUT SHOULD NOT BE";
+	protected static final String BAD_FUNDING_SOURCES_LIST_SIZE_FMT= "BAD FUNDING SOURCES LIST SIZE - EXPECTED %s FOUND %S";
+	protected static final String BAD_FUNDING_SOURCE_ID_FMT = "BAD FUNDING SOURCE ID - EXPECTED %s FOUND %s";
 	
 	private final Logger LOG = Logger.getLogger(this.getClass().getName());		
 
@@ -148,10 +156,55 @@ public abstract class NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll extends R
 		// test that the Funding Source block is present
 		WSFundingSourceList fundingSourceList = customerInfoContainer.getFundingSources();
 		restActions.assertTrue( fundingSourceList != null, FUNDING_SOURCE_REF_IS_NULL );
+		if ( fundingSourceList != null ) {
+			
+			String sExpectedFundingSourceIdList = data.get(EXPECTED_FUNDING_SOURCE_ID_LIST);
+			String[] aExpectedFundingSourceIdList = sExpectedFundingSourceIdList.split(" ");
+			
+			List<WSFundingSource> fundingSources = fundingSourceList.getFundingSources();
+			restActions.assertTrue( fundingSources != null, FUNDING_SOURCE_LIST_IS_NULL);
+			
+			if ( fundingSources != null ) {
+				int expectedFundingSourcesLength = 0;
+				// count the number of fundingSourceIds with non-zero length
+				for ( int i = 0; i < aExpectedFundingSourceIdList.length; i++ ) {
+					if ( aExpectedFundingSourceIdList[i].length() > 0 ) {
+						expectedFundingSourcesLength++;
+					}
+				}
+				int actualFoundingSourcesLength = fundingSources.size();
+				
+				restActions.assertTrue( expectedFundingSourcesLength == actualFoundingSourcesLength,
+						String.format(BAD_FUNDING_SOURCES_LIST_SIZE_FMT, 
+								expectedFundingSourcesLength, actualFoundingSourcesLength));
+				
+				if (expectedFundingSourcesLength == actualFoundingSourcesLength) {
+					for (int i = 0; i < expectedFundingSourcesLength; i++) {
+						Integer expectedFundingSourceId = Integer.valueOf(aExpectedFundingSourceIdList[i]);
+						WSFundingSource actualFoundingSource = fundingSources.get(i);
+						Integer actualFundingSourceId = actualFoundingSource.getFundingSourceId();
+
+						restActions.assertTrue(expectedFundingSourceId.equals(actualFundingSourceId),
+								String.format(BAD_FUNDING_SOURCE_ID_FMT,
+										expectedFundingSourceId,actualFundingSourceId));
+					}
+				}
+			}
+		}
 		
 		// test that the One Account block is present
 		WSOneAccountInfo oneAccountInfo = customerInfoContainer.getOneAccountInfo();
 		restActions.assertTrue( oneAccountInfo != null, ONE_ACCOUNT_REF_IS_NULL );
+		
+		if ( oneAccountInfo != null ) {
+			Integer actualOneAccountId = oneAccountInfo.getOneAccountId();
+			String sExpectedOneAccountId = data.get(EXPECTED_ONE_ACCOUNT_ID);
+			if ( sExpectedOneAccountId != null ) {
+				Integer expectedOneAccountId = Integer.valueOf(sExpectedOneAccountId);
+				restActions.assertTrue( expectedOneAccountId.equals(actualOneAccountId),
+						String.format(BAD_ONE_ACCOUNT_ID_FMT, 
+								expectedOneAccountId, actualOneAccountId));
+			}
+		}
 	}
-
 }
