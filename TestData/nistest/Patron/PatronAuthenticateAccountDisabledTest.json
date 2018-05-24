@@ -1,0 +1,10 @@
+{
+"patronAuthenticateWithAccountDisabled": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "471039:Verify patron/Authenticate with account disabled",
+			"Username_Disabled":"Ventracmt001",
+			"password_Disabled":"Uf=g$i=C9t" 
+		}
+	]
+}

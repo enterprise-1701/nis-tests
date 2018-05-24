@@ -1,0 +1,22 @@
+{
+"patronRegisterWithNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description":"360697:verifyPatronAccountWithNameBlank",
+			"FirstName":"Test",
+			"LastName":"Test",
+			"DateOfBirth" : "1990-02-16",
+			"Password" : "Ventra2018!",
+			"Address1": "California",
+			"Address2": "SanDigo",
+		    "City":"SanDiego",
+		    "Country":"US",
+		    "PostalCode":"92111",
+		    "State":"CA",
+		    "Phone":"123-456-7890",
+		    "SecurityQuestion" : "What is your mother's maiden ?",
+		    "SecurityAnswer" : "wyanemother"
+			}
+	]
+
+}
