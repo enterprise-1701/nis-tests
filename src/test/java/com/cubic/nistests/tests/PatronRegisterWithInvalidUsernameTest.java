@@ -1,7 +1,6 @@
 package com.cubic.nistests.tests;
 
 import java.util.Hashtable;
-
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import com.cubic.accelerators.RESTActions;

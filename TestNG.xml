@@ -17,6 +17,8 @@
 	<test name="NISTests">
 		<classes>
 
+			<class name="com.cubic.nistests.tests.CSAPIV1_OneAccountBalanceHistory"/>
+
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
@@ -31,8 +33,8 @@
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
 <!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
-           
-           <!-- *************** Patron Authentication and Registration Tests *************** -->
+            
+           <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
            
            <!--  <class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateUsernameBlankTest"/> 

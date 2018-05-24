@@ -16,7 +16,12 @@
 
 	<test name="NISTests">
 		<classes>
- 
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset_CMS"/>
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll_CMS"/>
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryBad_MaxLength_CMS"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCredentialsAuthenticate_InvalidPassword_CMS"/>	
+ 			<class name="com.cubic.nistests.tests.CSAPIV1_OneAccountBalanceHistory"/>
+ 			
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
@@ -31,7 +36,6 @@
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

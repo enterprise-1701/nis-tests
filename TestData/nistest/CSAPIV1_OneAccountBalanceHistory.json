@@ -1,0 +1,20 @@
+{
+	"getOneAccountBalanceHistory": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "687535:CSAPIV1_OneAccountBalanceHistory",
+			"testRailId":"687535",
+			"ONE_ACCOUNT_ID":"7445",
+			"START_DATE_TIME":"2018-04-08T23:00:00.000Z",
+			"END_DATE_TIME":"2018-05-09T22:59:59.999Z",
+			"VIEW_TYPE":"simple",
+			"FINANCIAL_TXN_TYPE":"PurseLoad",
+			"SORT_BY":"transactionId.desc",
+			"OFFSET":"0",
+			"LIMIT":"5",
+			"EXPECTED_TOTAL_COUNT":"0",
+			"EXPECTED_ARRAY_SIZE":"0"
+		}
+	]
+}
