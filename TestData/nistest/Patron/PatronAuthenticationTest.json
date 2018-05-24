@@ -1,0 +1,10 @@
+{
+	"patronAuthenticate": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "470989:Verify patron/Authenticate",
+			"Username_valid":"ventracmt118068",
+			"password_valid":"K!akz58j!"
+		}
+	]
+}
