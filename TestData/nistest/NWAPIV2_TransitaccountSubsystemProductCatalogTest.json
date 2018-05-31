@@ -1,0 +1,21 @@
+{
+	"getProductCatalog": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "933962:NWAPIV2_TransitaccountSubsystemProductcatalogTest",
+			"testRailId":"933962",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"TRANSIT_ACCOUNT_ID":"440000169613",
+			"SUBSYSTEM_ENUM":"ABP",
+			"EXPECTED_PRODUCT_SKU":"c3a040b8-4552-4562-8d06-be4cc68f2b07",
+			"EXPECTED_PRODUCT_TYPE_ID":"6",
+			"EXPECTED_PRODUCT_FAMILY_ID":"5",
+			"EXPECTED_PRODUCT_NAME":"Max Journey Count 1",
+			"EXPECTED_VALIDITY_DURATION":"1",
+			"EXPECTED_VALIDITY_DURATION_TYPE":"NumberOfDays",
+			"EXPECTED_PRICE":"0",
+			"EXPECTED_SUPPORTS_AUTOLOAD":"false"
+		}
+	]
+}
