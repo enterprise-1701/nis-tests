@@ -1,0 +1,16 @@
+{
+	"testSortByValue": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "824956:NWAPIV2_TransitaccountSubsystemTravelHistoryTapsBadSortByTest",
+			"testRailId":"824956",
+			"EXPECTED_HTTP_RESPONSE_CODE":"400",
+			"SUBSYSTEM_ENUM":"ABP",
+			"SORTBY_VALUES":"startDateTime.asc,endDateTime.asc,route.desc",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"sortBy",
+			"EXPECTED_ERROR_KEY":"errors.sort.expression.invalid"
+		}
+	]
+}
