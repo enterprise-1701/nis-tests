@@ -1,0 +1,13 @@
+{
+	"testSortByValue": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "824960:NWAPIV2_TransitaccountSubsystemTravelHistoryTapsGoodSortByTest",
+			"testRailId":"824960",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"SUBSYSTEM_ENUM":"ABP",
+			"SORTBY_VALUES":"transactionDateTime.desc,routeNumber.asc,travelMode.asc,status.asc,tripId.desc,tapId.asc,zone.asc,operator.desc"
+		}
+	]
+}
