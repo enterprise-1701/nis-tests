@@ -11,12 +11,13 @@
 	<parameter name="platform" value=""></parameter>
 	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
 
-	<parameter name="projectID" value="35"></parameter>
-	<parameter name="suiteID" value="548"></parameter>
+	<!-- <parameter name="projectID" value="35"></parameter>
+	<parameter name="suiteID" value="548"></parameter> -->
 
 	<test name="NISTests">
 		<classes>
-			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
+		<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_BlankTest"/>
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_PaymentRepositoryNonceTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemLocationTest"/>
 
@@ -34,7 +35,7 @@
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
-			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/> -->
 <!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
             
            <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
