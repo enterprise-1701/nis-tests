@@ -29,11 +29,7 @@ public class NWAPIV2_CustomerserviceFeedbackTest extends RESTEngine {
 	private final Logger LOG = Logger.getLogger(this.getClass().getName());
 	
 	/**
-	 * This @Test method will call the customerservice/feedback API.
-	 * By default, the HTTP response code returned is 500 Internal
-	 * Server Error, unless the NIS SETTINGS table is updated. The
-	 * default settings preclude the operation of the feedback
-	 * mechanism, which is only implemented for MSD, not CMS. 
+	 * This @Test method will call the customerservice/feedback API. 
 	 * 
 	 * testRailId = 958036
 	 * 
@@ -54,20 +50,32 @@ public class NWAPIV2_CustomerserviceFeedbackTest extends RESTEngine {
             LOG.info("##### Creating GET request headers");
 			Hashtable<String,String> headerTable = BackOfficeUtils.createRESTHeader(RESTConstants.APPLICATION_JSON);
 			
+			// update Header x-cub-audit with an MSD WEB location
+			headerTable.put("x-cub-audit",
+					"{\"sourceIp\":\"172.21.17.18\",\"userId\":\"\",\"channel\":\"Web\",\"location\":\"MSD WEB\"}");
+			
 			String sURL = buildFeedbackURL();
 	        LOG.info("##### Built URL: " + sURL);
 	        
-			String sPrevalidateRequestBody = buildFeedbackRequestBody();            
+			String sRequestBody = buildFeedbackRequestBody();            
 	        
 			LOG.info("##### Making HTTP request to prevalidate the credentials...");
 			ClientResponse clientResponse = restActions.postClientResponse(
-					sURL, sPrevalidateRequestBody, headerTable, null,
+					sURL, sRequestBody, headerTable, null,
 					RESTConstants.APPLICATION_JSON);
 
 			LOG.info("##### Verifying HTTP response code...");
 			int status = clientResponse.getStatus();
-			String msg = "WRONG HTTP RESPONSE CODE - EXPECTED 500, FOUND " + status;
-			restActions.assertTrue(status == HttpURLConnection.HTTP_INTERNAL_ERROR, msg);
+			String msg = "WRONG HTTP RESPONSE CODE - EXPECTED 200, FOUND " + status;
+			restActions.assertTrue(status == HttpURLConnection.HTTP_OK, msg);
+			
+			String response = clientResponse.getEntity(String.class);
+			LOG.info("##### Got the response body");
+			restActions.assertTrue(response != null, "RESPONSE IS NULL BUT SHOULD NOT BE NULL");
+			LOG.info( response );
+			
+			restActions.assertTrue(response.contains("referenceNumber"),
+					"referenceNumber IS MISSING FROM THE RESPONSE");
 			
 		} finally {
 			teardownAutomationTest(context, testCaseName);
@@ -99,8 +107,7 @@ public class NWAPIV2_CustomerserviceFeedbackTest extends RESTEngine {
 		pw.println("\"feedbackMessage\":\"Test Feedback\",");
 		pw.println("\"unregisteredEmail\":\"ankit.pandya@cubic.com\",");
 		pw.println("\"firstName\":\"Ankit\",");
-		pw.println("\"lastName\":\"Pandya\",");
-		pw.println("\"referenceNumber\":\"1234567890\"");
+		pw.println("\"lastName\":\"Pandya\"");
 		pw.println("}");
 		return sw.toString();
 	}
