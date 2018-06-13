@@ -16,7 +16,14 @@
 
 	<test name="NISTests">
 		<classes>
-		<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_BlankTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_BlankTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_ConsecutiveTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_ContiguousTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_NoDigitsTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_TooLongTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_TooSmallTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPassword_UserNameTest"/>
+			<class name="com.cubic.nistests.tests.ResetMerchantSubaccountPasswordTest"/>
 			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_PaymentRepositoryNonceTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemLocationTest"/>
