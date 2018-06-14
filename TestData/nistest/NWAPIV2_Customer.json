@@ -1,0 +1,10 @@
+{
+	"createCustomer": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "956903:NWAPIV2_Customer",
+			"testRailId":"956903"		
+		}
+	]
+}

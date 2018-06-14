@@ -1,0 +1,10 @@
+{
+	"customerFeedback": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "958036:NWAPIV2_CustomerserviceFeedback",
+			"testRailId":"958036"		
+		}
+	]
+}
