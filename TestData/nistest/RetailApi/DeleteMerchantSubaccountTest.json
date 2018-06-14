@@ -1,0 +1,15 @@
+{
+	"deleteMerchantSubaccount": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "559835:Verify deleteMerchantSubaccount",
+			"userType":"Employee",
+			"UserIdBlank":"",
+			"password":"7492",
+			"firstName":"Twentyone",
+			"lastName":"Savage",
+			"NOContent":"204",
+			"ErrorKey":"errors.general.value.required"
+		}
+	]
+}

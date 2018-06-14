@@ -1,0 +1,14 @@
+{
+	"createMerchantSubaccountWithUserIdDuplicate": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "556449:Verify CreateMerchantSubaccountWithUserIdDuplicate",
+			"userType":"Employee",
+			"UserIdDuplicate":"212121",
+			"password":"7492",
+			"firstName":"Twentyone",
+			"lastName":"Savage",
+			"ErrorKey":"errors.general.value.duplicate"
+		}
+	]
+}
