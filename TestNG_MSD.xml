@@ -16,7 +16,11 @@
 
 	<test name="NISTests">
 		<classes>
-
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCompleteRegistration"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerserviceFeedbackTest"/>
+ 
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsBadSortByTest"/>	 
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>

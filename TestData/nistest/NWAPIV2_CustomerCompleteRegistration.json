@@ -1,0 +1,10 @@
+{
+	"completeRegistration": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "12428:NWAPIV2_CustomerCompleteRegistration",
+			"testRailId":"12428"		
+		}
+	]
+}
