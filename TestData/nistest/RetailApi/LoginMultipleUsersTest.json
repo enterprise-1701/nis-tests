@@ -1,0 +1,16 @@
+{
+"LoginMultipleUsers": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "274844 : Login - Multiple Users",
+			"Username_Valid" : "532253",
+			"Password_Valid" : "5650",
+			"deviceSerialNumber_Valid" : "4e67a19d1900c51d",
+			"EXPECTED_FIELDNAME1":"authCode",
+			"EXPECTED_FIELDNAME2":"userId",
+			"EXPECTED_FIELDNAME1_VALUE":"Success",
+			"EXPECTED_FIELDNAME2_VALUE":"324"
+			}
+
+	]
+}

@@ -11,33 +11,41 @@
 	<parameter name="platform" value=""></parameter>
 	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
 
-	<parameter name="projectID" value="35"></parameter>
-	<parameter name="suiteID" value="548"></parameter>
+<!-- 	<parameter name="projectID" value="35"></parameter>
+	<parameter name="suiteID" value="548"></parameter> -->
 
 	<test name="NISTests">
 		<classes>
 		
-			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest"/>
+	<!-- 	<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsBadSortByTest"/>		
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_PaymentRepositoryNonceTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemLocationTest"/>
-
 			<class name="com.cubic.nistests.tests.CSAPIV1_OneAccountBalanceHistory"/>
-
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
 		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
 		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>
-
 			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
-			 
-			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/> -->
+			
+			<class name="com.cubic.nistests.tests.PatronAuthenticateValidUsernameAndPasswordTest2"/>
+			<class name="com.cubic.nistests.tests.PatronAuthenticateRegisteredDeviceTest"/>
+			<class name="com.cubic.nistests.tests.PatronAuthenticateUnregisteredDeviceTest2"/> 
+			<class name="com.cubic.nistests.tests.PatronAuthenticateAuthorizationFailedTest"/>
+			<class name="com.cubic.nistests.tests.PatronLoginLockedUserTest2"/>			
+			<class name="com.cubic.nistests.tests.PatronLoginWithNoAuthTest2"/>
+			<class name="com.cubic.nistests.tests.LoginMultipleUsersTest"/>
+			<class name="com.cubic.nistests.tests.PatronLoginSuspendedUserTest2"/>
+			<class name="com.cubic.nistests.tests.ForgotPinTest"/>
+			
+				
 <!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
             
            <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
