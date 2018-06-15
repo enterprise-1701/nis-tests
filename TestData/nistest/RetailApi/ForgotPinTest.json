@@ -1,0 +1,13 @@
+{
+"ForgotPin": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "191110 : Forgot Pin",
+	       	"ForgotPin_username" : "532253",	       	
+	       	"SecurityQuestion" : "What is your first pet's name?",
+			"SecurityAnswer ": "Bob",
+			"verificationToken": "Password"
+			}
+
+	]
+}
