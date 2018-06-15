@@ -1,0 +1,14 @@
+{
+	"createMerchantSubaccountWithUserIdBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "556447:Verify CreateMerchantSubaccountWithUserIdBlank",
+			"userType":"Employee",
+			"UserIdBlank":"",
+			"password":"7492",
+			"firstName":"Twentyone",
+			"lastName":"Savage",
+			"ErrorKey":"errors.general.value.required"
+		}
+	]
+}
