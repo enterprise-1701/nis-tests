@@ -2,7 +2,7 @@
 "PatronLoginLockedUser": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "190411 : Verify patron Login - Locked User",
+			"TestCase_Description": "190411 : Verify Customer Login - Locked User",
 	        "username" : "876546",
 			"password" : "5650",
 			"expected_authCode" : "authCode",

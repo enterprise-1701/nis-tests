@@ -2,7 +2,7 @@
 "PatronLoginWithNoAuth": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "821823 : Verify Patron Logout - Blank Auth",
+			"TestCase_Description": "821823 : Verify Customer Logout - Blank Auth",
 	       	"username" : "876546",
 			"password" : "5650",
 			"expected_fieldName":"fieldName",

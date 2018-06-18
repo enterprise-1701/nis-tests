@@ -17,11 +17,11 @@ import com.cubic.nisjava.api.MerchantPatronAuthenticatePost;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-public class PatronAuthenticateAuthorizationFailedTest extends RESTEngine {
+public class RetailApi_V1_CustomerLoginSuspendedUserTest extends RESTEngine {
 	
-	/**********************  C190410 Merchant Login - Authorization Failed **********************/
+	/**********************  190412 Merchant Login - Suspended User **********************/
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-	public void PatronLoginWithAuthorizationFailed(ITestContext context,Hashtable<String, String> data) throws Throwable {
+	public void PatronLoginSuspendedUser(ITestContext context,Hashtable<String, String> data) throws Throwable {
 		
 		String testCaseName = data.get("TestCase_Description");
 		RESTActions restActions = setupAutomationTest(context, testCaseName);
@@ -29,7 +29,7 @@ public class PatronAuthenticateAuthorizationFailedTest extends RESTEngine {
 		try {
 			
 			if (data.get("RunMode").equals("Y")) {
-				MerchantPatronAuthenticatePost.verifyPatronLoginWithAuthorizationFailed(data , restActions);
+				MerchantPatronAuthenticatePost.verifyPatronLoginWithSuspendedUser(data , restActions);
 				 				                
 			}
 		} catch (Exception e) {

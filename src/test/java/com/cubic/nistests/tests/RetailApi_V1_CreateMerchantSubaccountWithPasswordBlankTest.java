@@ -1,9 +1,9 @@
 package com.cubic.nistests.tests;
+
 /**
  *  Author:Vijaya Bhaskar Palem
  *  Jun 4, 2018
  */
-
 import java.util.Hashtable;
 
 import org.testng.ITestContext;
@@ -15,11 +15,11 @@ import com.cubic.nisjava.api.CreateMerchantSubaccountPost;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
              
-public class CreateMerchantSubaccountWithUserIdDuplicateTest extends RESTEngine{
+public class RetailApi_V1_CreateMerchantSubaccountWithPasswordBlankTest extends RESTEngine{
 	
-	//*******  Create Merchant Subaccount with UserId Duplicate ******//
+	//*******  Create Merchant Subaccount with Password Blank ******//
 			@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-			public void createMerchantSubaccountWithUserIdDuplicate(ITestContext context,Hashtable<String, String> data) throws Throwable {
+			public void createMerchantSubaccountWithPasswordBlank(ITestContext context,Hashtable<String, String> data) throws Throwable {
 				
 				String testCaseNameWithInvalidData = data.get("TestCase_Description");
 				RESTActions restActions = setupAutomationTest(context, testCaseNameWithInvalidData);
@@ -27,7 +27,7 @@ public class CreateMerchantSubaccountWithUserIdDuplicateTest extends RESTEngine{
 				
 				try {
 					if (data.get("RunMode").equals("Y")) {
-						CreateMerchantSubaccountPost.CreateMerchantSubaccountUserIdDuplicate(data, restActions);
+						CreateMerchantSubaccountPost.CreateMerchantSubaccountPasswordBlank(data, restActions);
 		                  
 					}
 				} catch (Exception e) {

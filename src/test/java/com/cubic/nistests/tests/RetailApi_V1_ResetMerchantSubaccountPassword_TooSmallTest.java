@@ -13,7 +13,7 @@ import com.cubic.nisjava.api.ResetMerchantSubaccountPasswordPATCH;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-public class ResetMerchantSubaccountPassword_TooSmallTest extends RESTEngine
+public class RetailApi_V1_ResetMerchantSubaccountPassword_TooSmallTest extends RESTEngine
 {
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
 	public void verifyResetMerchantSubaccountPasswordTooSmall(ITestContext context,Hashtable<String, String> data) throws Throwable

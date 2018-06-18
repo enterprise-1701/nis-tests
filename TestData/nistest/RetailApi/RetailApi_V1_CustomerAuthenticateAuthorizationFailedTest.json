@@ -2,7 +2,7 @@
 "PatronLoginWithAuthorizationFailed": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "190410 : Verify patron Login - Authorization Failed",
+			"TestCase_Description": "190410 : Verify Customer Login - Authorization Failed",
 	        "Username_Invalid":"foo",
 			"Password_Invalid":"foo",
 			"expected_authCode" : "authCode",

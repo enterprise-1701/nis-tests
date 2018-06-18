@@ -17,11 +17,11 @@ import com.cubic.nisjava.api.MerchantPatronAuthenticatePost;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-public class LoginMultipleUsersTest extends RESTEngine {
+public class RetailApi_V1_CustomerAuthenticateUnregisteredDeviceTest extends RESTEngine {
 	
-	/**********************  C274844 Login - Multiple Users  **********************/
+	/**********************  C190402 Merchant Login With Unregistered Device **********************/
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-	public void LoginMultipleUsers(ITestContext context,Hashtable<String, String> data) throws Throwable {
+	public void PatronAuthenticateWithUnregisteredDevice(ITestContext context,Hashtable<String, String> data) throws Throwable {
 		
 		String testCaseName = data.get("TestCase_Description");
 		RESTActions restActions = setupAutomationTest(context, testCaseName);
@@ -29,7 +29,7 @@ public class LoginMultipleUsersTest extends RESTEngine {
 		try {
 			
 			if (data.get("RunMode").equals("Y")) {
-				MerchantPatronAuthenticatePost.verifyLoginWithMultipleUsers(data , restActions);
+				MerchantPatronAuthenticatePost.verifyPatronAuthenticateWithUnregisteredDevice(data , restActions);
 				 				                
 			}
 		} catch (Exception e) {

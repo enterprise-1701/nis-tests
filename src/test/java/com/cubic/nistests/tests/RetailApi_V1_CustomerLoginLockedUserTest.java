@@ -17,11 +17,11 @@ import com.cubic.nisjava.api.MerchantPatronAuthenticatePost;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-public class PatronAuthenticateUnregisteredDeviceTest2 extends RESTEngine {
+public class RetailApi_V1_CustomerLoginLockedUserTest extends RESTEngine {
 	
-	/**********************  C190402 Merchant Login With Unregistered Device **********************/
+	/**********************  C190411 Login - Locked User **********************/
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-	public void PatronAuthenticateWithUnregisteredDevice(ITestContext context,Hashtable<String, String> data) throws Throwable {
+	public void PatronLoginLockedUser(ITestContext context,Hashtable<String, String> data) throws Throwable {
 		
 		String testCaseName = data.get("TestCase_Description");
 		RESTActions restActions = setupAutomationTest(context, testCaseName);
@@ -29,7 +29,7 @@ public class PatronAuthenticateUnregisteredDeviceTest2 extends RESTEngine {
 		try {
 			
 			if (data.get("RunMode").equals("Y")) {
-				MerchantPatronAuthenticatePost.verifyPatronAuthenticateWithUnregisteredDevice(data , restActions);
+				MerchantPatronAuthenticatePost.verifyPatronLoginWithLockedUser(data , restActions);
 				 				                
 			}
 		} catch (Exception e) {

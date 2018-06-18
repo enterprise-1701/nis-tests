@@ -5,6 +5,7 @@
 package com.cubic.nistests.tests;
 
 import java.util.Hashtable;
+
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import com.cubic.accelerators.RESTActions;
@@ -14,10 +15,10 @@ import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
 
-public class ResetMerchantSubaccountPassword_UserNameTest extends RESTEngine
+public class RetailApi_V1_ResetMerchantSubaccountPassword_ContiguousTest extends RESTEngine
 {
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-	public void verifyResetMerchantSubaccountPasswordUserName(ITestContext context,Hashtable<String, String> data) throws Throwable
+	public void verifyResetMerchantSubaccountPasswordContiguous(ITestContext context,Hashtable<String, String> data) throws Throwable
 	{
 		String testCaseName = data.get("TestCase_Description");
 		RESTActions restActions = setupAutomationTest(context, testCaseName);
@@ -25,7 +26,7 @@ public class ResetMerchantSubaccountPassword_UserNameTest extends RESTEngine
 		{
 			if (data.get("RunMode").equals("Y"))
 			{
-				ResetMerchantSubaccountPasswordPATCH.verifyResetMerchantSubaccountPasswordUserName(data, restActions);       
+				ResetMerchantSubaccountPasswordPATCH.verifyResetMerchantSubaccountPasswordContiguous(data, restActions);                 
 			}
 		} 
 		catch (Exception e) 

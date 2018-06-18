@@ -14,12 +14,12 @@ import com.cubic.accelerators.RESTEngine;
 import com.cubic.nisjava.api.CreateMerchantSubaccountPost;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
-
-public class CreateMerchantSubaccountWithNameBlankTest extends RESTEngine{
+             
+public class RetailApi_V1_DeleteMerchantSubaccountWithInvalidStatusTest extends RESTEngine{
 	
-	//*******  Create Merchant Subaccount with Name Blank ******//
+	//*******  Delete Merchant Subaccount with Invalid Status  ******//
 			@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
-			public void createMerchantSubaccountWithNameBlank(ITestContext context,Hashtable<String, String> data) throws Throwable {
+			public void deleteMerchantSubaccountwithinvalidStatus(ITestContext context,Hashtable<String, String> data) throws Throwable {
 				
 				String testCaseNameWithInvalidData = data.get("TestCase_Description");
 				RESTActions restActions = setupAutomationTest(context, testCaseNameWithInvalidData);
@@ -27,7 +27,7 @@ public class CreateMerchantSubaccountWithNameBlankTest extends RESTEngine{
 				
 				try {
 					if (data.get("RunMode").equals("Y")) {
-						CreateMerchantSubaccountPost.CreateMerchantSubaccountNameBlank(data, restActions);
+						CreateMerchantSubaccountPost.DeleteMerchantSubaccountWithInvalidStatus(data, restActions);
 		                  
 					}
 				} catch (Exception e) {
