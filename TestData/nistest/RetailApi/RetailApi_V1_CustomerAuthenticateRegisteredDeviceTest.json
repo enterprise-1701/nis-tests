@@ -1,0 +1,16 @@
+{
+"patronAuthenticateWithRegisteredDevice": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "190399 : Verify Merchant Login - Registered Device",
+	       	"Username_Valid":"Cubic3",
+			"Password_Valid":"1521",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"EXPECTED_FIELDNAME1":"authCode",
+			"EXPECTED_FIELDNAME2":"userId",
+			"EXPECTED_FIELDNAME1_VALUE":"Success",
+			"EXPECTED_FIELDNAME2_VALUE":"1180",
+			"deviceSerialNumber_Registered":"8d84dd021a6ce29b"
+		}
+	]
+}
