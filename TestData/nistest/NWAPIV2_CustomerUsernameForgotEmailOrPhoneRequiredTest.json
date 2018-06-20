@@ -1,0 +1,14 @@
+{
+	"usernameForgot": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "960992:NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest",
+			"testRailId":"960992",
+			"EXPECTED_RESPONSE_CODE":"400",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"Email/Phone",
+			"EXPECTED_ERROR_KEY":"errors.email.or.phone.are.required"		
+		}
+	]
+}

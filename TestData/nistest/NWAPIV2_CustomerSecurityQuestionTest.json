@@ -1,0 +1,11 @@
+{
+	"securityQuestion": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "960977:NWAPIV2_CustomerSecurityQuestionTest",
+			"testRailId":"960977",
+			"EXPECTED_RESPONSE_CODE":"200"		
+		}
+	]
+}

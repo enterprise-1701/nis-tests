@@ -1,0 +1,14 @@
+{
+	"usernameForgot": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "123456:NWAPIV2_CustomerUsernameForgotNotFoundTest",
+			"testRailId":"123456",
+			"EXPECTED_RESPONSE_CODE":"404",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"Account",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}

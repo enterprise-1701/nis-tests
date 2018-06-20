@@ -28,6 +28,14 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 	protected static final String EXPECTED_HTTP_RESPONSE_CODE = "EXPECTED_HTTP_RESPONSE_CODE";	
 	protected static final String BAD_RESPONSE_CODE_FMT = "WRONG HTTP RESPONSE CODE - EXPECTED %s, FOUND %s";
 	protected static final String RESPONSE_IS_NULL = "RESPONSE IS NULL BUT SHOULD NOT BE NULL";	
+	protected static final String EXPECTED_RESULT = "EXPECTED_RESULT";	
+	protected static final String RESULT_FMT = "BAD RESULT: EXPECTED '%s', FOUND '%s'";
+	protected static final String BAD_UI_NULL_FMT = "BAD UID: UID IS NULL BUT IT SHOULD NOT BE";
+	protected static final String BAD_UI_LENGTH_0_MSG = "BAD UID: UID HAS LENGTH 0";
+	protected static final String EXPECTED_FIELDNAME = "EXPECTED_FIELDNAME";
+	protected static final String BAD_ERROR_KEY_FMT = "BAD ERROR KEY: EXPECTED '%s', FOUND '%s'";
+	protected static final String EXPECTED_ERROR_KEY = "EXPECTED_ERROR_KEY";
+	protected static final String BAD_FIELD_NAME_FMT = "BAD FIELD NAME: EXPECTED '%s', FOUND '%s'";
 	
 	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
 	
@@ -58,7 +66,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		
 		String response = clientResponse.getEntity(String.class);
 		LOG.info("##### Got the response body: " + response);
-		restActions.assertTrue(response != null, "RESPONSE IS NULL BUT SHOULD NOT BE NULL");	
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);	
 		
 		LOG.info("##### Parse the actual response...");
 		Gson gson = new Gson();
@@ -88,7 +96,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		
 		String response = clientResponse.getEntity(String.class);
 		LOG.info("##### Got the response body");
-		restActions.assertTrue(response != null, "RESPONSE IS NULL BUT SHOULD NOT BE NULL");
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
 		LOG.info( response );
 		
 		Gson gson = new Gson();
@@ -126,7 +134,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		
 		String response = clientResponse.getEntity(String.class);
 		LOG.info("##### Got the response body");
-		restActions.assertTrue(response != null, "RESPONSE IS NULL BUT SHOULD NOT BE NULL");
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
 		LOG.info( response );
 		
 		Gson gson = new Gson();
@@ -168,7 +176,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		
 		String response = clientResponse.getEntity(String.class);
 		LOG.info("##### Got the response body");
-		restActions.assertTrue(response != null, "RESPONSE IS NULL BUT SHOULD NOT BE NULL");
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
 		LOG.info( response );
 		
 		Gson gson = new Gson();
@@ -378,4 +386,128 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 						"BAD CUSTOMER ID - EXPECTED %s, FOUND %s",
 						expectedCustomerId, actualCustomerId));
 	}
+	
+	
+	/**
+	 * Build the URL used to get the security question.
+	 * 
+	 * @return The URL in string format.
+	 */
+	protected String buildSecurityQuestionURL() {
+        return "http://" + BackOfficeGlobals.ENV.NIS_HOST + ":" + BackOfficeGlobals.ENV.NIS_PORT
+                + "/nis/nwapi/v2/customer/securityquestion";
+	}
+	
+	/**
+	 * Helper method to build the Prevalidate request body.
+	 * 
+	 * @param username  The username to use
+	 * @param password  The password to use
+	 * @return  the Prevalidate request body
+	 */
+	protected String buildSecurityQuestionRequestBody( String username ) {
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter( sw );
+		pw.println("{");
+		pw.println("\"username\":\"" + username + "\"");
+		pw.println("}");
+		return sw.toString();
+	}
+	
+	/**
+	 * Helper method to lookup the Security Questions that belong to a username.
+	 * 
+	 * @param restActions  The RESTActions object used by the @Test method.
+	 * @param data  The Test Data from the JSON input file
+	 * @param headerTable  The HTTP Headers used to call the API.
+	 * @param username  The username used to get the Security Questions.
+	 * @return The response in String form.
+	 * @throws Throwable  Thrown if something goes wrong.
+	 */
+	protected String securityQuestion(RESTActions restActions, Hashtable<String,String> data, Hashtable<String,String> headerTable, String username ) throws Throwable {
+
+		String securityQuestionURL = buildSecurityQuestionURL();
+		LOG.info("##### Built URL: " + securityQuestionURL);
+		
+		String requestBody = buildSecurityQuestionRequestBody( username );
+		LOG.info("##### Built request body: " + requestBody);
+		
+		LOG.info("##### Making HTTP request to obtain the Security Question...");
+		ClientResponse clientResponse = restActions.postClientResponse(
+				securityQuestionURL, requestBody, headerTable, null,
+				RESTConstants.APPLICATION_JSON);
+
+		LOG.info("##### Verifying HTTP response code...");
+		String sExpectedResponseCode = data.get("EXPECTED_RESPONSE_CODE");
+		int iExpectedResponseCode = Integer.parseInt(sExpectedResponseCode);
+		int iActualResponseCode = clientResponse.getStatus();
+		String fmt = "WRONG HTTP RESPONSE CODE - EXPECTED %s, FOUND %s";
+		String msg = String.format(fmt, iExpectedResponseCode, iActualResponseCode);
+		restActions.assertTrue(iExpectedResponseCode == iActualResponseCode, msg);
+		
+		String response = clientResponse.getEntity(String.class);
+		LOG.info("##### Got the response body");
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
+		LOG.info( response );
+		
+		return response;
+	}
+	
+	/**
+	 * Build the URL used to call the username forgot API.
+	 * 
+	 * @return The URL in string format.
+	 */
+	protected String buildUsernameForgotURL() {
+        return "http://" + BackOfficeGlobals.ENV.NIS_HOST + ":" + BackOfficeGlobals.ENV.NIS_PORT
+                + "/nis/nwapi/v2/customer/username/forgot";
+	}
+	
+	/**
+	 * Helper method to build the 'Username Forgot' request body.
+	 * 
+	 * @param email  The email address to use
+	 * @return  the 'Username Forgot' request body
+	 */
+	protected String buildUsernameForgotRequestBody( String email ) {
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter( sw );
+		pw.println("{");
+		pw.println("    \"email\":\"" + email + "\"");
+		pw.println("}");
+		return sw.toString();
+	}	
+	
+	/**
+	 * This is a Helper method to call the 'Username Forgot' API.
+	 * 
+	 * @param restActions  The RESTActions object used by the @Test method.
+	 * @param data  The Test Data from the JSON input file.
+	 * @param headerTable  The HTTP Headers using by the @Test method.
+	 * @param email  The email address of the user we're searching for.
+	 * @throws Throwable  Thrown if something goes wrong.
+	 */
+	protected ClientResponse usernameForgot(RESTActions restActions, Hashtable<String,String> data, Hashtable<String,String> headerTable, String email ) throws Throwable {
+
+		String usernameForgotURL = buildUsernameForgotURL();
+		LOG.info("##### Built URL: " + usernameForgotURL);
+		
+		String requestBody = buildUsernameForgotRequestBody( email );
+		LOG.info("##### Built request body: " + requestBody);
+		
+		LOG.info("##### Making HTTP request to obtain the Username Forgot...");
+		ClientResponse clientResponse = restActions.postClientResponse(
+				usernameForgotURL, requestBody, headerTable, null,
+				RESTConstants.APPLICATION_JSON);
+
+		LOG.info("##### Verifying HTTP response code...");
+		String sExpectedResponseCode = data.get("EXPECTED_RESPONSE_CODE");
+		int iExpectedResponseCode = Integer.parseInt(sExpectedResponseCode);
+		int iActualResponseCode = clientResponse.getStatus();
+		String fmt = "WRONG HTTP RESPONSE CODE - EXPECTED %s, FOUND %s";
+		String msg = String.format(fmt, iExpectedResponseCode, iActualResponseCode);
+		restActions.assertTrue(iExpectedResponseCode == iActualResponseCode, msg);
+		
+		return clientResponse;
+	}	
 }
