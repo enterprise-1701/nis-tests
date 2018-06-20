@@ -1,0 +1,15 @@
+{
+"dailyTransactionReportNoTransaction": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description":"621686 : Daily Transaction Report - No Transaction",
+			"CustomerId" : "CMS000001000",
+			"EndPoints"  : "/transactions/summary",
+			"TransactionDate" :  "2017-03-11T13:34:00.000",
+			"DeviceID"	: "MTL00011",
+			"ExpectedResponseCode" : "200"
+			
+			}
+	]
+
+}
