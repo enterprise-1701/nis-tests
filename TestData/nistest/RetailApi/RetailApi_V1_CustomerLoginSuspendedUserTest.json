@@ -1,0 +1,15 @@
+{
+"PatronLoginSuspendedUser": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "190412 : Verify Customer Login - Suspended User",
+	       	"username" : "Cubic5",
+			"password" : "1521",
+			"expected_authCode" : "authCode",
+			"expected_authCode_value" : "Failure",
+			"expected_authErrors": "authErrors",
+			"expected_errorKey" : "errorKey",
+			"expected_errorKey_value" : "errors.account.is.inactive"
+		}
+	]
+}

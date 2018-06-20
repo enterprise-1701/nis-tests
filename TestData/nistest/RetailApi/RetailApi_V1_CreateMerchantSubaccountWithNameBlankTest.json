@@ -1,0 +1,13 @@
+{
+	"createMerchantSubaccountWithNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "556446:Verify CreateMerchantSubaccountWithNameBlank",
+			"userType":"Employee",
+			"password":"7492",
+			"firstName":"Twentyone",
+			"lastName":"Savage",
+			"ErrorKey":"errors.general.value.required"
+		}
+	]
+}

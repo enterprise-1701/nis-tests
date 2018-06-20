@@ -1,0 +1,21 @@
+{
+"PatronAuthenticateWithUnregisteredDevice": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "190402 : Verify Merchant Login - Unregistered Device",
+	       	"Username_Valid":"532253",
+			"Password_Valid":"5650",
+			"EXPECTED_HTTP_RESPONSE_CODE":"400",
+			"deviceSerialNumber_UnRegistered":"12345678M212121",
+			"expected_hdr_field" : "hdr",
+			"expected_result" : "result",
+			"expected_result_value" : "DataValidationError",
+			"expected_uid" : "uid",
+			"expected_uid_value" : "618fbd7d-aa7d-4ba2-90ae-8d033274b3df",
+			"expected_fieldName": "fieldName",
+			"expected_fieldName_value": "deviceSerialNumber",
+			"expected_errorKey": "errorKey",
+			"expected_errorKey_value": "errors.general.device.unauthorized"
+		}
+	]
+}

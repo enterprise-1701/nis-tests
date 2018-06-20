@@ -1,0 +1,15 @@
+{
+"PatronLoginWithAuthorizationFailed": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "190410 : Verify Customer Login - Authorization Failed",
+	        "Username_Invalid":"foo",
+			"Password_Invalid":"foo",
+			"expected_authCode" : "authCode",
+			"expected_authCode_value" : "Failure",
+			"expected_authErrors" : "authErrors",
+			"expected_errorKey" : "errorKey",
+			"expected_errorKey_value" : "errors.invalid.user.or.password"
+		}
+	]
+}

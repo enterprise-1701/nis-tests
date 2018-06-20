@@ -1,0 +1,20 @@
+{
+"PatronLoginWithNoAuth": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "821823 : Verify Customer Logout - Blank Auth",
+	       	"username" : "876546",
+			"password" : "5650",
+			"expected_fieldName":"fieldName",
+			"expected_fieldName_value": "hdr",
+			"expected_result": "result",
+			"expected_result_value": "DataValidationError",
+			"expected_uid" : "uid",
+			"expected_uid_value" : "f70ae661-7695-4cd9-b2d4-33df8749e62b",
+			"expected_errorKey": "errorKey",
+			"expected_errorKey_value": "errors.general.value.required",
+			"expected_errorMessage": "errorMessage",
+			"expected_errorMessage_value": "request header is null"
+		}
+	]
+}
