@@ -1,0 +1,14 @@
+{
+	"securityQuestion": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "960955:NWAPIV2_CustomerSecurityQuestionUsernameBlankTest",
+			"testRailId":"960955",
+			"EXPECTED_RESPONSE_CODE":"400",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"Username",
+			"EXPECTED_ERROR_KEY":"errors.general.value.required"		
+		}
+	]
+}

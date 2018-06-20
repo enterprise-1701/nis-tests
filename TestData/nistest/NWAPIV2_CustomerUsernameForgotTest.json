@@ -1,0 +1,11 @@
+{
+	"usernameForgot": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "960998:NWAPIV2_CustomerUsernameForgotTest",
+			"testRailId":"960998",
+			"EXPECTED_RESPONSE_CODE":"204"		
+		}
+	]
+}

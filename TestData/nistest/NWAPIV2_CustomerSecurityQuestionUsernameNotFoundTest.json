@@ -1,0 +1,14 @@
+{
+	"securityQuestion": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "960995:NWAPIV2_CustomerSecurityQuestionUsernameNotFoundTest",
+			"testRailId":"960995",
+			"EXPECTED_RESPONSE_CODE":"404",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"Username",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}
