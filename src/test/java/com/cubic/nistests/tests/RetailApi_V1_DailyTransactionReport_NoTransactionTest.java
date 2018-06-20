@@ -1,5 +1,6 @@
 /**
- * 
+ * @author 203610
+ * Jun 19, 2018
  */
 package com.cubic.nistests.tests;
 
@@ -14,10 +15,7 @@ import com.cubic.nisjava.api.RetailAPIDailyTransactionReportPOST;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-/**
- * @author 203610
- * Jun 19, 2018
- */
+
 public class RetailApi_V1_DailyTransactionReport_NoTransactionTest extends RESTEngine
 {
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
