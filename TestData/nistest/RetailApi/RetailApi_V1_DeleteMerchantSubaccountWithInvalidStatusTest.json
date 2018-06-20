@@ -1,0 +1,14 @@
+{
+	"deleteMerchantSubaccountwithinvalidStatus": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "559837:Verify deleteMerchantSubaccountwithinvalidStatus",
+			"userType":"Employee",
+			"UserIdBlank":"",
+			"password":"7492",
+			"firstName":"Twentyone",
+			"lastName":"Savage",
+			"ErrorKey":"errors.general.value.unexpected"
+		}
+	]
+}

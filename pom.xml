@@ -48,7 +48,7 @@
   	<dependency>
   		<groupId>com.cubic.seleniumaction</groupId>
   		<artifactId>seleniumaction</artifactId>
-  		<version>1.4.0</version>
+  		<version>1.5.0</version>
   	</dependency>
   	<dependency>
   		<groupId>org.slf4j</groupId>
@@ -123,7 +123,7 @@
   	<dependency>
   		<groupId>com.cubic.backofficejava</groupId>
   		<artifactId>BackOfficeJava</artifactId>
-  		<version>1.5.2</version>
+  		<version>1.6.1</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.vpos</groupId>

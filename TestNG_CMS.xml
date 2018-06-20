@@ -11,9 +11,6 @@
 	<parameter name="platform" value=""></parameter>
 	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
 
-	<parameter name="projectID" value="35"></parameter>
-	<parameter name="suiteID" value="548"></parameter>
-
 	<test name="NISTests">
 		<classes>
 		
@@ -22,7 +19,7 @@
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameNotFoundTest"/>  
-			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameBlankTest"/>		
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameBlankTest"/>			
 		
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
