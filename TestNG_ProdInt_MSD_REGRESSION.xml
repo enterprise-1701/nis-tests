@@ -42,7 +42,7 @@
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
 		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
-		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>
+<!--		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>    -->     <!-- JIRA Defect ID CCBO-13057 -->
 
 			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
