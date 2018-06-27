@@ -10,7 +10,11 @@
 			"EXPECTED_FIELDNAME2":"userId",
 			"EXPECTED_FIELDNAME1_VALUE":"Success",
 			"EXPECTED_FIELDNAME2_VALUE":"1180",
-			"deviceSerialNumber_Registered":"8d84dd021a6ce29b"
+			"deviceSerialNumber_Registered":"8d84dd021a6ce29b",
+			"EXPECTED_FIELDNAME3":"operatorId",
+			"EXPECTED_FIELDNAME3_VALUE":"5",
+			"EXPECTED_FIELDNAME4":"locationId",
+			"EXPECTED_FIELDNAME4_VALUE":"842"
 		}
 	]
 }
