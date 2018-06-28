@@ -1,0 +1,11 @@
+{
+	"getCustomerAddress": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "978003:NWAPIV2_CustomerGetAddressTest",
+			"testRailId":"978003",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

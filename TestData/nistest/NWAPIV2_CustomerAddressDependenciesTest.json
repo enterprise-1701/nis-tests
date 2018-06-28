@@ -1,0 +1,11 @@
+{
+	"getContactDependencies": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "978107:NWAPIV2_CustomerAddressDependenciesTest",
+			"testRailId":"978107",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}
