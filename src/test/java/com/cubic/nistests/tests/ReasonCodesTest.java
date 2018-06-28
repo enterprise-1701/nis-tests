@@ -120,6 +120,8 @@ public class ReasonCodesTest extends RESTEngine {
 	/**
 	 * Helper method to verify the response from the API.
 	 * 
+	 * The Reason Codes are stored in the CXS DB table REASON_CODE.
+	 * 
 	 * @param restActions  The Rest Actions object used to report assertions.
 	 * @param data The Test Data.
 	 * @param response  The API response, in String form.
