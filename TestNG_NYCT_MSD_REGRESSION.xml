@@ -14,6 +14,12 @@
 	<test name="NISTests">
 		<classes>
 		
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPutAddressTest"/>  
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPostAddressTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetAddressTest"/>		
+		
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotNotFoundTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest"/>
