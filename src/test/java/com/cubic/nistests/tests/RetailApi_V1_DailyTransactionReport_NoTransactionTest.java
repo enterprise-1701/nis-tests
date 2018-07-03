@@ -15,15 +15,13 @@ import com.cubic.nisjava.api.RetailAPIDailyTransactionReportPOST;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;
 
-
 public class RetailApi_V1_DailyTransactionReport_NoTransactionTest extends RESTEngine
 {
 	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderRetailAPI.class)
 	public void dailyTransactionReportNoTransaction(ITestContext context,Hashtable<String, String> data) throws Throwable
 	{		
 		String testCaseName = data.get("TestCase_Description");
-		RESTActions restActions = setupAutomationTest(context, testCaseName);        
-
+		RESTActions restActions = setupAutomationTest(context, testCaseName);   
 		try {			
 			if (data.get("RunMode").equals("Y"))
 			{

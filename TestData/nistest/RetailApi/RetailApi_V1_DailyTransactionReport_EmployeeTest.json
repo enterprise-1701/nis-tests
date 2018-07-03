@@ -1,0 +1,34 @@
+
+{
+"retailerDailyTransactionReportEmployee": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description":"978523 : Daily Transaction Report - Employee",
+			"CustomerId" : "CMS000005210",
+			"EndPoints"  : "/transactions/summary",
+			"DeviceID"	: "MTL00031",
+			"UserId"	: "1446",
+			"TransactionDate" :  "2018-06-28T09:57:50.132Z",
+			"ExpectedResponseCode" : "200",
+			"Field_Transactions_ItemType" : "Transactions ItemType",
+			"Field_Transactions_Quantity" : "Quantity",
+			"Field_Transactions_LineItemTotal" : "Line Item Total",
+			"Field_Transactions_EmployeeID" : "Employee ID",
+			"Field_Transactions_Employee_FirstName" : "Employee First Name",
+			"Field_Transactions_Employee_LastName" : "Employee Last Name",
+			"Field_Transactions_Employee_UserID" : "Employee UserID",
+			"Field_Transactions_Employee_UserName" : "Employee User Name",
+			"Field_Transactions_Employee_UserType" : "Employee User Type",
+			"Field_Transactions_Employee_CredentialStatus" : "Credential Status",
+			"Field_Transactions_Employee_PhoneNumber" : "Phone Number",
+			"Field_Transactions_Employee_PhoneType" : "Phone Type",
+			"Field_Transactions_Employee_PhoneCountry" : "Phone Country",
+			
+			"Field_Transactions_Employee_FirstName" : "Employee First Name",
+			"Field_Transactions_Employee_FirstName" : "Employee First Name","Field_Transactions_Employee_FirstName" : "Employee First Name",
+			
+			
+			}
+	]
+
+}

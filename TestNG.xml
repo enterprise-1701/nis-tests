@@ -16,10 +16,13 @@
 
 	<test name="NISTests">
 		<classes>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReportTest"/> 
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_AdminTest"/>
+   			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
+   			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest"/>
    			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
    			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>
+
 			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCompleteRegistration"/>

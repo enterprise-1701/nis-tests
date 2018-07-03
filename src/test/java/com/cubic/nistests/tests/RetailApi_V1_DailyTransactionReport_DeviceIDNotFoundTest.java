@@ -28,12 +28,15 @@ public class RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest extends RE
 			{
 				RetailAPIDailyTransactionReportPOST.retailerDailyTransactionReportDeviceIdNotFound(restActions, data);				 				                
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			e.printStackTrace();
 			throw new RuntimeException(e);
-		} finally {
+		}
+		finally
+		{
 			teardownAutomationTest(context, testCaseName);
-
 		}
 	}
 }
