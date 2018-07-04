@@ -17,7 +17,7 @@
 	<test name="NISTests">
 		<classes>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_AdminTest"/>
-   			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
+   			 <class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
    			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest"/>
    			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
