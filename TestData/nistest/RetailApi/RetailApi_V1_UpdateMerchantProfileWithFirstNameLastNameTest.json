@@ -1,0 +1,12 @@
+{
+"updateMerchantProfileWithFirstNameLastName": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612518 : Edit Merchant Profile - firstName + lastName",
+	        "UserId" : "324",
+	        "firstName" : "Jordan",
+	        "lastName" : "Tester",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "204"
+		}
+	]
+}

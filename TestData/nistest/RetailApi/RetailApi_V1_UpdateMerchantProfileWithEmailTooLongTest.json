@@ -1,0 +1,22 @@
+{
+"updateMerchantProfileWithEmailTooLong": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612530 : Edit Merchant Profile - email - value toolong",
+	        "UserId" : "324",
+	        "Valid_Email" : "thisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatestthisisatest@cubic.com",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "a19f8ef7-e20b-4541-9bc8-84ae45921a74",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "email",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.value.toolong",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Maximum length exceeded."
+		}
+	]
+}

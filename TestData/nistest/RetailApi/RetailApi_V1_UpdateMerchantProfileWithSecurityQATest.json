@@ -1,0 +1,12 @@
+{
+"updateMerchantProfileWithSecurityQA": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612544 : Edit Merchant Profile - securityQAs",
+	        "UserId" : "324",
+	        "securityQuestion" : "What is your first pet\'s name?",
+			"securityAnswer" : "cat",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "204"
+		}
+	]
+}

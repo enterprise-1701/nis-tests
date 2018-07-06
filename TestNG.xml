@@ -47,11 +47,11 @@
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-<!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
+			<class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/>
             
            <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
            
-           <!--  <class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
+           	<class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateUsernameBlankTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateAccountDisabledTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateInvalidUsernameAndPasswordTest"/> 
@@ -89,11 +89,11 @@
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithSecurityAnswertoolongTest"/>
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoolongTest"/>
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoosmallTest"/>
-            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPinInvalidTest"/> -->
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPinInvalidTest"/>
             
              <!-- *************** Merchant MDT Retail Api 1.0 Tests Need to Run in MDT_EIL Environment *************** -->
              
-             <!-- <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
+             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithNameBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithPasswordBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithUserIdBlankTest"/>
@@ -118,8 +118,35 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginWithNoAuthTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginMultipleUsersTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginSuspendedUserTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/> -->
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/>
 			
+			 <!-- *************** Merchant MDT Retail Api 1.0 Tests - Update Merchant Device *************** -->
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewMerchantProfileUserIdNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithValidEmailTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithEmailTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithEmailStartingWithSpecialCharactersTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithInvalidEmailFormatTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithFirstNameLastNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithEmptyFirstNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithFirstNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithEmptyLastNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithLastNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithValidPhoneTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPhoneNoValueRequiredTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPhoneNoTooShortTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPhoneNoTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPhoneNumberTypeRequiredTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPhoneNoTypeValueInvalidTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPasswordTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPasswordValueRequiredTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPasswordCannotContainUsernameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithPasswordMustContainDigitsTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithSecurityQATest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithSecurityQuestionValueRequiredTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithSecurityQuestionValueUnexpectedTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithSecurityAnswerValueRequiredTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_UpdateMerchantProfileWithSecurityAnswerValueTooLongTest"/>
+		
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,0 +1,23 @@
+{
+"updateMerchantProfileWithSecurityQuestionValueUnexpected": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612549 : Edit Merchant Profile - securityQAs - securityQAs[0].securityQuestion value unexpected",
+	        "UserId" : "324",
+	        "securityQuestion" : "What",
+			"securityAnswer" : "cat",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "e528c7af-e862-4199-98f9-b2bc4f8c1453",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "securityQAs[0].securityQuestion",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.value.unexpected",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Invalid value."
+		}
+	]
+}

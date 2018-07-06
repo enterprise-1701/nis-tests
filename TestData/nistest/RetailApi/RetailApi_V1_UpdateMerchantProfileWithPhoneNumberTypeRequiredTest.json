@@ -1,0 +1,24 @@
+{
+"updateMerchantProfileWithPhoneNoTypeRequired": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "967812 : Edit Merchant Profile - phone - phone[0].type value required",
+	        "UserId" : "324",
+	        "country": "US",
+			"number": "(619) 456-7890",
+			"type": "",
+	       	"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "dbfd814d-e2c5-4ec6-a6f4-c47903e47cd5",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "phone[0].type",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.value.required",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Field is blank."
+		}
+	]
+}

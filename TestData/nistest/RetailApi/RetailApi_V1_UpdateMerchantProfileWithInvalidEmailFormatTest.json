@@ -1,0 +1,22 @@
+{
+"updateMerchantProfileWithInvalidEmailFormat": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612528 : Edit Merchant Profile - email - invalid format",
+	        "UserId" : "324",
+	        "Valid_Email" : "cubic.com",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "dbfd814d-e2c5-4ec6-a6f4-c47903e47cd5",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "email",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.email.invalid.format",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Must be in a standard valid email format."
+		}
+	]
+}

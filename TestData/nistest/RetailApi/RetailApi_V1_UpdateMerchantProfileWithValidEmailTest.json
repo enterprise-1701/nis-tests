@@ -1,0 +1,12 @@
+{
+"updateMerchantProfileWithValidEmail": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612543 : Edit Merchant Profile - email",
+	        "UserId" : "324",
+	        "Valid_Email" : "thisisatest@cubic.com",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "204",
+			"EXPECTED_HTTP_RESPONSE_CODE1" : "200"
+		}
+	]
+}
