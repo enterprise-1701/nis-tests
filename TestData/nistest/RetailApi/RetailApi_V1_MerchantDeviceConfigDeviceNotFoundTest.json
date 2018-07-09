@@ -1,0 +1,12 @@
+{
+	"verifyDeviceConfigDeviceNotFound": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "607838:Verify Device Id configuration- deviceId not found",
+			"InvalidDeviceID":"MTLXXXX",
+			"ErrorKey":"errors.general.record.not.found",
+			"CustomerId":"CMS000001000"
+			
+		}
+	]
+}

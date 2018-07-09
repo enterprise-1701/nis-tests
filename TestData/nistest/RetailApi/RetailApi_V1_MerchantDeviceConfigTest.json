@@ -1,0 +1,14 @@
+{
+	"retriveDeviceConfig": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "607828:Verify Device configuration",
+			"CustomerId":"CMS000001000",
+			"DeviceID":"DeviceID",
+			"LocationID":"LocationID",
+			"deviceSerialNbr":"deviceSerialNbr",
+			"Nickname":"Nickname",
+			"Status":"Status"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"verifyDeviceConfigDataWithcustomerNotFound": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "821831:Verify Device configuration Data - Customer Not Found",
+			"ErrorKey":"errors.general.record.not.found",
+			"Invalid_CustomerId":"CMSXXXXXXXXXX"
+		}
+	]
+}
