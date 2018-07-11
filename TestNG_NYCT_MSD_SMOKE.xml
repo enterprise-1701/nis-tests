@@ -11,17 +11,13 @@
 	<parameter name="platform" value=""></parameter>
 	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
 
-	<parameter name="projectID" value="35"></parameter>
-	<parameter name="suiteID" value="548"></parameter>
-
 	<test name="NISTests">
 		<classes>
 		
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCompleteRegistration"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_PaymentRepositoryNonceTest"/>
-
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
-
-			<class name="com.cubic.nistests.tests.CountriesTest"/>
 
 		</classes>
 	</test> <!-- Test -->

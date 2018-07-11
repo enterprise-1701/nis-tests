@@ -3,7 +3,7 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "824960:NWAPIV2_TransitaccountSubsystemTravelHistoryTapsGoodSortByTest",
+			"TestCase_Description": "824960:NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest",
 			"testRailId":"824960",
 			"EXPECTED_HTTP_RESPONSE_CODE":"200",
 			"SUBSYSTEM_ENUM":"ABP",

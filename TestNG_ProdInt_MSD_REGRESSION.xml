@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="nistests - Test Suite">
+
+	<parameter name="browser" value="saucelabs"></parameter>
+	<parameter name="seleniumgridurl" value="local"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="executionenv" value="local"></parameter>
+	<parameter name="version" value=""></parameter>
+	<parameter name="platform" value=""></parameter>
+	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
+
+	<test name="NISTests">
+		<classes>
+		
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPutAddressTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPostAddressTest"/>  
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetAddressTest"/>
+			 
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotTest"/> 
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameNotFoundTest"/>  
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameBlankTest"/>		
+		
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCompleteRegistration"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerserviceFeedbackTest"/>
+ 
+			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsBadSortByTest"/>	 
+			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_PaymentRepositoryNonceTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemLocationTest"/>
+			
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnSubset_MSD"/>
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryGood_ReturnAll_MSD"/> 
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerViewAccountSummaryBad_MaxLength_MSD"/>
+ 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCredentialsAuthenticate_InvalidPassword_MSD"/>
+ 			<class name="com.cubic.nistests.tests.CSAPIV1_OneAccountBalanceHistory"/>
+  
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithDoc"/>
+			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
+	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
+		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
+<!--		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>    -->     <!-- JIRA Defect ID CCBO-13057 -->
+ 
+			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
+			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
+			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
+			<class name="com.cubic.nistests.tests.CountriesTest"/>
+			<class name="com.cubic.nistests.tests.SecurityQuestionsTestMSD"/>	
+			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
+			 
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

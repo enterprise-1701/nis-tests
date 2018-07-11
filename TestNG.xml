@@ -11,11 +11,21 @@
 	<parameter name="platform" value=""></parameter>
 	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
 
-	<parameter name="projectID" value="35"></parameter>
-	<parameter name="suiteID" value="548"></parameter>
-
 	<test name="NISTests">
 		<classes>
+
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPutAddressTest"/>  
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPostAddressTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetAddressTest"/>
+		
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameNotFoundTest"/>  
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerSecurityQuestionUsernameBlankTest"/>		
 		
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetCustomer"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
@@ -43,11 +53,11 @@
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-			<class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/>
+<!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
             
            <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
            
-           <class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
+           <!--  <class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateUsernameBlankTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateAccountDisabledTest"/> 
             <class name="com.cubic.nistests.tests.PatronAuthenticateInvalidUsernameAndPasswordTest"/> 
@@ -85,11 +95,11 @@
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithSecurityAnswertoolongTest"/>
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoolongTest"/>
             <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoosmallTest"/>
-            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPinInvalidTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPinInvalidTest"/> -->
             
              <!-- *************** Merchant MDT Retail Api 1.0 Tests Need to Run in MDT_EIL Environment *************** -->
              
-             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
+             <!-- <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithNameBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithPasswordBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithUserIdBlankTest"/>
@@ -114,17 +124,15 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginWithNoAuthTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginMultipleUsersTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginSuspendedUserTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/> 
 			
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_AdminTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>
-						
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>-->
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
-
-
