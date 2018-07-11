@@ -1,0 +1,20 @@
+{
+"dailyTransactionReportInvalidDate": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description":"621682 : Daily Transaction Report - Invalid date",
+			"CustomerId" : "CMS000001000",
+			"EndPoints"  : "/transactions/summary",
+			"TransactionDate" :  "2031-06-14L17:17:07.690Z",
+			"DeviceID"	: "MTL00011",
+			"UserId"	: "324",
+			"ExpectedResponseCode" : "400",
+			"ExpectedErrorMessage" : "Value is not a valid date and time.",
+			"ExpectedErrorKey" : "errors.invalid.date",
+			"AttributeErrorMessage" : "errorMessage",
+			"AttributeErrorKey" : "errorKey"
+			
+			}
+	]
+
+}

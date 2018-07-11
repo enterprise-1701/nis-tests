@@ -16,7 +16,7 @@
             
              <!-- *************** Merchant MDT Retail Api 1.0 Tests Need to Run in MDT_EIL Environment *************** -->
              
-             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
+         <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithNameBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithPasswordBlankTest"/>
              <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithUserIdBlankTest"/>
@@ -41,7 +41,14 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginWithNoAuthTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginMultipleUsersTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginSuspendedUserTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/> 
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_AdminTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>
 			
 		</classes>
 	</test> <!-- Test -->
