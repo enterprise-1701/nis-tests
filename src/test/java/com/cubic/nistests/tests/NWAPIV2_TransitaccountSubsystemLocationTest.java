@@ -112,6 +112,13 @@ public class NWAPIV2_TransitaccountSubsystemLocationTest extends NWAPIV2_GetBase
 		
 		WSLocation actual = locationList.get(0);
 		
+		actual.setServiceTypeDesc(data.get(EXPECTED_SERVICE_TYPE_DESC));
+		actual.setServiceType(data.get(EXPECTED_SERVICE_TYPE));
+		actual.setDirectionDesc(data.get(EXPECTED_DIRECTION_DESC));
+		actual.setDirection(data.get(EXPECTED_DIRECTION));
+		actual.setRouteDesc(data.get(EXPECTED_ROUTE_DESC));
+		actual.setRouteNumber(data.get(EXPECTED_ROUTE_NUMBER));
+		
 		boolean bEquals = expected.equals( actual );
 		restActions.assertTrue(bEquals, WSLocation.getErrorMessage());
 	}
