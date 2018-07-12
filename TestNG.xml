@@ -15,7 +15,7 @@
 		<classes>
 
 			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->
-			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPutAddressTest"/>  
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPostAddressTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerGetAddressTest"/>
@@ -52,7 +52,7 @@
 			<class name="com.cubic.nistests.tests.CountriesTest"/>
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
-			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
+			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/> -->
 <!-- 		    <class name="com.cubic.nistests.tests.SelfServiceCRM_CustomerPrevalidate_Success"/> -->
             
            <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
@@ -125,6 +125,16 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginMultipleUsersTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginSuspendedUserTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/> -->
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameLNameTest"/>
+			 <class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordContainsUserNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordMustContainsDigitsTest"/>
 			
 		</classes>
 	</test> <!-- Test -->
