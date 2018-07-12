@@ -2,9 +2,9 @@
 "PatronLoginSuspendedUser": [
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "190412 : Verify Customer Login - Suspended User",
-	       	"username" : "Cubic5",
-			"password" : "1521",
+			"TestCase_Description": "190412 : Verify Patron Login - Suspended User",
+	       	"username" : "172839",
+			"password" : "5650",
 			"expected_authCode" : "authCode",
 			"expected_authCode_value" : "Failure",
 			"expected_authErrors": "authErrors",

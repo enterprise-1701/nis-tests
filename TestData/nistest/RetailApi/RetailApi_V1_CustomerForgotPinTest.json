@@ -5,9 +5,16 @@
 			"TestCase_Description": "191110 : Forgot Pin",
 	       	"ForgotPin_username" : "532253",	       	
 	       	"SecurityQuestion" : "What is your first pet's name?",
-			"SecurityAnswer ": "Bob",
-			"verificationToken": "Password"
+			"SecurityAnswer": "dog",
+			"verificationToken": "",
+			"newPassword" : "1357",
+			"password" : "1357",
+			"customerId" : "CMS000001000",
+			"contactId" : "324",
+			"EXPECTED_FIELDNAME1" : "authCode",
+			"EXPECTED_FIELDNAME1_VALUE" : "Success",
+			"EXPECTED_FIELDNAME2" : "userId",
+			"EXPECTED_FIELDNAME2_VALUE" : "324"			
 			}
-
 	]
 }
