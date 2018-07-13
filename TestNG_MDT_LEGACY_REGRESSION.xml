@@ -65,7 +65,7 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigNoDevicesReturnedTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigDeviceNotFoundTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantRetriveDeviceConfigDataTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_DeviceConfigDataCustomerNotFoundTest"/>-->
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DeviceConfigDataCustomerNotFoundTest"/>
 			
 		</classes>
 	</test> <!-- Test -->
