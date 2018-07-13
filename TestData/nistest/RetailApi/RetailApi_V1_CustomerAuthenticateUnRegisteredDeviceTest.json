@@ -3,8 +3,8 @@
 		{
 			"RunMode": "Y",
 			"TestCase_Description": "190402 : Verify Merchant Login - Unregistered Device",
-	       	"Username_Valid":"532253",
-			"Password_Valid":"5650",
+	       	"Username_Valid":"Cubic3",
+			"Password_Valid":"1521",
 			"EXPECTED_HTTP_RESPONSE_CODE":"400",
 			"deviceSerialNumber_UnRegistered":"12345678M212121",
 			"expected_hdr_field" : "hdr",

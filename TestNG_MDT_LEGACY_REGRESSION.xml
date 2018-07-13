@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="nistests - Test Suite">
+
+	<parameter name="browser" value="saucelabs"></parameter>
+	<parameter name="seleniumgridurl" value="local"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="executionenv" value="local"></parameter>
+	<parameter name="version" value=""></parameter>
+	<parameter name="platform" value=""></parameter>
+	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
+
+	<test name="NISTests">
+		<classes>
+            
+             <!-- *************** Merchant MDT Retail Api 1.0 Tests Need to Run in MDT_EIL Environment *************** -->
+             
+         <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountTest"/> 
+             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithNameBlankTest"/>
+             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithPasswordBlankTest"/>
+             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithUserIdBlankTest"/>
+             <class name="com.cubic.nistests.tests.RetailApi_V1_CreateMerchantSubaccountWithUserIdDuplicateTest"/>
+             <class name="com.cubic.nistests.tests.RetailApi_V1_DeleteMerchantSubaccountTest"/> 
+             <class name="com.cubic.nistests.tests.RetailApi_V1_DeleteMerchantSubaccountWithInvalidStatusTest"/>
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_BlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_ConsecutiveTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_ContiguousTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_NoDigitsTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_TooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_TooSmallTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPassword_UserNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ResetMerchantSubaccountPasswordTest"/>
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerAuthenticateValidUsernameAndPasswordTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerAuthenticateRegisteredDeviceTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerAuthenticateUnregisteredDeviceTest"/> 
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerAuthenticateAuthorizationFailedTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginLockedUserTest"/>			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginWithNoAuthTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginMultipleUsersTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerLoginSuspendedUserTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_CustomerForgotPinTest"/> 
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_AdminTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_DeviceIDNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameLNameTest"/>
+			 <class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordContainsUserNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordMustContainsDigitsTest"/>
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

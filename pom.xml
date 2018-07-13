@@ -4,7 +4,7 @@
 
   <groupId>com.cubic.nistests</groupId>
   <artifactId>NISTests</artifactId>
-  <version>1.13.4</version>
+  <version>1.14.1</version>
   <packaging>jar</packaging>
 
   <name>NISTests</name>
@@ -43,7 +43,7 @@
   	<dependency>
   		<groupId>com.cubic.testutil</groupId>
   		<artifactId>testutil</artifactId>
-  		<version>1.7.2</version>
+  		<version>1.8.0</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.seleniumaction</groupId>
@@ -123,7 +123,7 @@
   	<dependency>
   		<groupId>com.cubic.backofficejava</groupId>
   		<artifactId>BackOfficeJava</artifactId>
-  		<version>1.6.1</version>
+  		<version>1.7.3</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.vpos</groupId>
@@ -148,7 +148,7 @@
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
   		<artifactId>NISJava</artifactId>
-  		<version>1.10.1</version>
+  		<version>1.11.1</version>
   	</dependency>
   </dependencies>
   
