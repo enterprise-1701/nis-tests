@@ -12,7 +12,7 @@
 			"LastName" : "LastName",			
 			"UserName" : "UserName",
 			"UserStatus" : "UserStatus",
-			"CredentialStatus" : "CredentialStatus",
+			"CredentialStatus" : "CredentialStatus"
 		}
 	]
 }

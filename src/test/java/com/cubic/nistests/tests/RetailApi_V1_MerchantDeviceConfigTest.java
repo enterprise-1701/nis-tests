@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTEngine;
-import com.cubic.nisjava.api.CreateMerchantSubaccountPost;
 import com.cubic.nisjava.api.MerchantDeviceConfigurationGET;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderRetailAPI;

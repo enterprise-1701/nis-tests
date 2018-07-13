@@ -15,7 +15,7 @@
 			"CredentialStatus" : "CredentialStatus",
 			"FieldName" : "name.firstName",
 			"ErrorKey" : "errors.general.value.required",
-			"ErrorMessage" : "Field is blank.",
+			"ErrorMessage" : "Field is blank."
 		}
 	]
 }

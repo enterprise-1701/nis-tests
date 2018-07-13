@@ -17,7 +17,7 @@
 			"CredentialStatus" : "CredentialStatus",
 			"FieldName" : "name.firstName",
 			"ErrorKey" : "errors.general.value.toolong",
-			"ErrorMessage" : "Maximum length exceeded.",
+			"ErrorMessage" : "Maximum length exceeded."
 		}
 	]
 }
