@@ -3,13 +3,17 @@
 		{
 			"RunMode": "Y",
 			"TestCase_Description": "274844 : Login - Multiple Users",
-			"Username_Valid" : "532253",
-			"Password_Valid" : "5650",
+			"Username_Valid" : "Cubic3",
+			"Password_Valid" : "1521",
 			"deviceSerialNumber_Valid" : "4e67a19d1900c51d",
 			"EXPECTED_FIELDNAME1":"authCode",
 			"EXPECTED_FIELDNAME2":"userId",
 			"EXPECTED_FIELDNAME1_VALUE":"Success",
-			"EXPECTED_FIELDNAME2_VALUE":"324"
+			"EXPECTED_FIELDNAME2_VALUE":"1180",
+			"EXPECTED_FIELDNAME3":"operatorId",
+			"EXPECTED_FIELDNAME3_VALUE":"5",
+			"EXPECTED_FIELDNAME4":"locationId",
+			"EXPECTED_FIELDNAME4_VALUE":"842"
 			}
 
 	]

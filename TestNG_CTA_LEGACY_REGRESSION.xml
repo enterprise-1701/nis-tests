@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="nistests - Test Suite">
+
+	<parameter name="browser" value="saucelabs"></parameter>
+	<parameter name="seleniumgridurl" value="local"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="executionenv" value="local"></parameter>
+	<parameter name="version" value=""></parameter>
+	<parameter name="platform" value=""></parameter>
+	<parameter name="chromeDownloadDirPath" value="c:\temp\"></parameter>
+
+	<test name="NISTests">
+		<classes>
+            
+           <!-- *************** Patron Authentication and Registration Tests Need to Run in CTA_EIL Environment *************** -->
+           
+            <class name="com.cubic.nistests.tests.PatronAuthenticationTest"/> 
+            <class name="com.cubic.nistests.tests.PatronAuthenticateUsernameBlankTest"/> 
+            <class name="com.cubic.nistests.tests.PatronAuthenticateAccountDisabledTest"/> 
+            <class name="com.cubic.nistests.tests.PatronAuthenticateInvalidUsernameAndPasswordTest"/> 
+            <class name="com.cubic.nistests.tests.PatronAuthenticatePasswordBlankTest"/>
+            
+            <class name="com.cubic.nistests.tests.PatronRegisterTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidUsernameTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPasswordMaxlengthTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithNameBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithFirstNameBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithFirstNametoolangTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithLastNameBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithLastNametoolangTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithAddressBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithAddressOneFieldBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithAddressOneTooLongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithAddressTwoTooLongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithCityBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithCitytoolongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithSateIdBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidSateTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithCountryBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidCountryTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPostalCodeBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidPostalCodeTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPhoneBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPhonetoolongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPhoneNumberBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidPhoneNumberTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithPhoneTypeBlankTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithInvalidPhoneTypeTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailtoolongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithSpecialCharsTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithInvalidFormatTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithSecurityAnswertoolongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoolongTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPintoosmallTest"/>
+            <class name="com.cubic.nistests.tests.PatronRegisterWithEmailWithIVRPinInvalidTest"/>
+            
+       </classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

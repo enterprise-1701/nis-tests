@@ -1,0 +1,23 @@
+{
+"viewEditMerchantSubaccountLNameTooLong": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "559815 : View/Edit Merchant Subaccount - lastName toolong",
+			"User" : "620",
+			"ExpectedResponseCodeGET" : "200",
+			"ExpectedResponseCodePATCH" : "400",
+			"UserFirstName" : "Twenty-one",
+			"UserLastName":"TYin7VOb7IAaMryJAZWDxjzbERlRxcTuATRb0BZCSp3SW6CMqWXXV0OTAHnhtr",
+			"UserId" : "UserId",
+			"UserType" : "UserType",
+			"FirstName" : "FirstName",
+			"LastName" : "LastName",			
+			"UserName" : "UserName",
+			"UserStatus" : "UserStatus",
+			"CredentialStatus" : "CredentialStatus",
+			"FieldName" : "name.lastName",
+			"ErrorKey" : "errors.general.value.toolong",
+			"ErrorMessage" : "Maximum length exceeded."
+		}
+	]
+}

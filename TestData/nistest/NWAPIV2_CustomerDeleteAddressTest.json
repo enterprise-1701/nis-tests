@@ -1,0 +1,11 @@
+{
+	"deleteCustomerAddress": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "978109:NWAPIV2_CustomerDeleteAddressTest",
+			"testRailId":"978109",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

@@ -57,7 +57,8 @@ public class NWAPIV2_CustomerserviceFeedbackTest extends RESTEngine {
 			String sURL = buildFeedbackURL();
 	        LOG.info("##### Built URL: " + sURL);
 	        
-			String sRequestBody = buildFeedbackRequestBody();            
+			String sRequestBody = buildFeedbackRequestBody();
+			LOG.info( sRequestBody );
 	        
 			LOG.info("##### Making HTTP request to prevalidate the credentials...");
 			ClientResponse clientResponse = restActions.postClientResponse(
