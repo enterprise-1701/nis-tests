@@ -131,7 +131,24 @@
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_EmployeeTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_InvalidDateTest"/>
 			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_ManagerTest"/>
-			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>-->
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DailyTransactionReport_NoTransactionTest"/>
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameLNameTest"/>
+			 <class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_FNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_LNameTooLongTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordBlankTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordContainsUserNameTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_ViewEditMerchantSubaccount_PasswordMustContainsDigitsTest"/>
+			
+			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigCustomerNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigNoDevicesReturnedTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantDeviceConfigDeviceNotFoundTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_MerchantRetriveDeviceConfigDataTest"/>
+			<class name="com.cubic.nistests.tests.RetailApi_V1_DeviceConfigDataCustomerNotFoundTest"/>-->
 			
 		</classes>
 	</test> <!-- Test -->
