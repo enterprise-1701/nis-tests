@@ -1,0 +1,18 @@
+{
+"viewEditMerchantSubaccountFNameLName": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "559808 : View/Edit Merchant Subaccount - firstName + lastName",
+			"User" : "620",
+			"ExpectedResponseCodeGET" : "200",
+			"ExpectedResponseCodePATCH" : "204",
+			"UserId" : "UserId",
+			"UserType" : "UserType",
+			"FirstName" : "FirstName",
+			"LastName" : "LastName",			
+			"UserName" : "UserName",
+			"UserStatus" : "UserStatus",
+			"CredentialStatus" : "CredentialStatus"
+		}
+	]
+}

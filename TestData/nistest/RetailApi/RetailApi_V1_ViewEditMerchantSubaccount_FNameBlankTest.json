@@ -1,0 +1,21 @@
+{
+"viewEditMerchantSubaccountFNameBlank": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "559809 : View/Edit Merchant Subaccount - firstName blank",
+			"User" : "620",
+			"ExpectedResponseCodeGET" : "200",
+			"ExpectedResponseCodePATCH" : "400",
+			"UserId" : "UserId",
+			"UserType" : "UserType",
+			"FirstName" : "FirstName",
+			"LastName" : "LastName",			
+			"UserName" : "UserName",
+			"UserStatus" : "UserStatus",
+			"CredentialStatus" : "CredentialStatus",
+			"FieldName" : "name.firstName",
+			"ErrorKey" : "errors.general.value.required",
+			"ErrorMessage" : "Field is blank."
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"verifyDeviceConfigNoDevicesRetuned": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "607834:Retrieve Device Configuration - No devices returned",
+			"CustomerId":"CMS000002000"
+		}
+	]
+}
