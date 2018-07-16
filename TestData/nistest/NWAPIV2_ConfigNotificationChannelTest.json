@@ -1,0 +1,17 @@
+{
+	"getNotificationChannels": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "951918:NWAPIV2_ConfigNotificationChannelTest",
+			"testRailId":"951918",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"EXPECTED_CHANNEL_EMAIL_NAME":"EMAIL",
+			"EXPECTED_CHANNEL_EMAIL_ENABLED":"true",
+			"EXPECTED_CHANNEL_SMS_NAME":"SMS",
+			"EXPECTED_CHANNEL_SMS_ENABLED":"false",
+			"EXPECTED_CHANNEL_PUSHNOTIFICATION_NAME":"PUSHNOTIFICATION",
+			"EXPECTED_CHANNEL_PUSHNOTIFICATION_ENABLED":"true"		
+		}
+	]
+}
