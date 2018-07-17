@@ -51,15 +51,13 @@ public class SecurityQuestionsTestCMS extends SecurityQuestionsTest {
 		WSSecurityQuestion q1 = new WSSecurityQuestion();
 		q1.setName(data.get(EXPECTED_QUESTION_1));
 		String sAnswer1 = data.get(EXPECTED_VALUE_1);
-		Integer answer1 = Integer.valueOf(sAnswer1);
-		q1.setValue(answer1);
+		q1.setValue(sAnswer1);
 		questionList.add(q1);
 
 		WSSecurityQuestion q2 = new WSSecurityQuestion();
 		q2.setName(data.get(EXPECTED_QUESTION_2));
 		String sAnswer2 = data.get(EXPECTED_VALUE_2);
-		Integer answer2 = Integer.valueOf(sAnswer2);
-		q2.setValue(answer2);
+		q2.setValue(sAnswer2);
 		questionList.add(q2);
 		
 		result.setSecurityQuestions(questionList);
