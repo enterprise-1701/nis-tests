@@ -51,43 +51,37 @@ public class SecurityQuestionsTestMSD extends SecurityQuestionsTest {
 		WSSecurityQuestion q1 = new WSSecurityQuestion();
 		q1.setName(data.get(EXPECTED_QUESTION_1));
 		String sAnswer1 = data.get(EXPECTED_VALUE_1);
-		Integer answer1 = Integer.valueOf(sAnswer1);
-		q1.setValue(answer1);
+		q1.setValue(sAnswer1);
 		questionList.add(q1);
 
 		WSSecurityQuestion q2 = new WSSecurityQuestion();
 		q2.setName(data.get(EXPECTED_QUESTION_2));
 		String sAnswer2 = data.get(EXPECTED_VALUE_2);
-		Integer answer2 = Integer.valueOf(sAnswer2);
-		q2.setValue(answer2);
+		q2.setValue(sAnswer2);
 		questionList.add(q2);
 		
 		WSSecurityQuestion q3 = new WSSecurityQuestion();
 		q3.setName(data.get(EXPECTED_QUESTION_3));
 		String sAnswer3 = data.get(EXPECTED_VALUE_3);
-		Integer answer3 = Integer.valueOf(sAnswer3);
-		q3.setValue(answer3);
+		q3.setValue(sAnswer3);
 		questionList.add(q3);
 		
 		WSSecurityQuestion q4 = new WSSecurityQuestion();
 		q4.setName(data.get(EXPECTED_QUESTION_4));
 		String sAnswer4 = data.get(EXPECTED_VALUE_4);
-		Integer answer4 = Integer.valueOf(sAnswer4);
-		q4.setValue(answer4);
+		q4.setValue(sAnswer4);
 		questionList.add(q4);
 		
 		WSSecurityQuestion q5 = new WSSecurityQuestion();
 		q5.setName(data.get(EXPECTED_QUESTION_5));
 		String sAnswer5 = data.get(EXPECTED_VALUE_5);
-		Integer answer5 = Integer.valueOf(sAnswer5);
-		q5.setValue(answer5);
+		q5.setValue(sAnswer5);
 		questionList.add(q5);
 		
 		WSSecurityQuestion q6 = new WSSecurityQuestion();
 		q6.setName(data.get(EXPECTED_QUESTION_6));
 		String sAnswer6 = data.get(EXPECTED_VALUE_6);
-		Integer answer6 = Integer.valueOf(sAnswer6);
-		q6.setValue(answer6);
+		q6.setValue(sAnswer6);
 		questionList.add(q6);
 		
 		result.setSecurityQuestions(questionList);
