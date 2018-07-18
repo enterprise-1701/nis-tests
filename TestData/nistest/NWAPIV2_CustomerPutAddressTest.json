@@ -1,0 +1,11 @@
+{
+	"updateCustomerAddress": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "978025:NWAPIV2_CustomerPutAddressTest",
+			"testRailId":"978025",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

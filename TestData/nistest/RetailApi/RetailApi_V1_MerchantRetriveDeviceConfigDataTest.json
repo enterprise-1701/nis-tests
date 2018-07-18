@@ -1,0 +1,9 @@
+{
+	"retriveDeviceConfigData": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "821830:Verify Device configuration Data",
+			 "CustomerId" : "CMS000001000"
+		}
+	]
+}

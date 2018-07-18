@@ -1,0 +1,11 @@
+{
+	"getShippingTypes": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "933957:NWAPIV2_CustomerServiceShippingTypesTest",
+			"testRailId":"933957",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

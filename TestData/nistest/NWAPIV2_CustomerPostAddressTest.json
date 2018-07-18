@@ -1,0 +1,11 @@
+{
+	"addCustomerAddress": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "978010:NWAPIV2_CustomerPostAddressTest",
+			"testRailId":"978010",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

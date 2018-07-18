@@ -1,0 +1,12 @@
+{
+	"getNotificationTypes": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "123456:NWAPIV2_ConfigNotificationTypeTest",
+			"testRailId":"123456",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200",
+			"EXPECTED_CHANNEL":"EMAIL"		
+		}
+	]
+}
