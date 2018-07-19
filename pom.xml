@@ -33,22 +33,22 @@
   	<dependency>
   		<groupId>com.cubic.soapaction</groupId>
   		<artifactId>soapaction</artifactId>
-  		<version>1.4.0</version>
+  		<version>1.4.2</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.restaction</groupId>
   		<artifactId>restaction</artifactId>
-  		<version>1.4.0</version>
+  		<version>1.4.2</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.testutil</groupId>
   		<artifactId>testutil</artifactId>
-  		<version>1.8.0</version>
+  		<version>1.8.2</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.seleniumaction</groupId>
   		<artifactId>seleniumaction</artifactId>
-  		<version>1.5.0</version>
+  		<version>1.5.3</version>
   	</dependency>
   	<dependency>
   		<groupId>org.slf4j</groupId>
