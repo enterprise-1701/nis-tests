@@ -1,0 +1,19 @@
+{
+"viewMerchantProfileWithUserIdNotFound": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612516 : View Merchant Profile - user-id not found",
+	        "UserId" : "0000",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "404",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "7e16453c-73a9-4641-a3c1-a1d855f14e91",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "user-id",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.record.not.found"
+		}
+	]
+}
