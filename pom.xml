@@ -4,7 +4,7 @@
 
   <groupId>com.cubic.nistests</groupId>
   <artifactId>NISTests</artifactId>
-  <version>1.16.1</version>
+  <version>1.16.2</version>
   <packaging>jar</packaging>
 
   <name>NISTests</name>
@@ -54,11 +54,6 @@
   		<groupId>org.slf4j</groupId>
   		<artifactId>slf4j-log4j12</artifactId>
   		<version>1.7.25</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.cubic.oamjava</groupId>
-  		<artifactId>OAMJava</artifactId>
-  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>com.google.code.gson</groupId>
@@ -123,7 +118,7 @@
   	<dependency>
   		<groupId>com.cubic.backofficejava</groupId>
   		<artifactId>BackOfficeJava</artifactId>
-  		<version>1.7.3</version>
+  		<version>1.8.0</version>
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.vpos</groupId>
@@ -148,7 +143,7 @@
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
   		<artifactId>NISJava</artifactId>
-  		<version>1.13.1</version>
+  		<version>1.14.1</version>
   	</dependency>
   </dependencies>
   
