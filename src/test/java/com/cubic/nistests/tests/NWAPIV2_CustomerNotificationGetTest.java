@@ -38,7 +38,7 @@ public class NWAPIV2_CustomerNotificationGetTest extends NWAPIV2_PostBase {
 	 * http://10.252.1.21:8201/nis/nwapi/v2/customer/BD334982-A08A-E811-80CC-000D3A36F32A/notification/get
 	 * API.
 	 * 
-	 * testRailId = 123456
+	 * testRailId = 1041078
 	 * 
 	 * @param context  The TestNG Context object
 	 * @param data  The Test Data from the JSON input file
