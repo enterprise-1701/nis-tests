@@ -132,8 +132,7 @@ public class NWAPIV2_CustomerNotificationTest extends NWAPIV2_GetBase {
 	 */
 	@Override
 	protected String buildURL(Hashtable<String, String> data) {
-        String sURL = NISUtils.getURL("false", 
-        		BackOfficeGlobals.ENV.NIS_HOST, BackOfficeGlobals.ENV.NIS_PORT)
+        String sURL = NISUtils.getURL()
                 + "/nis/nwapi/v2/customer/" + data.get(CUSTOMER_ID)
                 + "/notification/" + data.get(ALERT_ID);
 		return sURL;
