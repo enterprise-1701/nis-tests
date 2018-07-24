@@ -15,6 +15,7 @@ import com.cubic.database.DataBaseUtil;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 import com.cubic.nisjava.utils.NISUtils;
+import com.sun.jersey.api.client.ClientResponse;
 
 /**
  * This test class will call the PATCH
@@ -67,8 +68,13 @@ public class NWAPIV2_CustomerNotificationPreferencesPatchTest extends NWAPIV2_Pa
 	 * @param response  The response in String form
 	 */
 	@Override
-	protected void verifyResponse(Hashtable<String, String> data, RESTActions restActions, String response) {
-		// deliberately do nothing because there is no response (204 No Content).
+	protected void verifyResponse(Hashtable<String, String> data, RESTActions restActions, ClientResponse clientResponse) {
+		LOG.info("##### Verifying HTTP response code...");
+		int actualHTTPResponseCode = clientResponse.getStatus();
+		String sExpectedHTTPResponseCode = data.get(EXPECTED_HTTP_RESPONSE_CODE);
+		int expectedResponseCode = Integer.parseInt( sExpectedHTTPResponseCode );
+		String msg = String.format(BAD_RESPONSE_CODE_FMT, expectedResponseCode, actualHTTPResponseCode);
+		restActions.assertTrue(expectedResponseCode == actualHTTPResponseCode, msg);
 	}
 
 	/**

@@ -56,12 +56,7 @@ public abstract class NWAPIV2_PatchBase extends RESTEngine {
 			ClientResponse clientResponse = restActions.patchClientResponse(
 					sURL, requestBody, headerTable, urlQueryParameters, RESTConstants.APPLICATION_JSON);
 
-			LOG.info("##### Verifying HTTP response code...");
-			int actualHTTPResponseCode = clientResponse.getStatus();
-			String sExpectedHTTPResponseCode = data.get(EXPECTED_HTTP_RESPONSE_CODE);
-			int expectedResponseCode = Integer.parseInt( sExpectedHTTPResponseCode );
-			String msg = String.format(BAD_RESPONSE_CODE_FMT, expectedResponseCode, actualHTTPResponseCode);
-			restActions.assertTrue(expectedResponseCode == actualHTTPResponseCode, msg);
+			verifyResponse( data, restActions, clientResponse );
 		
 		} catch( Exception e ) {	
 			restActions = setupAutomationTest(context, testCaseName);
@@ -82,7 +77,7 @@ public abstract class NWAPIV2_PatchBase extends RESTEngine {
 	 * @param restActions  The RESTActions object created by the @Test method
 	 * @param response  The response in String form
 	 */
-	protected abstract void verifyResponse( Hashtable<String,String> data, RESTActions restActions, String response );	
+	protected abstract void verifyResponse( Hashtable<String,String> data, RESTActions restActions, ClientResponse clientResponse );	
 	
 	/**
 	 * Helper method to build the URL used to call the API.
