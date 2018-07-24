@@ -39,7 +39,7 @@ public class NWAPIV2_CustomerNotificationPreferencesPatchTest extends NWAPIV2_Pa
 	 * http://10.252.1.21:8201/nis/nwapi/v2/customer/AEEA73E8-A9B1-4266-9D2A-6113DDA6EEC9/notificationpreferences
 	 * API.
 	 * 
-	 * testRailId = 123456
+	 * testRailId = 1141781
 	 * 
 	 * @param context  The TestNG Context object
 	 * @param data  The Test Data from the JSON input file

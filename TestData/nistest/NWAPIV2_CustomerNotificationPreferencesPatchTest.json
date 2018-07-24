@@ -3,8 +3,8 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "123456:NWAPIV2_CustomerNotificationPreferencesPatchTest",
-			"testRailId":"123456",
+			"TestCase_Description": "1141781:NWAPIV2_CustomerNotificationPreferencesPatchTest",
+			"testRailId":"1141781",
 			"EXPECTED_HTTP_RESPONSE_CODE":"204"		
 		}
 	]
