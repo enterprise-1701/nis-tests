@@ -13,10 +13,10 @@
 
 	<test name="NISTests">
 		<classes>
-
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotificationPreferencesPatchTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotificationPreferencesTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotificationPreferences_InvalidCustomerIdTest"/>
-			 
+			  
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotification_BadNotificationIdTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotificationTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerNotificationGetTest"/>
@@ -25,7 +25,7 @@
 			<class name="com.cubic.nistests.tests.NWAPIV2_ConfigNotificationChannelTest"/>
 		    <class name="com.cubic.nistests.tests.NWAPIV2_ConfigNotificationTypeTest"/> 
 		 	 
-			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->   
+			<!-- <class name="com.cubic.nistests.tests.NWAPIV2_CustomerDeleteAddressTest"/>  --><!-- JIRA Defect ID CCBO-13129 -->     
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerAddressDependenciesTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPutAddressTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerPostAddressTest"/>  
@@ -42,7 +42,7 @@
 			<class name="com.cubic.nistests.tests.NWAPIV2_Customer"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerCompleteRegistration"/>
 			<!-- ProdInt is not config'd for feedback <class name="com.cubic.nistests.tests.NWAPIV2_CustomerserviceFeedbackTest"/> -->
-   
+     
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsGoodSortByTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemTravelhistoryTapsBadSortByTest"/>	 
 			<class name="com.cubic.nistests.tests.NWAPIV2_TransitaccountSubsystemProductcatalogTest"/>
@@ -59,9 +59,8 @@
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
 		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
-
 <!--		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>    -->     <!-- JIRA Defect ID CCBO-13057 -->
-  
+    
 			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
@@ -70,7 +69,7 @@
 			<class name="com.cubic.nistests.tests.ReasonCodesTest"/>		  		
 			 
 			<class name="com.cubic.nistests.tests.ViewNotificationHistory_ByNotificationIdTest"/>
-
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
