@@ -148,7 +148,7 @@
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
   		<artifactId>NISJava</artifactId>
-  		<version>1.14.0</version>
+  		<version>1.15.0</version>
   	</dependency>
   </dependencies>
   
