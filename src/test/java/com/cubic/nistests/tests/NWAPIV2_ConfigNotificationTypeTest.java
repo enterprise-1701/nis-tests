@@ -39,7 +39,7 @@ public class NWAPIV2_ConfigNotificationTypeTest extends NWAPIV2_GetBase {
 	/**
 	 * This @Test method will call the config/notificationchannel API. 
 	 * 
-	 * testRailId = 123456
+	 * testRailId = 951917
 	 * 
 	 * @param context  The TestNG Context object
 	 * @param data  The Test Data, from the JSON input file

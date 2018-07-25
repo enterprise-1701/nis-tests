@@ -1,0 +1,23 @@
+{
+"updateMerchantProfileWithSecurityAnswerValueTooLong": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612555 : Edit Merchant Profile - securityQAs - securityQAs[0].securityAnswer value too long",
+	        "UserId" : "324",
+	        "securityQuestion" : "What is your first pet's name?",
+			"securityAnswer" : "dogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdogdog",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "a3150d26-95d3-4678-85ef-f41c82b25617",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "securityQAs[0].securityAnswer",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.value.toolong",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Maximum length exceeded."
+		}
+	]
+}

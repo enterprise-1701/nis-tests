@@ -1,0 +1,14 @@
+{
+	"getNotification": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1040744:NWAPIV2_CustomerNotification_BadNotificationIdTest",
+			"testRailId":"1040744",
+			"EXPECTED_HTTP_RESPONSE_CODE":"404",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"notification-id",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"getNotification": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1041078:NWAPIV2_CustomerNotificationGetTest",
+			"testRailId":"1041078",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"		
+		}
+	]
+}

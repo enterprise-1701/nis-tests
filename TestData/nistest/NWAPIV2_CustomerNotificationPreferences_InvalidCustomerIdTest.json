@@ -1,0 +1,14 @@
+{
+	"getNotificationPreferences": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1094303:NWAPIV2_CustomerNotificationPreferences_InvalidCustomerIdTest",
+			"testRailId":"1094303",
+			"EXPECTED_HTTP_RESPONSE_CODE":"404",
+			"CUSTOMER_ID":"999999999999999999",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}

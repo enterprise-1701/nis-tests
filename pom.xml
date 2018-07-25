@@ -48,17 +48,12 @@
   	<dependency>
   		<groupId>com.cubic.seleniumaction</groupId>
   		<artifactId>seleniumaction</artifactId>
-  		<version>1.5.0</version>
+  		<version>1.5.3</version>
   	</dependency>
   	<dependency>
   		<groupId>org.slf4j</groupId>
   		<artifactId>slf4j-log4j12</artifactId>
   		<version>1.7.25</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.cubic.oamjava</groupId>
-  		<artifactId>OAMJava</artifactId>
-  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>com.google.code.gson</groupId>
@@ -167,17 +162,4 @@
 	</plugins>
   </build>
 	  
-<!--   <distributionManagement>
-	<repository>
-    	<id>central</id>
-        <name>CUBICUSWWWT-releases</name>
-        <url>https://cubicuswwwt.jfrog.io/cubicuswwwt/ww-test-us-virtual/</url>
- 	</repository>
-    <snapshotRepository>
-    	<id>snapshots</id>
-        <name>CUBICUSWWWT-snapshots</name>
-        <url>https://cubicuswwwt.jfrog.io/cubicuswwwt/ww-test-us-virtual/</url>
- 	</snapshotRepository>
-  </distributionManagement>	 -->
-
 </project>

@@ -1,0 +1,14 @@
+{
+"updateMerchantProfileWithValidPhone": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612542 : Edit Merchant Profile - phone",
+	        "UserId" : "324",
+	        "country" : "US",
+	        "number" : "(619) 456-7890",
+	        "type" : "M",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "204",
+			"EXPECTED_HTTP_RESPONSE_CODE1" : "200"			
+		}
+	]
+}

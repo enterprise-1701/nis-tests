@@ -1,0 +1,23 @@
+{
+"updateMerchantProfileWithSecurityQuestionValueRequired": [
+		{
+			"RunMode": "Y",
+			"TestCase_Description" : "612546 : Edit Merchant Profile - securityQAs - securityQAs[0].securityQuestion value required",
+	        "UserId" : "324",
+	        "securityQuestion" : "",
+			"securityAnswer" : "cat",
+			"EXPECTED_HTTP_RESPONSE_CODE" : "400",
+			"EXPECTED_HDR_FIELD" : "hdr",
+			"EXPECTED_RESULT" : "result",
+			"EXPECTED_RESULT_VALUE" : "DataValidationError",
+			"EXPECTED_FIELDNAME1" : "uid",
+			"EXPECTED_FIELDNAME1_VALUE" : "8a2ca4c6-b91e-4f09-a7e2-2d054e1df9b8",
+			"EXPECTED_FIELDNAME2" : "fieldName",
+			"EXPECTED_FIELDNAME2_VALUE" : "securityQAs[0].securityQuestion",
+			"EXPECTED_FIELDNAME3" : "errorKey",
+			"EXPECTED_FIELDNAME3_VALUE" : "errors.general.value.required",
+			"EXPECTED_FIELDNAME4" : "errorMessage",
+			"EXPECTED_FIELDNAME4_VALUE" : "Field is blank."
+		}
+	]
+}
