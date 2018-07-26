@@ -142,7 +142,7 @@
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
-  		<artifactId>NISJava</artifactId>
+  		<artifactId>NISJava-Beta</artifactId>
   		<version>1.15.1</version>
   	</dependency>
   </dependencies>
