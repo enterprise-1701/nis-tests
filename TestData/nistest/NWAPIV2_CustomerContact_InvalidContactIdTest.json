@@ -1,0 +1,15 @@
+{
+	"getContact": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "123456:NWAPIV2_CustomerContact_InvalidContactIdTest",
+			"testRailId":"123456",
+			"EXPECTED_HTTP_RESPONSE_CODE":"404",
+			"CONTACT_ID":"F57A450A-5A90-E811-80CC-DEADBEEF0000",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"ContactId",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}
