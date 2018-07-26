@@ -10,6 +10,7 @@ import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.backoffice.utils.BackOfficeUtils;
+import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 
@@ -54,8 +55,9 @@ public class NWAPIV2_CustomerGetCustomer extends NWAPIV2_CustomerBase {
 			String securityQuestion = securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			String expectedCustomerId = createCustomer(restActions, headerTable, username, password, securityQuestion);
-			
+			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			String expectedCustomerId = customerResponse.getCustomerId();
+					
 			LOG.info("##### Call the Complete Registration API");
 			completeRegistration(restActions, headerTable, expectedCustomerId);
 			

@@ -5,6 +5,7 @@ import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.UUID;
 
 import org.apache.log4j.Logger;
 
@@ -15,6 +16,7 @@ import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.nisjava.apiobjects.WSAddressContainer;
 import com.cubic.nisjava.apiobjects.WSAddress_;
 import com.cubic.nisjava.apiobjects.WSCompleteRegistrationResponse;
+import com.cubic.nisjava.apiobjects.WSContactContainer;
 import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerInfo;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
@@ -24,6 +26,7 @@ import com.cubic.nisjava.apiobjects.WSHdr;
 import com.cubic.nisjava.apiobjects.WSPrevalidateResponse;
 import com.cubic.nisjava.apiobjects.WSSecurityQuestion;
 import com.cubic.nisjava.apiobjects.WSSecurityQuestionList;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 
@@ -40,6 +43,8 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 	protected static final String BAD_ERROR_KEY_FMT = "BAD ERROR KEY: EXPECTED '%s', FOUND '%s'";
 	protected static final String EXPECTED_ERROR_KEY = "EXPECTED_ERROR_KEY";
 	protected static final String BAD_FIELD_NAME_FMT = "BAD FIELD NAME: EXPECTED '%s', FOUND '%s'";
+	protected static final String CUSTOMER_ID = "CUSTOMER_ID";
+	protected static final String CONTACT_ID = "CONTACT_ID";
 	
 	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
 	
@@ -122,7 +127,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 	 * @return  The customer Id
 	 * @throws Throwable  Thrown if something goes wrong
 	 */
-	protected String createCustomer(RESTActions restActions, Hashtable<String,String> headerTable, String username, String password, String securityQuestion ) throws Throwable {
+	protected WSCreateCustomerResponse createCustomer(RESTActions restActions, Hashtable<String,String> headerTable, String username, String password, String securityQuestion ) throws Throwable {
 		String createCustomerURL = buildCreateCustomerURL();
 		LOG.info("##### Built URL: " + createCustomerURL);
 		String createCustomerRequestBody = buildCreateCustomerRequestBody( username, password, securityQuestion );
@@ -153,7 +158,7 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		Integer oneAccountId = createCustomerResponse.getOneAccountId();
 		restActions.assertTrue(oneAccountId != null, "oneAccountId IS NULL BUT SHOULD NOT BE NULL");
 		
-		return customerId;
+		return createCustomerResponse;
 	}
 	
 	
@@ -855,5 +860,109 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 		LOG.info("##### Got the response body:");
 		LOG.info( response );
 		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
+	}
+	
+	/**
+	 * Helper method to call the API
+	 * 
+	 * GET http://10.252.1.21:8201/nis/nwapi/v2/customer/2B911170-4690-E811-80CC-000D3A36F32A/contact/33911170-4690-E811-80CC-000D3A36F32A
+	 * 
+	 * @param restActions  The RESTActions object created by the calling @Test method
+	 * @param headerTable  The set of Headers created by the calling @Test method
+	 * @param customerId The CustomerId created by the calling @Test method
+	 * @param contactId  The ContactId created by the calling @Test method
+	 * @return A WSContactContainer object, initialized by parsing the HTTP Response.
+	 * @throws Throwable  Thrown if something goes wrong
+	 */
+	protected String getContact(RESTActions restActions, Hashtable<String,String> headerTable,
+			Hashtable<String,String> data ) throws Throwable {
+		
+		String customerId = data.get(CUSTOMER_ID);
+		String contactId = data.get(CONTACT_ID);
+		
+		String getContactURL = buildGetContactURL( customerId, contactId );
+		
+		ClientResponse clientResponse = restActions.getClientResponse(
+				getContactURL, headerTable, null, RESTConstants.APPLICATION_JSON);
+
+		LOG.info("##### Verifying HTTP response code...");
+		String sExpectedStatus = data.get(EXPECTED_HTTP_RESPONSE_CODE);
+		int expectedStatus = Integer.parseInt(sExpectedStatus);
+		int actualStatus = clientResponse.getStatus();
+		String msg =  String.format(BAD_RESPONSE_CODE_FMT, expectedStatus, actualStatus);
+		restActions.assertTrue(expectedStatus == actualStatus, msg);
+		
+		String response = clientResponse.getEntity(String.class);
+		LOG.info("##### Got the response body");
+		restActions.assertTrue(response != null, RESPONSE_IS_NULL);
+		LOG.info( response );
+		
+		return response;
+	}
+	
+	/**
+	 * Helper method to build the Get Contact URL
+	 * 
+	 * @param customerId The customerId to use to build the URL
+	 * @param contactId  The contactId to use to build the URL
+	 * @return  The Get Contact URL in String form
+	 */
+	protected String buildGetContactURL( String customerId, String contactId ) {
+        String sURL = NISUtils.getURL()
+                + "/nis/nwapi/v2/customer/" + customerId
+                + "/contact/" + contactId;
+		return sURL;
+	}
+
+	/**
+	 * Helper method call by the @Test method to build the URL of the
+	 * PATCH customer/<customerid>/contact/<contact-id> API, and build
+	 * the Request Body to send, then call the API.
+	 * 
+	 * @param restActions  The RESTActions object created by the @Test method.
+	 * @param headerTable  The HTTP Headers used to send the message.
+	 * @param data  The test Data from the JSON input file.
+	 * @throws Throwable  Thrown if something went wrong.
+	 */
+	protected void patchContact(RESTActions restActions,Hashtable<String,String> headerTable,Hashtable<String, String> data) throws Throwable {
+		String customerId = data.get(CUSTOMER_ID);
+		String contactId = data.get(CONTACT_ID);
+		
+		String patchContactURL = buildGetContactURL( customerId, contactId );
+        LOG.info("##### Built URL: " + patchContactURL);
+        
+		String patchContactRequestBody = buildPatchContactRequestBody();            
+        
+		LOG.info("##### Making HTTP request to prevalidate the credentials...");
+		ClientResponse clientResponse = restActions.patchClientResponse(
+				patchContactURL, patchContactRequestBody, headerTable, null,
+				RESTConstants.APPLICATION_JSON);
+
+		LOG.info("##### Verifying HTTP response code...");
+		String sExpectedStatus = data.get(EXPECTED_HTTP_RESPONSE_CODE);
+		int expectedStatus = Integer.parseInt(sExpectedStatus);
+		int actualStatus = clientResponse.getStatus();
+		String msg =  String.format(BAD_RESPONSE_CODE_FMT, expectedStatus, actualStatus);
+		restActions.assertTrue(expectedStatus == actualStatus, msg);
+	}
+	
+	/**
+	 * Helper method to build the Request Body for the
+	 * PATCH customer/<customerid>/contact/<contact-id>
+	 * API.
+	 * 
+	 * @return  The Request Body in String form.
+	 */
+	protected String buildPatchContactRequestBody() {
+		String uniqueID = UUID.randomUUID().toString();
+		String username = uniqueID + "@cubic.com";	
+		
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter( sw );
+		pw.println("{");
+		pw.println("    \"contactType\": \"Primary\",");
+		pw.println("    \"username\":\"" + username + "\"");
+		pw.println("}");
+		return sw.toString();
 	}	
 }

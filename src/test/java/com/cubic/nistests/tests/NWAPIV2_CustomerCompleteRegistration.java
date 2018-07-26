@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
-
+import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
@@ -53,8 +53,8 @@ public class NWAPIV2_CustomerCompleteRegistration extends NWAPIV2_CustomerBase {
 			String securityQuestion = securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			String customerId = createCustomer(restActions, headerTable, username, password, securityQuestion);
-			
+			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			String customerId = customerResponse.getCustomerId();
 			LOG.info("##### Call the Complete Registration API");
 			completeRegistration(restActions, headerTable, customerId);
 		} finally {
