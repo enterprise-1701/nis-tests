@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.cubic.nistests</groupId>
-  <artifactId>NISTests</artifactId>
+  <artifactId>NISTests-Beta</artifactId>
   <version>1.17.0</version>
   <packaging>jar</packaging>
 
@@ -142,7 +142,7 @@
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
-  		<artifactId>NISJava</artifactId>
+  		<artifactId>NISJava-Beta</artifactId>
   		<version>1.15.0</version>
   	</dependency>
   </dependencies>
