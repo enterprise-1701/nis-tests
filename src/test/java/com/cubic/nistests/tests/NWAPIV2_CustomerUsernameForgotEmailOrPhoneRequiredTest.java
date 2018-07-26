@@ -2,8 +2,10 @@ package com.cubic.nistests.tests;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -26,6 +28,9 @@ import com.sun.jersey.api.client.ClientResponse;
  */
 public class NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * The 'Username Forgot' API is called without either email or phone input.
 	 * This elicits an error message 'errors.email.or.phone.are.required'.

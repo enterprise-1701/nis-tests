@@ -1,8 +1,10 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -25,6 +27,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
  */
 public class NWAPIV2_CustomerContactPatchTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * This @Test method calls the PATCH customer/<customerid>/contact/<contact-id> API.
 	 * 

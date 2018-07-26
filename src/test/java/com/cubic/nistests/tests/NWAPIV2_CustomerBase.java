@@ -2,6 +2,7 @@ package com.cubic.nistests.tests;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.invoke.MethodHandles;
 import java.net.HttpURLConnection;
 import java.util.Hashtable;
 import java.util.List;
@@ -16,7 +17,6 @@ import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.nisjava.apiobjects.WSAddressContainer;
 import com.cubic.nisjava.apiobjects.WSAddress_;
 import com.cubic.nisjava.apiobjects.WSCompleteRegistrationResponse;
-import com.cubic.nisjava.apiobjects.WSContactContainer;
 import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerInfo;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
@@ -46,7 +46,8 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 	protected static final String CUSTOMER_ID = "CUSTOMER_ID";
 	protected static final String CONTACT_ID = "CONTACT_ID";
 	
-	protected final Logger LOG = Logger.getLogger(this.getClass().getName());
+	private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);
 	
 	/**
 	 * Test step 1: call the prevalidate API

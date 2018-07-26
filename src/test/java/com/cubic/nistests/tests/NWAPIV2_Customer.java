@@ -6,6 +6,10 @@ import java.util.UUID;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
+import java.lang.invoke.MethodHandles;
+
+import org.apache.log4j.Logger;
+
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
@@ -21,6 +25,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
  */
 public class NWAPIV2_Customer extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * An @Test method to call the Create Customer API.
 	 * 

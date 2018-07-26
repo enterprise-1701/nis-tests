@@ -1,7 +1,9 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,9 @@ import com.sun.jersey.api.client.ClientResponse;
  */
 public class NWAPIV2_CustomerUsernameForgotNotFoundTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * Call the 'Username Forgot' API with a non-existent email address.
 	 * 

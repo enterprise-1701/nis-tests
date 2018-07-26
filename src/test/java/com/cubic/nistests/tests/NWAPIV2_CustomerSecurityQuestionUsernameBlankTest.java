@@ -1,7 +1,9 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -15,6 +17,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
 import com.google.gson.Gson;
 
 public class NWAPIV2_CustomerSecurityQuestionUsernameBlankTest extends NWAPIV2_CustomerBase {	
+	
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
 	
 	/**
 	 * Get a Customer's Security Question using an invalid username,

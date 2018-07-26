@@ -1,9 +1,11 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -28,6 +30,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
  */
 public class NWAPIV2_CustomerAddressDependenciesTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * @Test method to call the customer/<customer-id>/address/<address-id>/dependencies URL.
 	 * 

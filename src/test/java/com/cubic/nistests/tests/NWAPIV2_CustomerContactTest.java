@@ -3,8 +3,11 @@ package com.cubic.nistests.tests;
 import java.util.Hashtable;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
+
+import java.lang.invoke.MethodHandles;
 
 import com.cubic.accelerators.RESTActions;
 import com.cubic.accelerators.RESTConstants;
@@ -28,6 +31,9 @@ import com.google.gson.Gson;
  */
 public class NWAPIV2_CustomerContactTest extends NWAPIV2_CustomerBase {
 
+	private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * This @Test method calls the GET Contact API.
 	 * 
