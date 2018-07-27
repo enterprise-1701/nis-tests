@@ -1,0 +1,11 @@
+{
+	"getNonce": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "933964:NWAPIV2_PaymentRepositoryNonceTest",
+			"testRailId":"933964",
+			"EXPECTED_HTTP_RESPONSE_CODE":"200"
+		}
+	]
+}
