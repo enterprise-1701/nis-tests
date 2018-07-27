@@ -4,7 +4,7 @@
 
   <groupId>com.cubic.nistests</groupId>
   <artifactId>NISTests</artifactId>
-  <version>1.16.5</version>
+  <version>1.18.0</version>
   <packaging>jar</packaging>
 
   <name>NISTests</name>
@@ -142,7 +142,7 @@
   	</dependency>
   	<dependency>
   		<groupId>com.cubic.nisjava</groupId>
-  		<artifactId>NISJava-Beta</artifactId>
+  		<artifactId>NISJava</artifactId>
   		<version>1.15.1</version>
   	</dependency>
   </dependencies>
@@ -162,17 +162,4 @@
 	</plugins>
   </build>
 	  
-  <distributionManagement>
-	<repository>
-    	<id>central</id>
-        <name>CUBICUSWWWT-releases</name>
-        <url>https://cubicuswwwt.jfrog.io/cubicuswwwt/ww-test-us-virtual/</url>
- 	</repository>
-    <snapshotRepository>
-    	<id>snapshots</id>
-        <name>CUBICUSWWWT-snapshots</name>
-        <url>https://cubicuswwwt.jfrog.io/cubicuswwwt/ww-test-us-virtual/</url>
- 	</snapshotRepository>
-  </distributionManagement>	
-
 </project>
