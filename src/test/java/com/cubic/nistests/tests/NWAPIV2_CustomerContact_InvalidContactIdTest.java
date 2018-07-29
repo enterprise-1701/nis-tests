@@ -17,6 +17,7 @@ import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSXCubHdrJSON;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 
 /**
@@ -64,21 +65,21 @@ public class NWAPIV2_CustomerContact_InvalidContactIdTest extends NWAPIV2_Custom
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
 			String expectedCustomerId = customerResponse.getCustomerId();
 			data.put(CUSTOMER_ID, expectedCustomerId);
 					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the GET Contact API");
-			String response = getContact(restActions, headerTable, data);
+			String response = NISUtils.getContact(restActions, headerTable, data);
 	
 			LOG.info("##### Parsing the response content...");
 			Gson gson = new Gson();

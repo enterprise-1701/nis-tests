@@ -17,6 +17,7 @@ import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerPostAddressResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * This test call calls the customer/<customer-id>/address API.
@@ -58,20 +59,20 @@ public class NWAPIV2_CustomerPostAddressTest extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
 			String expectedCustomerId = customerResponse.getCustomerId();
 					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the Post Address API");
-			WSCustomerPostAddressResponse postAddressResponse = addCustomerAddress(restActions, data, headerTable, expectedCustomerId);
+			WSCustomerPostAddressResponse postAddressResponse = NISUtils.addCustomerAddress(restActions, data, headerTable, expectedCustomerId);
 			
 			restActions.assertTrue(postAddressResponse != null, 
 					"postAddressResponse IS NULL BUT IT SHOULD NOT BE");			

@@ -15,6 +15,7 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * Call a Customer's 'Username Forgot' API using the email address.
@@ -55,20 +56,20 @@ public class NWAPIV2_CustomerUsernameForgotTest extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get all Security Questions from the system");
-			String expectedSecurityQuestion = securityQuestion(restActions, headerTable);
+			String expectedSecurityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, expectedSecurityQuestion);
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, expectedSecurityQuestion);
 			String expectedCustomerId = customerResponse.getCustomerId();
 					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Get the user's Username Forgot API");
-			usernameForgot( restActions, data, headerTable, email );
+			NISUtils.usernameForgot( restActions, data, headerTable, email );
 		} finally {
 			teardownAutomationTest(context, testCaseName);
 			LOG.info("##### Done!");

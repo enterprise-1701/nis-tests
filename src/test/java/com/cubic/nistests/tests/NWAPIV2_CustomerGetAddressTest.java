@@ -18,6 +18,7 @@ import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * This test class will call the Get Customer Address API.
@@ -59,26 +60,26 @@ public class NWAPIV2_CustomerGetAddressTest extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			WSCreateCustomerResponse customerResponse = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
 			String expectedCustomerId = customerResponse.getCustomerId();
 					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the GET Customer API");
 			WSCustomerInfoContainer customerInfoContainer = 
-					getCustomer( restActions, headerTable, expectedCustomerId );
+					NISUtils.getCustomer( restActions, headerTable, expectedCustomerId );
 			
 			WSAddress_ expectedAddress = customerInfoContainer.getCustomerInfo().getAddresses().get(0);
 			
 			LOG.info("##### Call the GET Address API");
-			getCustomerAddress( restActions, data, headerTable, expectedCustomerId, expectedAddress );
+			NISUtils.getCustomerAddress( restActions, data, headerTable, expectedCustomerId, expectedAddress );
 		
 		} catch( Exception e ) {
 			RESTActions restActions = setupAutomationTest(context, testCaseName);

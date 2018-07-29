@@ -16,6 +16,7 @@ import com.cubic.logutils.Log4jUtil;
 import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * This test class calls the PATCH Customer Contact API:
@@ -57,13 +58,13 @@ public class NWAPIV2_CustomerContactPatchTest extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			WSCreateCustomerResponse customerResponse = createCustomer(
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(
 					restActions, headerTable, username, password, securityQuestion);
 			String expectedCustomerId = customerResponse.getCustomerId();
 			String expectedContactId = customerResponse.getContactId();
@@ -71,10 +72,10 @@ public class NWAPIV2_CustomerContactPatchTest extends NWAPIV2_CustomerBase {
 			data.put(CONTACT_ID, expectedContactId);
 					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the PATCH Contact API");
-			patchContact(restActions, headerTable, data);
+			NISUtils.patchContact(restActions, headerTable, data);
 			
 		} catch( Exception e ) {
 			restActions.failureReport("setup", "Setup failure occurred: " + e);

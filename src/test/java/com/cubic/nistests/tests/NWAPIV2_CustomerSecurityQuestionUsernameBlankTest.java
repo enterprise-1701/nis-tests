@@ -14,6 +14,7 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSXCubHdrJSON;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 
 public class NWAPIV2_CustomerSecurityQuestionUsernameBlankTest extends NWAPIV2_CustomerBase {	
@@ -45,7 +46,7 @@ public class NWAPIV2_CustomerSecurityQuestionUsernameBlankTest extends NWAPIV2_C
 			Hashtable<String,String> headerTable = BackOfficeUtils.createRESTHeader(RESTConstants.APPLICATION_JSON);
 			
 			LOG.info("##### Get the user's Security Question");
-			String response = securityQuestion( restActions, data, headerTable, "" );
+			String response = NISUtils.securityQuestion( restActions, data, headerTable, "" );
 
 			verifyResponse( restActions, data, response );
 		} finally {

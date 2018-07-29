@@ -16,6 +16,7 @@ import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * A test class that contains an @Test method to
@@ -55,13 +56,13 @@ public class NWAPIV2_Customer extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get the Security Questions");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### call the Create Customer API");
-			createCustomer(restActions, headerTable, username, password, securityQuestion);
+			NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
 		} finally {
 			teardownAutomationTest(context, testCaseName);
 			LOG.info("##### Done!");
