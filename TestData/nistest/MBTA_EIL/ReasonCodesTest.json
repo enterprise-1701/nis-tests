@@ -1,0 +1,19 @@
+{
+	"getReasonCodes": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "688841:ReasonCodesTest",
+			"testRailId":"688841",
+			"EXPECTED_REASON_CODE_TYPE_NAME":"BlockAccount",
+			"EXPECTED_REASON_CODE_TYPE_DESC":"Reason code for Block Account",
+			"EXPECTED_REASON_CODE_DESC":"Fraud Analysis",
+			"EXPECTED_REASON_CODE_ACTIVE":"true",
+			"EXPECTED_REASON_CODE_MIN_AMOUNT":"0",
+			"EXPECTED_REASON_CODE_MAX_AMOUNT":"200",
+			"EXPECTED_NOTES_MANDATORY_FLAG":"false",
+			"EXPECTED_FINANCIALLY_RESPONSIBLE_OPERATOR_ID":"1",
+			"EXPECTED_FINANCIALLY_RESPONSIBLE_OPERATOR_DESC":"Cubic"			
+		}
+	]
+}

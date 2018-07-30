@@ -1,0 +1,10 @@
+{
+	"getCustomer": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "956910:NWAPIV2_CustomerGetCustomer",
+			"testRailId":"956910"		
+		}
+	]
+}
