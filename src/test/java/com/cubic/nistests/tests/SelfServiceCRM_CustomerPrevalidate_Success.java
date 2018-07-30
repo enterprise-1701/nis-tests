@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 //import com.cubic.backoffice.apiobjects.WSCustomerContact;
 //import com.cubic.backoffice.apiobjects.WSErrors;
-import com.cubic.backoffice.BaseTest.BaseTest;
+import com.cubic.backoffice.baseobjects.BaseTest;
 //import com.cubic.backoffice.utils.BackOfficeUtils;
 //import com.cubic.backoffice.utils.GenericConstantsUtils;
 

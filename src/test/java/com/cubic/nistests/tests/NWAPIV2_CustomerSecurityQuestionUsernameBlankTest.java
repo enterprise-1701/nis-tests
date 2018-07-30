@@ -1,7 +1,9 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -12,9 +14,13 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSXCubHdrJSON;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 
 public class NWAPIV2_CustomerSecurityQuestionUsernameBlankTest extends NWAPIV2_CustomerBase {	
+	
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
 	
 	/**
 	 * Get a Customer's Security Question using an invalid username,
@@ -40,7 +46,7 @@ public class NWAPIV2_CustomerSecurityQuestionUsernameBlankTest extends NWAPIV2_C
 			Hashtable<String,String> headerTable = BackOfficeUtils.createRESTHeader(RESTConstants.APPLICATION_JSON);
 			
 			LOG.info("##### Get the user's Security Question");
-			String response = securityQuestion( restActions, data, headerTable, "" );
+			String response = NISUtils.securityQuestion( restActions, data, headerTable, "" );
 
 			verifyResponse( restActions, data, response );
 		} finally {
