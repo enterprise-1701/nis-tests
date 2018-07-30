@@ -1,9 +1,11 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -14,10 +16,12 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.logutils.Log4jUtil;
 import com.cubic.nisjava.apiobjects.WSAddress_;
 import com.cubic.nisjava.apiobjects.WSContactDependency;
+import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerInfoContainer;
 import com.cubic.nisjava.apiobjects.WSDependencyLists;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * Test class to call the customer/<customer-id>/address/<address-id>/dependencies URL.
@@ -27,6 +31,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
  */
 public class NWAPIV2_CustomerAddressDependenciesTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * @Test method to call the customer/<customer-id>/address/<address-id>/dependencies URL.
 	 * 
@@ -54,27 +61,28 @@ public class NWAPIV2_CustomerAddressDependenciesTest extends NWAPIV2_CustomerBas
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			String expectedCustomerId = createCustomer(restActions, headerTable, username, password, securityQuestion);
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
+			String expectedCustomerId = customerResponse.getCustomerId();
 			
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the GET Customer API");
 			WSCustomerInfoContainer customerInfoContainer = 
-					getCustomer( restActions, headerTable, expectedCustomerId );
+					NISUtils.getCustomer( restActions, headerTable, expectedCustomerId );
 			
 			WSAddress_ expectedAddress = customerInfoContainer.getCustomerInfo().getAddresses().get(0);			
 			
 			String expectedAddressId = expectedAddress.getAddressId();
 			
 			LOG.info("##### Call the PUT Address API");
-			WSDependencyLists dependencyLists = getContactDependencies( restActions, data, headerTable, expectedCustomerId, expectedAddressId );
+			WSDependencyLists dependencyLists = NISUtils.getContactDependencies( restActions, data, headerTable, expectedCustomerId, expectedAddressId );
 			
 			restActions.assertTrue( dependencyLists != null, 
 					"dependencyLists IS NULL BUT IT SHOULD NOT BE NULL");

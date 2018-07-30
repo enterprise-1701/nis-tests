@@ -1,8 +1,10 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -11,9 +13,11 @@ import com.cubic.accelerators.RESTConstants;
 import com.cubic.backoffice.constants.BackOfficeGlobals;
 import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.logutils.Log4jUtil;
+import com.cubic.nisjava.apiobjects.WSCreateCustomerResponse;
 import com.cubic.nisjava.apiobjects.WSCustomerPostAddressResponse;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 
 /**
  * This test call calls the customer/<customer-id>/address API.
@@ -25,6 +29,9 @@ import com.cubic.nisjava.dataproviders.NISDataProviderSource;
  */
 public class NWAPIV2_CustomerPostAddressTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * This @Test method calls the GET Address API.
 	 * 
@@ -52,19 +59,20 @@ public class NWAPIV2_CustomerPostAddressTest extends NWAPIV2_CustomerBase {
 			String password = "Pas5word!";
 			
 			LOG.info("##### Call the Prevalidate API");
-			prevalidate(restActions, headerTable, username, password);
+			NISUtils.prevalidate(restActions, headerTable, username, password);
 			
 			LOG.info("##### Get a Security Question");
-			String securityQuestion = securityQuestion(restActions, headerTable);
+			String securityQuestion = NISUtils.securityQuestion(restActions, headerTable);
 			
 			LOG.info("##### Call the Create Customer API");
-			String expectedCustomerId = createCustomer(restActions, headerTable, username, password, securityQuestion);
-			
+			WSCreateCustomerResponse customerResponse = NISUtils.createCustomer(restActions, headerTable, username, password, securityQuestion);
+			String expectedCustomerId = customerResponse.getCustomerId();
+					
 			LOG.info("##### Call the Complete Registration API");
-			completeRegistration(restActions, headerTable, expectedCustomerId);
+			NISUtils.completeRegistration(restActions, headerTable, expectedCustomerId);
 			
 			LOG.info("##### Call the Post Address API");
-			WSCustomerPostAddressResponse postAddressResponse = addCustomerAddress(restActions, data, headerTable, expectedCustomerId);
+			WSCustomerPostAddressResponse postAddressResponse = NISUtils.addCustomerAddress(restActions, data, headerTable, expectedCustomerId);
 			
 			restActions.assertTrue(postAddressResponse != null, 
 					"postAddressResponse IS NULL BUT IT SHOULD NOT BE");			

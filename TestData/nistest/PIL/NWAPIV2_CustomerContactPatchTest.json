@@ -1,0 +1,11 @@
+{
+	"getContact": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1142579:NWAPIV2_CustomerContactPatchTest",
+			"testRailId":"1142579",
+			"EXPECTED_HTTP_RESPONSE_CODE":"204"		
+		}
+	]
+}

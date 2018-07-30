@@ -2,8 +2,10 @@ package com.cubic.nistests.tests;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -14,6 +16,7 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSXCubHdrJSON;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 
@@ -26,6 +29,9 @@ import com.sun.jersey.api.client.ClientResponse;
  */
 public class NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * The 'Username Forgot' API is called without either email or phone input.
 	 * This elicits an error message 'errors.email.or.phone.are.required'.
@@ -50,7 +56,7 @@ public class NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest extends NWAP
 			Hashtable<String,String> headerTable = BackOfficeUtils.createRESTHeader(RESTConstants.APPLICATION_JSON);			
 			
 			LOG.info("##### Get the user's Username Forgot API");
-			ClientResponse clientResponse = usernameForgot( restActions, data, headerTable, null );
+			ClientResponse clientResponse = NISUtils.usernameForgotAlt( restActions, data, headerTable, null );
 			
 			String response = clientResponse.getEntity(String.class);
 			LOG.info("##### Got the response body");
@@ -108,7 +114,7 @@ public class NWAPIV2_CustomerUsernameForgotEmailOrPhoneRequiredTest extends NWAP
 	 * @param email  The email address to use
 	 * @return  the 'Username Forgot' request body
 	 */
-	@Override
+
 	protected String buildUsernameForgotRequestBody( String email ) {
 		StringWriter sw = new StringWriter();
 		PrintWriter pw = new PrintWriter( sw );

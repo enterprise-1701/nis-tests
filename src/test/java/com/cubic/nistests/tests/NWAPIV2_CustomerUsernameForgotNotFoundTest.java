@@ -1,7 +1,9 @@
 package com.cubic.nistests.tests;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -12,6 +14,7 @@ import com.cubic.backoffice.utils.BackOfficeUtils;
 import com.cubic.nisjava.apiobjects.WSXCubHdrJSON;
 import com.cubic.nisjava.constants.AppConstants;
 import com.cubic.nisjava.dataproviders.NISDataProviderSource;
+import com.cubic.nisjava.utils.NISUtils;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
 
@@ -23,6 +26,9 @@ import com.sun.jersey.api.client.ClientResponse;
  */
 public class NWAPIV2_CustomerUsernameForgotNotFoundTest extends NWAPIV2_CustomerBase {
 
+    private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
+    private static final Logger LOG = Logger.getLogger(CLASS_NAME);	
+	
 	/**
 	 * Call the 'Username Forgot' API with a non-existent email address.
 	 * 
@@ -46,7 +52,7 @@ public class NWAPIV2_CustomerUsernameForgotNotFoundTest extends NWAPIV2_Customer
 			Hashtable<String,String> headerTable = BackOfficeUtils.createRESTHeader(RESTConstants.APPLICATION_JSON);			
 			
 			LOG.info("##### Get the user's Username Forgot API");
-			ClientResponse clientResponse = usernameForgot( restActions, data, headerTable, "no-such-email-address@cubic.com" );
+			ClientResponse clientResponse = NISUtils.usernameForgot( restActions, data, headerTable, "no-such-email-address@cubic.com" );
 			
 			String response = clientResponse.getEntity(String.class);
 			LOG.info("##### Got the response body");
