@@ -2,7 +2,7 @@
   "getNotificationDetail": [
     {
       "RunMode": "Y",
-      "TestCase_Description": "REST001:ViewNotificationHistory_ByNotificationIdTest",
+      "TestCase_Description": "482041:ViewNotificationHistory_ByNotificationIdTest",
       "testRailId": "482041",
       "USERNAME": "ABC",
       "CUSTOMER_ID": "5502460",
