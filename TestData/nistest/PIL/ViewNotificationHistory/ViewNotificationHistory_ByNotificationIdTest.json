@@ -2,13 +2,11 @@
   "getNotificationDetail": [
     {
       "RunMode": "Y",
-      "TestCase_Description": "REST001:getNotificationDetail",
+      "TestCase_Description": "REST001:ViewNotificationHistory_ByNotificationIdTest",
       "testRailId": "482041",
       "USERNAME": "ABC",
       "CUSTOMER_ID": "5502460",
-      "NIS_HOST":"10.252.1.21",
-      "NIS_PORT":"8201",
-      "NIS_URL_FMT": "http://%s:%s/nis/csapi/v1/customer/%s/notification/%s",
+      "NIS_URL_FMT": "/nis/csapi/v1/customer/%s/notification/%s",
       "NOTIFICATION_ID": "4863",
       "CONTACT_ID":"5502460",
       "FIRST_NAME":"4gPmgyr1RqkDvv0y",
