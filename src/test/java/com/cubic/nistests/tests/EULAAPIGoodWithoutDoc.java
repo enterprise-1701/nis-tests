@@ -24,7 +24,7 @@ public class EULAAPIGoodWithoutDoc extends EULAAPIGood {
 	 * @param data		The test data.
 	 * @throws Throwable Thrown if something goes wrong.
 	 */
-	@Test(dataProvider = AppConstants.DATA_PROVIDER, dataProviderClass = NISDataProviderSource.class)
+	@Test(dataProvider = AppConstants.DATA_PROVIDER_NO_TRIM, dataProviderClass = NISDataProviderSource.class)
 	public void getEULA(ITestContext context, Hashtable<String, String> data) throws Throwable {
 		mainTest( context, data );
 	}	
