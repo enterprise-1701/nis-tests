@@ -1,9 +1,5 @@
 package com.cubic.nistests.tests;
 
-import java.lang.invoke.MethodHandles;
-
-import org.apache.log4j.Logger;
-
 import com.cubic.accelerators.RESTEngine;
 
 public class NWAPIV2_CustomerBase extends RESTEngine {
@@ -21,8 +17,5 @@ public class NWAPIV2_CustomerBase extends RESTEngine {
 	protected static final String BAD_FIELD_NAME_FMT = "BAD FIELD NAME: EXPECTED '%s', FOUND '%s'";
 	protected static final String CUSTOMER_ID = "CUSTOMER_ID";
 	protected static final String CONTACT_ID = "CONTACT_ID";
-	
-	private static final String CLASS_NAME = MethodHandles.lookup().lookupClass().getSimpleName();
-    private static final Logger LOG = Logger.getLogger(CLASS_NAME);
 
 }

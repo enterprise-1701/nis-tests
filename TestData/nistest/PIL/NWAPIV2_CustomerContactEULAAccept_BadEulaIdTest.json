@@ -1,0 +1,15 @@
+{
+	"customerContactEULAAccept_badEulaId": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1205016:NWAPIV2_CustomerContactEULAAccept_BadEulaIdTest",
+			"testRailId":"1205016",
+			"EULA_ID":"9999",
+			"LOCALE":"en",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"eulaId",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}
