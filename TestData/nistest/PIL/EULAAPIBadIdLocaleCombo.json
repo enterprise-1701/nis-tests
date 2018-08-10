@@ -7,9 +7,9 @@
 			"testRailId":"698268",
 			"LOC_LOCALE_TAG":"es",	
 			"INFO_EULA_ID":"100",
-			"RETURN_DOCUMENT":"false",
+			"RETURN_DOCUMENT":"true",
 			"EXPECTED_RESULT":"DataValidationError",
-			"EXPECTED_FIELDNAME":"locale",
+			"EXPECTED_FIELDNAME":"document",
 			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"
 		}
 	]

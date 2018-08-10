@@ -1,0 +1,15 @@
+{
+	"customerContactEULAAccept_badLocale": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1205015:NWAPIV2_CustomerContactEULAAccept_BadLocaleTest",
+			"testRailId":"1205015",
+			"EULA_ID":"100",
+			"LOCALE":"zz",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_FIELDNAME":"locale",
+			"EXPECTED_ERROR_KEY":"errors.general.record.not.found"		
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"customerContactEULAAccept": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1205020:NWAPIV2_CustomerContactEULAAcceptTest",
+			"testRailId":"1205020",
+			"EULA_ID":"100",
+			"LOCALE":"en",
+			"EXPECTED_RESULT":"DataValidationError",
+			"EXPECTED_ERROR_KEY":"errors.general.eula.already.accepted"		
+		}
+	]
+}

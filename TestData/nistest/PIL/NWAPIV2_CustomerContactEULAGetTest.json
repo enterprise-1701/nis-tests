@@ -1,0 +1,12 @@
+{
+	"customerContactEULAGet": 
+	[
+		{
+			"RunMode": "Y",
+			"TestCase_Description": "1205014:NWAPIV2_CustomerContactEULAGetTest",
+			"testRailId":"1205014",
+			"EULA_ID":"100",
+			"LOCALE":"en"	
+		}
+	]
+}

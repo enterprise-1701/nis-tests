@@ -13,6 +13,16 @@
 
 	<test name="NISTests">
 		<classes>
+ 
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactEULAAcceptTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactEULAAccept_BadEulaIdTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactEULAAccept_BadLocaleTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactEULAGetTest"/>
+
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactPasswordTest"/>
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactPassword_OldPasswordIsBlankTest"/>				
+			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactPassword_NewPasswordIsBlankTest"/>		
+ 
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContact_InvalidContactIdTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactTest"/>
 			<class name="com.cubic.nistests.tests.NWAPIV2_CustomerContactPatchTest"/>
@@ -63,8 +73,8 @@
 			<class name="com.cubic.nistests.tests.EULAAPIGoodWithoutDoc"/>
 	 		<class name="com.cubic.nistests.tests.EULAAPIBadId"/>
 		 	<class name="com.cubic.nistests.tests.EULAAPIBadLocale"/>
-<!--		 	<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>    -->     <!-- JIRA Defect ID CCBO-13057 -->
- 
+			<class name="com.cubic.nistests.tests.EULAAPIBadIdLocaleCombo"/>
+			 
 			<class name="com.cubic.nistests.tests.NameSuffixesTest"/>
 			<class name="com.cubic.nistests.tests.NameTitlesTest"/>
 			<class name="com.cubic.nistests.tests.PhoneTypesTest"/>
