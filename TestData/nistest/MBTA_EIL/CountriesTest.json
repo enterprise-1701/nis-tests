@@ -3,8 +3,8 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "686679:CountriesTest",
-			"testRailId":"686679",
+			"TestCase_Description": "1142240:CountriesTest",
+			"testRailId":"1142240",
 			"EXPECTED_COUNTRY_NAME":"US",
 			"EXPECTED_COUNTRY_DESC":"United States of America",
 			"EXPECTED_NUM_US_STATES":"59",

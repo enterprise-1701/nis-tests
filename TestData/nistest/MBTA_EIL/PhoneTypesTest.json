@@ -3,8 +3,8 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "685823:PhoneTypesTest",
-			"testRailId":"685823",
+			"TestCase_Description": "1148161:PhoneTypesTest",
+			"testRailId":"1148161",
 			
 			"PHONETYPE_KEY_H":"H",
 			"PHONETYPE_VAL_H":"Home",
