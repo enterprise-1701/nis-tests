@@ -3,8 +3,8 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "933964:NWAPIV2_PaymentRepositoryNonceTest",
-			"testRailId":"933964",
+			"TestCase_Description": "1142241:NWAPIV2_PaymentRepositoryNonceTest",
+			"testRailId":"1142241",
 			"EXPECTED_HTTP_RESPONSE_CODE":"200"
 		}
 	]

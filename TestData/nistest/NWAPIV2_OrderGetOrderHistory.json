@@ -1,0 +1,11 @@
+{ "getOrderHistory": [
+    {
+      "RunMode": "Y",
+      "TestCase_Description": "977861:NWAPIV2_OrderGetOrderHistory",
+      "testRailId":"977861",
+      "HTTP_CODE":"200",
+      "ORDER_ID":"2235",
+      "STATUS":"Completed",
+      "AMOUNT":"300"
+    }
+]}

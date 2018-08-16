@@ -3,8 +3,8 @@
 	[
 		{
 			"RunMode": "Y",
-			"TestCase_Description": "685746:NameSuffixesTest",
-			"testRailId":"685746",
+			"TestCase_Description": "1148160:NameSuffixesTest",
+			"testRailId":"1148160",
 			"NAMESUFFIXES_KEY_1":"1",
 			"NAMESUFFIXES_VALUE_1":"Junior",
 			"NAMESUFFIXES_KEY_2":"2",
